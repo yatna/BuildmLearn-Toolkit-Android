@@ -1,0 +1,126 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1ResultActivity}{\section{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Result\-Activity Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1ResultActivity}\index{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Result\-Activity@{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Result\-Activity}}
+}
+
+
+Simulator code for Learn Spelling Template.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-learnspelling.\-Result\-Activity\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{d1/d28/classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1ResultActivity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-learnspelling.\-Result\-Activity\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{d6/d52/classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1ResultActivity__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1ResultActivity_a3a2dfc9b13e184b57e2003c6c2c05131}{on\-Create\-View} (Layout\-Inflater inflater, View\-Group container, Bundle saved\-Instance\-State)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1ResultActivity_a602c95278014ebcb073528f459507ad8}{on\-Stop} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Learn Spelling Template. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1ResultActivity_a3a2dfc9b13e184b57e2003c6c2c05131}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Result\-Activity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Result\-Activity}!on\-Create\-View@{on\-Create\-View}}
+\index{on\-Create\-View@{on\-Create\-View}!org::buildmlearn::toolkit::learnspelling::ResultActivity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Result\-Activity}}
+\subsubsection[{on\-Create\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-learnspelling.\-Result\-Activity.\-on\-Create\-View (
+\begin{DoxyParamCaption}
+\item[{Layout\-Inflater}]{inflater, }
+\item[{View\-Group}]{container, }
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1ResultActivity_a3a2dfc9b13e184b57e2003c6c2c05131}
+
+\begin{DoxyCode}
+58                                                                                                       \{
+59 
+60         view = inflater.inflate(R.layout.spelling\_fragment\_finish, container, \textcolor{keyword}{false});
+61         mDataManager = DataManager.getInstance();
+62         mTv\_Correct = (TextView) view.findViewById(R.id.tv\_correct);
+63         mTv\_Wrong = (TextView) view.findViewById(R.id.tv\_wrong);
+64         mTv\_Unanswered = (TextView) view.findViewById(R.id.tv\_unanswered);
+65         correct = mDataManager.getCorrect();
+66         wrong = mDataManager.getWrong();
+67         unanswered = mDataManager.getList().size() - correct - wrong;
+68 
+69         mTv\_Correct.setText(getString(R.string.correct) + \textcolor{stringliteral}{" "} + correct);
+70 
+71         mTv\_Wrong.setText(getString(R.string.wrong\_spelled) + \textcolor{stringliteral}{" "} + wrong);
+72         mTv\_Unanswered.setText(getString(R.string.unanswered) + \textcolor{stringliteral}{" "}
+73                 + unanswered);
+74         textToSpeech = \textcolor{keyword}{new} TextToSpeech(getActivity(),
+75                 \textcolor{keyword}{new} TextToSpeech.OnInitListener() \{
+76 
+77                     @Override
+78                     \textcolor{keyword}{public} \textcolor{keywordtype}{void} onInit(\textcolor{keywordtype}{int} arg0) \{
+79                         \textcolor{keywordflow}{if} (arg0 == TextToSpeech.SUCCESS) \{
+80                             textToSpeech.setLanguage(Locale.US);
+81                             String speechText = getString(R.string.correct)
+82                                     + \textcolor{stringliteral}{" "} + correct
+83                                     + getString(R.string.wrong\_spelled) + \textcolor{stringliteral}{" "}
+84                                     + wrong + getString(R.string.unanswered)
+85                                     + \textcolor{stringliteral}{" "} + unanswered;
+86                             convertTextToSpeech(speechText);
+87                         \}
+88                     \}
+89                 \});
+90 
+91 
+92         view.findViewById(R.id.btn\_exit).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+93             @Override
+94             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+95                 getActivity().finish();
+96             \}
+97         \});
+98 
+99         view.findViewById(R.id.btn\_restart).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+100             @Override
+101             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+102                 mDataManager.reset();
+103                 getActivity().getFragmentManager().beginTransaction().replace(R.id.container, 
+      SpellingMainFragment.newInstance(getActivity().getIntent().getStringExtra(Constants.SIMULATOR\_FILE\_PATH)), StartFragment.
+      TAG).addToBackStack(null).commit();
+104 \textcolor{comment}{//t}
+105             \}
+106         \});
+107 
+108         \textcolor{keywordflow}{return} view;
+109     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1ResultActivity_a602c95278014ebcb073528f459507ad8}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Result\-Activity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Result\-Activity}!on\-Stop@{on\-Stop}}
+\index{on\-Stop@{on\-Stop}!org::buildmlearn::toolkit::learnspelling::ResultActivity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Result\-Activity}}
+\subsubsection[{on\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-learnspelling.\-Result\-Activity.\-on\-Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1ResultActivity_a602c95278014ebcb073528f459507ad8}
+
+\begin{DoxyCode}
+113                          \{
+114         super.onStop();
+115         textToSpeech.shutdown();
+116     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/learnspelling/\hyperlink{ResultActivity_8java}{Result\-Activity.\-java}\end{DoxyCompactItemize}

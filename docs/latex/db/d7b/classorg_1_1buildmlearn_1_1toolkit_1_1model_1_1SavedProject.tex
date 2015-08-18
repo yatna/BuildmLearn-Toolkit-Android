@@ -1,0 +1,240 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject}{\section{org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject}\index{org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project@{org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project}}
+}
+
+
+Model class for holding the details of a Saved File.  
+
+
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{d7/d50/classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_adb8e49d8331062fbca7e82d88c636d5f}{Saved\-Project} (File file, String file\-Name, long date, String type, String full\-Path)
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a80e2d2daf80abb1f4e896c681ecb93bc}{get\-Name} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a2e1f111a512798fb8b1acf992fcd5240}{set\-Name} (String name)
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a1e9523ff7c4ef3db7829059215ff70de}{get\-Date} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a3b47ee46e4cbea68adee68b64c2ec079}{set\-Date} (long date)
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a5f64a7ad50e81ee2757e986da3c4e0a8}{get\-Type} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a752a07c55de9337e3220a1ffdb4faf50}{set\-Type} (String type)
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_ae2d5fe5caab78e44afee598b57e758fd}{get\-Author} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a59a14f4cc86c7079a84c591177418e61}{set\-Author} (String author)
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_af5b8dd7b1537d22874905c305fa3698a}{get\-Full\-Path} ()
+\item 
+File \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_abb1361575d53240244c368ab3b18ffb8}{get\-File} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a38b605c92572817f27a18173277c253d}{set\-File} (File file)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Model class for holding the details of a Saved File. 
+
+Created by Abhishek on 01-\/06-\/2015. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_adb8e49d8331062fbca7e82d88c636d5f}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}!Saved\-Project@{Saved\-Project}}
+\index{Saved\-Project@{Saved\-Project}!org::buildmlearn::toolkit::model::SavedProject@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}}
+\subsubsection[{Saved\-Project}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project.\-Saved\-Project (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{String}]{file\-Name, }
+\item[{long}]{date, }
+\item[{String}]{type, }
+\item[{String}]{full\-Path}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_adb8e49d8331062fbca7e82d88c636d5f}
+
+\begin{DoxyCode}
+21                                                                                              \{
+22 
+23         this.file = file;
+24         this.fullPath = fullPath;
+25         this.date = formatDate(date);
+26         this.type = type;
+27         String[] data = fileName.split(\textcolor{stringliteral}{"-by-"});
+28         \textcolor{keywordflow}{try} \{
+29             this.name = data[0];
+30             this.author = data[1];
+31         \} \textcolor{keywordflow}{catch} (ArrayIndexOutOfBoundsException e) \{
+32             this.name = fileName;
+33             this.author = \textcolor{stringliteral}{"Unknown"};
+34         \}
+35         this.name = this.name.replaceAll(\textcolor{stringliteral}{"-"}, \textcolor{stringliteral}{" "});
+36         this.author = this.author.replaceAll(\textcolor{stringliteral}{"-"}, \textcolor{stringliteral}{" "});
+37         \textcolor{keywordflow}{try} \{
+38             this.author = this.author.substring(0, this.author.indexOf(\textcolor{stringliteral}{"."}));
+39         \} \textcolor{keywordflow}{catch} (StringIndexOutOfBoundsException e) \{
+40             \textcolor{comment}{/* Do nothing, special case when file is without .buildmlearn extension*/}
+41         \}
+42     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_ae2d5fe5caab78e44afee598b57e758fd}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}!get\-Author@{get\-Author}}
+\index{get\-Author@{get\-Author}!org::buildmlearn::toolkit::model::SavedProject@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}}
+\subsubsection[{get\-Author}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project.\-get\-Author (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_ae2d5fe5caab78e44afee598b57e758fd}
+
+\begin{DoxyCode}
+73                               \{
+74         \textcolor{keywordflow}{return} author;
+75     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a1e9523ff7c4ef3db7829059215ff70de}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}!get\-Date@{get\-Date}}
+\index{get\-Date@{get\-Date}!org::buildmlearn::toolkit::model::SavedProject@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}}
+\subsubsection[{get\-Date}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project.\-get\-Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a1e9523ff7c4ef3db7829059215ff70de}
+
+\begin{DoxyCode}
+57                             \{
+58         \textcolor{keywordflow}{return} date;
+59     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_abb1361575d53240244c368ab3b18ffb8}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}!get\-File@{get\-File}}
+\index{get\-File@{get\-File}!org::buildmlearn::toolkit::model::SavedProject@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}}
+\subsubsection[{get\-File}]{\setlength{\rightskip}{0pt plus 5cm}File org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project.\-get\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_abb1361575d53240244c368ab3b18ffb8}
+
+\begin{DoxyCode}
+85                           \{
+86         \textcolor{keywordflow}{return} file;
+87     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_af5b8dd7b1537d22874905c305fa3698a}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}!get\-Full\-Path@{get\-Full\-Path}}
+\index{get\-Full\-Path@{get\-Full\-Path}!org::buildmlearn::toolkit::model::SavedProject@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}}
+\subsubsection[{get\-Full\-Path}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project.\-get\-Full\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_af5b8dd7b1537d22874905c305fa3698a}
+
+\begin{DoxyCode}
+81                                 \{
+82         \textcolor{keywordflow}{return} fullPath;
+83     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a80e2d2daf80abb1f4e896c681ecb93bc}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!org::buildmlearn::toolkit::model::SavedProject@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project.\-get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a80e2d2daf80abb1f4e896c681ecb93bc}
+
+\begin{DoxyCode}
+49                             \{
+50         \textcolor{keywordflow}{return} name;
+51     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a5f64a7ad50e81ee2757e986da3c4e0a8}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}!get\-Type@{get\-Type}}
+\index{get\-Type@{get\-Type}!org::buildmlearn::toolkit::model::SavedProject@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}}
+\subsubsection[{get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project.\-get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a5f64a7ad50e81ee2757e986da3c4e0a8}
+
+\begin{DoxyCode}
+65                             \{
+66         \textcolor{keywordflow}{return} type;
+67     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a59a14f4cc86c7079a84c591177418e61}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}!set\-Author@{set\-Author}}
+\index{set\-Author@{set\-Author}!org::buildmlearn::toolkit::model::SavedProject@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}}
+\subsubsection[{set\-Author}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project.\-set\-Author (
+\begin{DoxyParamCaption}
+\item[{String}]{author}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a59a14f4cc86c7079a84c591177418e61}
+
+\begin{DoxyCode}
+77                                          \{
+78         this.author = author;
+79     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a3b47ee46e4cbea68adee68b64c2ec079}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}!set\-Date@{set\-Date}}
+\index{set\-Date@{set\-Date}!org::buildmlearn::toolkit::model::SavedProject@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}}
+\subsubsection[{set\-Date}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project.\-set\-Date (
+\begin{DoxyParamCaption}
+\item[{long}]{date}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a3b47ee46e4cbea68adee68b64c2ec079}
+
+\begin{DoxyCode}
+61                                    \{
+62         this.date = formatDate(date);
+63     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a38b605c92572817f27a18173277c253d}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}!set\-File@{set\-File}}
+\index{set\-File@{set\-File}!org::buildmlearn::toolkit::model::SavedProject@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}}
+\subsubsection[{set\-File}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project.\-set\-File (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a38b605c92572817f27a18173277c253d}
+
+\begin{DoxyCode}
+89                                    \{
+90         this.file = file;
+91     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a2e1f111a512798fb8b1acf992fcd5240}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}!set\-Name@{set\-Name}}
+\index{set\-Name@{set\-Name}!org::buildmlearn::toolkit::model::SavedProject@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}}
+\subsubsection[{set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project.\-set\-Name (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a2e1f111a512798fb8b1acf992fcd5240}
+
+\begin{DoxyCode}
+53                                      \{
+54         this.name = name;
+55     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a752a07c55de9337e3220a1ffdb4faf50}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}!set\-Type@{set\-Type}}
+\index{set\-Type@{set\-Type}!org::buildmlearn::toolkit::model::SavedProject@{org\-::buildmlearn\-::toolkit\-::model\-::\-Saved\-Project}}
+\subsubsection[{set\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-model.\-Saved\-Project.\-set\-Type (
+\begin{DoxyParamCaption}
+\item[{String}]{type}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject_a752a07c55de9337e3220a1ffdb4faf50}
+
+\begin{DoxyCode}
+69                                      \{
+70         this.type = type;
+71     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/model/\hyperlink{SavedProject_8java}{Saved\-Project.\-java}\end{DoxyCompactItemize}

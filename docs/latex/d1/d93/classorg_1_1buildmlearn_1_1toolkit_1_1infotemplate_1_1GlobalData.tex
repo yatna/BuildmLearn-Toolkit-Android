@@ -1,0 +1,144 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1GlobalData}{\section{org.\-buildmlearn.\-toolkit.\-infotemplate.\-Global\-Data Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1GlobalData}\index{org.\-buildmlearn.\-toolkit.\-infotemplate.\-Global\-Data@{org.\-buildmlearn.\-toolkit.\-infotemplate.\-Global\-Data}}
+}
+
+
+Simulator code for Info Template.  
+
+
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-infotemplate.\-Global\-Data\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{da/dc4/classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1GlobalData__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1GlobalData_abbf66139873f5feda47d3acac99d84c3}{read\-Xml} (String file\-Path)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1GlobalData}{Global\-Data} \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1GlobalData_a6a01ac84ffaa2fc2fbda16b6aecf5412}{get\-Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1GlobalData_a8f07b79704ee3a40a5e501e07f6a46c0}{Global\-Data} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Info Template. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1GlobalData_a8f07b79704ee3a40a5e501e07f6a46c0}{\index{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Global\-Data@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Global\-Data}!Global\-Data@{Global\-Data}}
+\index{Global\-Data@{Global\-Data}!org::buildmlearn::toolkit::infotemplate::GlobalData@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Global\-Data}}
+\subsubsection[{Global\-Data}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-infotemplate.\-Global\-Data.\-Global\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1GlobalData_a8f07b79704ee3a40a5e501e07f6a46c0}
+
+\begin{DoxyCode}
+57                            \{
+58         \textcolor{comment}{// Exists only to defeat instantiation.}
+59     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1GlobalData_a6a01ac84ffaa2fc2fbda16b6aecf5412}{\index{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Global\-Data@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Global\-Data}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!org::buildmlearn::toolkit::infotemplate::GlobalData@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Global\-Data}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Global\-Data} org.\-buildmlearn.\-toolkit.\-infotemplate.\-Global\-Data.\-get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1GlobalData_a6a01ac84ffaa2fc2fbda16b6aecf5412}
+
+\begin{DoxyCode}
+61                                            \{
+62         \textcolor{keywordflow}{if} (instance == null) \{
+63             instance = \textcolor{keyword}{new} \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1GlobalData_a8f07b79704ee3a40a5e501e07f6a46c0}{GlobalData}();
+64         \}
+65         \textcolor{keywordflow}{return} instance;
+66     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1GlobalData_abbf66139873f5feda47d3acac99d84c3}{\index{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Global\-Data@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Global\-Data}!read\-Xml@{read\-Xml}}
+\index{read\-Xml@{read\-Xml}!org::buildmlearn::toolkit::infotemplate::GlobalData@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Global\-Data}}
+\subsubsection[{read\-Xml}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-infotemplate.\-Global\-Data.\-read\-Xml (
+\begin{DoxyParamCaption}
+\item[{String}]{file\-Path}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1GlobalData_abbf66139873f5feda47d3acac99d84c3}
+
+\begin{DoxyCode}
+84                                          \{
+85         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+86 
+87         dbf.setValidating(\textcolor{keyword}{false});
+88 
+89         DocumentBuilder db;
+90         Document doc;
+91         \textcolor{keywordflow}{try} \{
+92             File fXmlFile = \textcolor{keyword}{new} File(filePath);
+93             mList = \textcolor{keyword}{new} ArrayList<InfoModel>();
+94             db = dbf.newDocumentBuilder();
+95             doc = db.parse(fXmlFile);
+96             doc.normalize();
+97             \textcolor{comment}{/*}
+98 \textcolor{comment}{             * NodeList app\_nodes = doc}
+99 \textcolor{comment}{             * .getElementsByTagName("buildmlearn\_application");}
+100 \textcolor{comment}{             */}
+101             \textcolor{comment}{// NamedNodeMap node = app\_nodes.item(0).getAttributes();}
+102             mTitle = doc.getElementsByTagName(\textcolor{stringliteral}{"title"}).item(0).getChildNodes()
+103                     .item(0).getNodeValue();
+104             \textcolor{comment}{// NodeList author\_nodes = doc.getElementsByTagName("author");}
+105             \textcolor{comment}{// NamedNodeMap node1 = author\_nodes.item(0).getAttributes();}
+106             mAuthor = doc.getElementsByTagName(\textcolor{stringliteral}{"name"}).item(0).getChildNodes()
+107                     .item(0).getNodeValue();
+108             ;
+109             \textcolor{comment}{// node1.getNamedItem("name").getNodeValue();}
+110             NodeList childNodes = doc.getElementsByTagName(\textcolor{stringliteral}{"item"});
+111             \textcolor{comment}{// Log.e("tag", "childNodes" + childNodes.getLength());}
+112             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < childNodes.getLength(); i++) \{
+113                 InfoModel app = \textcolor{keyword}{new} InfoModel();
+114 
+115                 Node child = childNodes.item(i);
+116 
+117                 \textcolor{keywordflow}{if} (child.getNodeType() == Node.ELEMENT\_NODE) \{
+118                     Element element2 = (Element) child;
+119 
+120                     app.setInfo\_object(getValue(\textcolor{stringliteral}{"item\_title"}, element2));
+121                     app.setInfo\_description(getValue(\textcolor{stringliteral}{"item\_description"}, element2));
+122 
+123                 \}
+124                 mList.add(app);
+125 
+126             \}
+127         \} \textcolor{keywordflow}{catch} (ParserConfigurationException e) \{
+128             Log.e(\textcolor{stringliteral}{"tag"}, e.getLocalizedMessage());
+129             e.printStackTrace();
+130         \} \textcolor{keywordflow}{catch} (FileNotFoundException e) \{
+131             Log.e(\textcolor{stringliteral}{"tag"}, e.getLocalizedMessage());
+132             e.printStackTrace();
+133         \} \textcolor{keywordflow}{catch} (SAXException e) \{
+134             Log.e(\textcolor{stringliteral}{"tag"}, e.getLocalizedMessage());
+135             e.printStackTrace();
+136         \} \textcolor{keywordflow}{catch} (IOException e) \{
+137             Log.e(\textcolor{stringliteral}{"tag"}, e.getLocalizedMessage());
+138             e.printStackTrace();
+139         \}
+140 
+141     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/infotemplate/\hyperlink{infotemplate_2GlobalData_8java}{Global\-Data.\-java}\end{DoxyCompactItemize}

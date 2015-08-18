@@ -1,0 +1,220 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter}{\section{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Adapter Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter}\index{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Adapter@{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Adapter}}
+}
+
+
+Adapter for displaying Info Template Editor data.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{d6/d0e/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{d0/dcc/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_1_1InfoTemplateHolder}{Info\-Template\-Holder}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_a196fcd7f2757f9e7ede8dd077f23c98e}{Info\-Adapter} (Context m\-Context, Array\-List$<$ \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoModel}{Info\-Model} $>$ data)
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_aea2d9bf9a012c6f483fd86905f84f409}{get\-Count} ()
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoModel}{Info\-Model} \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_a12c0148c366d316ed25b8765381eb4d1}{get\-Item} (int position)
+\item 
+long \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_ad93b0078702e484916aeb7e670af1d4a}{get\-Item\-Id} (int position)
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_a78324b9c5e28313fef5e7f4c6ab0f0be}{get\-View} (final int position, View convert\-View, View\-Group parent)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Adapter for displaying Info Template Editor data. 
+
+Created by abhishek on 17/06/15 at 9\-:48 P\-M. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_a196fcd7f2757f9e7ede8dd077f23c98e}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter}!Info\-Adapter@{Info\-Adapter}}
+\index{Info\-Adapter@{Info\-Adapter}!org::buildmlearn::toolkit::templates::InfoAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter}}
+\subsubsection[{Info\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Adapter.\-Info\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Context}]{m\-Context, }
+\item[{Array\-List$<$ {\bf Info\-Model} $>$}]{data}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_a196fcd7f2757f9e7ede8dd077f23c98e}
+
+\begin{DoxyCode}
+29                                                                     \{
+30         this.mContext = mContext;
+31         this.data = data;
+32     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_aea2d9bf9a012c6f483fd86905f84f409}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter}!get\-Count@{get\-Count}}
+\index{get\-Count@{get\-Count}!org::buildmlearn::toolkit::templates::InfoAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter}}
+\subsubsection[{get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Adapter.\-get\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_aea2d9bf9a012c6f483fd86905f84f409}
+
+\begin{DoxyCode}
+35                           \{
+36         \textcolor{keywordflow}{return} data.size();
+37     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_a12c0148c366d316ed25b8765381eb4d1}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter}!get\-Item@{get\-Item}}
+\index{get\-Item@{get\-Item}!org::buildmlearn::toolkit::templates::InfoAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter}}
+\subsubsection[{get\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Info\-Model} org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Adapter.\-get\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_a12c0148c366d316ed25b8765381eb4d1}
+
+\begin{DoxyCode}
+40                                            \{
+41         \textcolor{keywordflow}{return} data.get(position);
+42     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_ad93b0078702e484916aeb7e670af1d4a}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter}!get\-Item\-Id@{get\-Item\-Id}}
+\index{get\-Item\-Id@{get\-Item\-Id}!org::buildmlearn::toolkit::templates::InfoAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter}}
+\subsubsection[{get\-Item\-Id}]{\setlength{\rightskip}{0pt plus 5cm}long org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Adapter.\-get\-Item\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_ad93b0078702e484916aeb7e670af1d4a}
+
+\begin{DoxyCode}
+45                                         \{
+46         \textcolor{keywordflow}{return} position;
+47     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_a78324b9c5e28313fef5e7f4c6ab0f0be}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter}!get\-View@{get\-View}}
+\index{get\-View@{get\-View}!org::buildmlearn::toolkit::templates::InfoAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Adapter}}
+\subsubsection[{get\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Adapter.\-get\-View (
+\begin{DoxyParamCaption}
+\item[{final int}]{position, }
+\item[{View}]{convert\-View, }
+\item[{View\-Group}]{parent}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_a78324b9c5e28313fef5e7f4c6ab0f0be}
+
+\begin{DoxyCode}
+50                                                                                 \{
+51 
+52         InfoTemplateHolder holder;
+53 
+54         \textcolor{keywordflow}{if} (convertView == null) \{
+55             LayoutInflater inflater = LayoutInflater.from(mContext);
+56             convertView = inflater.inflate(R.layout.info\_template\_item, parent, \textcolor{keyword}{false});
+57             holder = \textcolor{keyword}{new} InfoTemplateHolder();
+58         \} \textcolor{keywordflow}{else} \{
+59             holder = (InfoTemplateHolder) convertView.getTag();
+60         \}
+61 
+62         holder.word = (TextViewPlus) convertView.findViewById(R.id.info\_object);
+63         holder.meaning = (TextViewPlus) convertView.findViewById(R.id.info\_description);
+64 
+65         InfoModel info = \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_a12c0148c366d316ed25b8765381eb4d1}{getItem}(position);
+66 
+67         holder.meaning.setText(info.getInfoDescription());
+68         holder.word.setText(info.getInfoObject());
+69         convertView.setTag(holder);
+70 
+71         holder.deleteButton = (ImageView) convertView.findViewById(R.id.info\_template\_delete);
+72         holder.deleteButton.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+73             @Override
+74             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+75 
+76                 \textcolor{keyword}{final} MaterialDialog dialog = \textcolor{keyword}{new} MaterialDialog.Builder(mContext)
+77                         .title(R.string.info\_template\_delete)
+78                         .content(R.string.info\_delete\_item\_content)
+79                         .positiveText(R.string.dialog\_yes)
+80                         .negativeText(R.string.dialog\_no)
+81                         .build();
+82 
+83                 dialog.getActionButton(DialogAction.POSITIVE).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener()
+       \{
+84                     @Override
+85                     \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+86                         data.remove(position);
+87                         notifyDataSetChanged();
+88                         dialog.dismiss();
+89                     \}
+90                 \});
+91 
+92                 dialog.show();
+93 
+94             \}
+95         \});
+96 
+97         holder.editButton = (ImageView) convertView.findViewById(R.id.info\_template\_edit);
+98         holder.editButton.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+99             @Override
+100             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+101                 \textcolor{keyword}{final} MaterialDialog dialog = \textcolor{keyword}{new} MaterialDialog.Builder(mContext)
+102                         .title(R.string.info\_add\_new\_title)
+103                         .customView(R.layout.info\_dialog\_add\_edit\_data, \textcolor{keyword}{true})
+104                         .positiveText(R.string.info\_template\_add)
+105                         .negativeText(R.string.info\_template\_delete)
+106                         .build();
+107 
+108                 \textcolor{keyword}{final} InfoModel data = \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter_a12c0148c366d316ed25b8765381eb4d1}{getItem}(position);
+109 
+110                 \textcolor{keyword}{final} EditText word = (EditText) dialog.findViewById(R.id.info\_word);
+111                 \textcolor{keyword}{final} EditText meaning = (EditText) dialog.findViewById(R.id.info\_meaning);
+112                 word.setText(data.getInfoObject());
+113                 meaning.setText(data.getInfoDescription());
+114 
+115                 dialog.getActionButton(DialogAction.POSITIVE).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener()
+       \{
+116                     @Override
+117                     \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+118 
+119                         \textcolor{keywordflow}{if} (InfoTemplate.validated(mContext, word, meaning)) \{
+120                             String wordText = word.getText().toString();
+121                             String meaningText = meaning.getText().toString();
+122 
+123                             data.setWord(wordText);
+124                             data.setInfoDescription(meaningText);
+125 
+126                             notifyDataSetChanged();
+127                             dialog.dismiss();
+128                         \}
+129 
+130                     \}
+131                 \});
+132 
+133                 dialog.show();
+134             \}
+135         \});
+136 
+137 
+138         \textcolor{keywordflow}{return} convertView;
+139     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/templates/\hyperlink{InfoAdapter_8java}{Info\-Adapter.\-java}\end{DoxyCompactItemize}

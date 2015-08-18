@@ -1,0 +1,195 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter}{\section{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Adapter Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter}\index{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Adapter@{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Adapter}}
+}
+
+
+Adapter for displaying Flash Card Template Editor data.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{d5/d23/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{d0/d43/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_1_1Holder}{Holder}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_a865c27585b7f0653f0d963bf301c2303}{Flash\-Card\-Adapter} (Context context, Array\-List$<$ \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel}{Flash\-Card\-Model} $>$ data)
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_af4d1bfcc51a9f945d4a0f0afe12adfc2}{get\-Count} ()
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel}{Flash\-Card\-Model} \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_a30e4366accf2cec71f6b642e84d610ea}{get\-Item} (int position)
+\item 
+long \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_a01bdc573acbbd2ab5965df2756095bff}{get\-Item\-Id} (int position)
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_ab93c5e59e63f2604b2a782b9a094179a}{get\-View} (final int position, View convert\-View, View\-Group parent)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Adapter for displaying Flash Card Template Editor data. 
+
+Created by abhishek on 12/07/15 at 11\-:56 P\-M. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_a865c27585b7f0653f0d963bf301c2303}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter}!Flash\-Card\-Adapter@{Flash\-Card\-Adapter}}
+\index{Flash\-Card\-Adapter@{Flash\-Card\-Adapter}!org::buildmlearn::toolkit::templates::FlashCardAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter}}
+\subsubsection[{Flash\-Card\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Adapter.\-Flash\-Card\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{Array\-List$<$ {\bf Flash\-Card\-Model} $>$}]{data}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_a865c27585b7f0653f0d963bf301c2303}
+
+\begin{DoxyCode}
+30                                                                              \{
+31         mContext = context;
+32         mData = data;
+33     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_af4d1bfcc51a9f945d4a0f0afe12adfc2}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter}!get\-Count@{get\-Count}}
+\index{get\-Count@{get\-Count}!org::buildmlearn::toolkit::templates::FlashCardAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter}}
+\subsubsection[{get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Adapter.\-get\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_af4d1bfcc51a9f945d4a0f0afe12adfc2}
+
+\begin{DoxyCode}
+36                           \{
+37         \textcolor{keywordflow}{return} mData.size();
+38     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_a30e4366accf2cec71f6b642e84d610ea}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter}!get\-Item@{get\-Item}}
+\index{get\-Item@{get\-Item}!org::buildmlearn::toolkit::templates::FlashCardAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter}}
+\subsubsection[{get\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Flash\-Card\-Model} org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Adapter.\-get\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_a30e4366accf2cec71f6b642e84d610ea}
+
+\begin{DoxyCode}
+41                                                 \{
+42         \textcolor{keywordflow}{return} mData.get(position);
+43     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_a01bdc573acbbd2ab5965df2756095bff}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter}!get\-Item\-Id@{get\-Item\-Id}}
+\index{get\-Item\-Id@{get\-Item\-Id}!org::buildmlearn::toolkit::templates::FlashCardAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter}}
+\subsubsection[{get\-Item\-Id}]{\setlength{\rightskip}{0pt plus 5cm}long org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Adapter.\-get\-Item\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_a01bdc573acbbd2ab5965df2756095bff}
+
+\begin{DoxyCode}
+46                                         \{
+47 
+48 
+49         \textcolor{keywordflow}{return} position;
+50     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_ab93c5e59e63f2604b2a782b9a094179a}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter}!get\-View@{get\-View}}
+\index{get\-View@{get\-View}!org::buildmlearn::toolkit::templates::FlashCardAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Adapter}}
+\subsubsection[{get\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Adapter.\-get\-View (
+\begin{DoxyParamCaption}
+\item[{final int}]{position, }
+\item[{View}]{convert\-View, }
+\item[{View\-Group}]{parent}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_ab93c5e59e63f2604b2a782b9a094179a}
+
+\begin{DoxyCode}
+53                                                                                 \{
+54 
+55         LayoutInflater mInflater;
+56         mInflater = LayoutInflater.from(mContext);
+57         Holder holder;
+58         \textcolor{keywordflow}{if} (convertView == null) \{
+59             convertView = mInflater.inflate(R.layout.flash\_template\_item, parent, \textcolor{keyword}{false});
+60             holder = \textcolor{keyword}{new} Holder();
+61 
+62             holder.question = (TextViewPlus) convertView.findViewById(R.id.flash\_item\_question);
+63             holder.answer = (TextViewPlus) convertView.findViewById(R.id.flash\_item\_answer);
+64             holder.hint = (TextViewPlus) convertView.findViewById(R.id.flash\_item\_hint);
+65             holder.image = (ImageView) convertView.findViewById(R.id.flash\_item\_image);
+66 
+67             holder.delete = (ImageView) convertView.findViewById(R.id.flash\_template\_delete);
+68             holder.edit = (ImageView) convertView.findViewById(R.id.flash\_item\_edit);
+69 
+70         \} \textcolor{keywordflow}{else} \{
+71             holder = (Holder) convertView.getTag();
+72         \}
+73 
+74         \textcolor{keyword}{final} FlashCardModel data = \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter_a30e4366accf2cec71f6b642e84d610ea}{getItem}(position);
+75         holder.answer.setText(data.getAnswer());
+76         holder.image.setImageBitmap(data.getImageBitmap());
+77         holder.hint.setText(data.getHint());
+78         holder.question.setText(data.getQuestion());
+79 
+80         holder.edit.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+81             @Override
+82             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+83                 Toast.makeText(mContext, \textcolor{stringliteral}{"Long press to edit this item"}, Toast.LENGTH\_SHORT).show();
+84             \}
+85         \});
+86 
+87         holder.delete.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+88             @Override
+89             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+90 
+91                 \textcolor{keyword}{final} MaterialDialog dialog = \textcolor{keyword}{new} MaterialDialog.Builder(mContext)
+92                         .title(R.string.info\_template\_delete)
+93                         .content(R.string.info\_delete\_item\_content)
+94                         .positiveText(R.string.dialog\_yes)
+95                         .negativeText(R.string.dialog\_no)
+96                         .build();
+97 
+98                 dialog.getActionButton(DialogAction.POSITIVE).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener()
+       \{
+99                     @Override
+100                     \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+101                         mData.remove(position);
+102                         notifyDataSetChanged();
+103                         dialog.dismiss();
+104                     \}
+105                 \});
+106 
+107                 dialog.show();
+108 
+109             \}
+110         \});
+111 
+112 
+113         convertView.setTag(holder);
+114 
+115         \textcolor{keywordflow}{return} convertView;
+116     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/templates/\hyperlink{FlashCardAdapter_8java}{Flash\-Card\-Adapter.\-java}\end{DoxyCompactItemize}

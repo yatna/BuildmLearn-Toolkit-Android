@@ -1,0 +1,92 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1DeepLinkerActivity}{\section{org.\-buildmlearn.\-toolkit.\-activity.\-Deep\-Linker\-Activity Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1DeepLinkerActivity}\index{org.\-buildmlearn.\-toolkit.\-activity.\-Deep\-Linker\-Activity@{org.\-buildmlearn.\-toolkit.\-activity.\-Deep\-Linker\-Activity}}
+}
+
+
+Activity responsible for handling files opened from file explorer.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-activity.\-Deep\-Linker\-Activity\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{d6/d40/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1DeepLinkerActivity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-activity.\-Deep\-Linker\-Activity\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{de/dab/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1DeepLinkerActivity__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1DeepLinkerActivity_a7737f816c7d10e707b4788bf5ae2f591}{on\-Create} (Bundle saved\-Instance\-State)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Activity responsible for handling files opened from file explorer. 
+
+This activity is started whenever users opens a .buildmlearn file from file explorer. This activity is responsible for getting the template type from the file, and passes the template Id and file path to Template Editor/ activity. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1DeepLinkerActivity_a7737f816c7d10e707b4788bf5ae2f591}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Deep\-Linker\-Activity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Deep\-Linker\-Activity}!on\-Create@{on\-Create}}
+\index{on\-Create@{on\-Create}!org::buildmlearn::toolkit::activity::DeepLinkerActivity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Deep\-Linker\-Activity}}
+\subsubsection[{on\-Create}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Deep\-Linker\-Activity.\-on\-Create (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1DeepLinkerActivity_a7737f816c7d10e707b4788bf5ae2f591}
+
+\begin{DoxyCode}
+36                                                        \{
+37         super.onCreate(savedInstanceState);
+38         Uri data = getIntent().getData();
+39         File fXmlFile = \textcolor{keyword}{new} File(data.getPath());
+40 
+41         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+42         DocumentBuilder dBuilder;
+43         \textcolor{keywordflow}{try} \{
+44             dBuilder = dbFactory.newDocumentBuilder();
+45             Document doc = dBuilder.parse(fXmlFile);
+46             doc.getDocumentElement().normalize();
+47             Log.d(\textcolor{stringliteral}{"Files"}, \textcolor{stringliteral}{"Root element :"} + doc.getDocumentElement().getAttribute(\textcolor{stringliteral}{"type"}));
+48             SavedProject savedProject = \textcolor{keyword}{new} SavedProject(fXmlFile, fXmlFile.getName(), 
+      fXmlFile.lastModified(), doc.getDocumentElement().getAttribute(\textcolor{stringliteral}{"type"}), fXmlFile.getAbsolutePath());
+49             Template[] templates = Template.values();
+50             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < templates.length; i++) \{
+51                 \textcolor{keywordflow}{if} (savedProject.getType().equals(getString(templates[i].getType()))) \{
+52                     Intent intent = \textcolor{keyword}{new} Intent(\textcolor{keyword}{this}, TemplateEditor.class);
+53                     intent.putExtra(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a2ee9d59d6a353dc4664ed2e2086dae9d}{Constants.TEMPLATE\_ID}, i);
+54                     intent.putExtra(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_ab2586e8aa144cd7e8b4928186d709ea8}{Constants.PROJECT\_FILE\_PATH}, 
+      savedProject.getFullPath());
+55                     startActivity(intent);
+56                     finish();
+57                     \textcolor{keywordflow}{return};
+58                 \}
+59             \}
+60             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Invalid project file"}, Toast.LENGTH\_SHORT).show();
+61             finish();
+62         \} \textcolor{keywordflow}{catch} (ParserConfigurationException e) \{
+63             e.printStackTrace();
+64         \} \textcolor{keywordflow}{catch} (SAXException e) \{
+65             e.printStackTrace();
+66         \} \textcolor{keywordflow}{catch} (IOException e) \{
+67             e.printStackTrace();
+68         \}
+69     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/activity/\hyperlink{DeepLinkerActivity_8java}{Deep\-Linker\-Activity.\-java}\end{DoxyCompactItemize}

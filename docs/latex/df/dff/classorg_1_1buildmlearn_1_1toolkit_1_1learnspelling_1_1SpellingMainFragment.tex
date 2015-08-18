@@ -1,0 +1,102 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingMainFragment}{\section{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Main\-Fragment Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingMainFragment}\index{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Main\-Fragment@{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Main\-Fragment}}
+}
+
+
+Simulator code for Learn Spelling Template.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Main\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{d9/d67/classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingMainFragment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Main\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{db/d72/classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingMainFragment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingMainFragment_a631d158eb635f9f7c5cc31459e3aa448}{on\-Create\-View} (Layout\-Inflater inflater, View\-Group container, Bundle saved\-Instance\-State)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Fragment \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingMainFragment_a9dc5bc1a66f73d325039fd8f5ba819c3}{new\-Instance} (String path)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Learn Spelling Template. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingMainFragment_a9dc5bc1a66f73d325039fd8f5ba819c3}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Main\-Fragment@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Main\-Fragment}!new\-Instance@{new\-Instance}}
+\index{new\-Instance@{new\-Instance}!org::buildmlearn::toolkit::learnspelling::SpellingMainFragment@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Main\-Fragment}}
+\subsubsection[{new\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static Fragment org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Main\-Fragment.\-new\-Instance (
+\begin{DoxyParamCaption}
+\item[{String}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingMainFragment_a9dc5bc1a66f73d325039fd8f5ba819c3}
+
+\begin{DoxyCode}
+53                                                     \{
+54         SpellingMainFragment fragment = \textcolor{keyword}{new} SpellingMainFragment();
+55         Bundle bundle = \textcolor{keyword}{new} Bundle();
+56         bundle.putString(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a5e8ea6ec23e727cbfc84e5b854ae311c}{Constants.SIMULATOR\_FILE\_PATH}, path);
+57         fragment.setArguments(bundle);
+58         \textcolor{keywordflow}{return} fragment;
+59     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingMainFragment_a631d158eb635f9f7c5cc31459e3aa448}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Main\-Fragment@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Main\-Fragment}!on\-Create\-View@{on\-Create\-View}}
+\index{on\-Create\-View@{on\-Create\-View}!org::buildmlearn::toolkit::learnspelling::SpellingMainFragment@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Main\-Fragment}}
+\subsubsection[{on\-Create\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Main\-Fragment.\-on\-Create\-View (
+\begin{DoxyParamCaption}
+\item[{Layout\-Inflater}]{inflater, }
+\item[{View\-Group}]{container, }
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingMainFragment_a631d158eb635f9f7c5cc31459e3aa448}
+
+\begin{DoxyCode}
+64                                                                                                       \{
+65 
+66         View view = inflater.inflate(R.layout.spelling\_fragment\_main, container, \textcolor{keyword}{false});
+67         mBtn\_Start = (Button) view.findViewById(R.id.btn\_start);
+68         mTv\_Title = (TextView) view.findViewById(R.id.tv\_apptitle);
+69         mTv\_Author = (TextView) view.findViewById(R.id.tv\_author);
+70 
+71         mBtn\_Start.setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+72 
+73             @Override
+74             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+75                 getActivity().getFragmentManager().beginTransaction().replace(R.id.container, \textcolor{keyword}{new} 
+      SpellingActivity()).addToBackStack(null).commit();
+76             \}
+77         \});
+78 
+79         mManager = DataManager.getInstance();
+80         mManager.readXml(getArguments().getString(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a5e8ea6ec23e727cbfc84e5b854ae311c}{Constants.SIMULATOR\_FILE\_PATH}
+      ));
+81         mTv\_Title.setText(mManager.getTitle());
+82         mTv\_Author.setText(mManager.getAuthor());
+83 
+84         \textcolor{keywordflow}{return} view;
+85     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/learnspelling/\hyperlink{SpellingMainFragment_8java}{Spelling\-Main\-Fragment.\-java}\end{DoxyCompactItemize}

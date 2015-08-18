@@ -1,0 +1,150 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter}{\section{org.\-buildmlearn.\-toolkit.\-adapter.\-Saved\-Project\-Adapter Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter}\index{org.\-buildmlearn.\-toolkit.\-adapter.\-Saved\-Project\-Adapter@{org.\-buildmlearn.\-toolkit.\-adapter.\-Saved\-Project\-Adapter}}
+}
+
+
+Adapter used for showing saved projects in a list.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-adapter.\-Saved\-Project\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{d3/d85/classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-adapter.\-Saved\-Project\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{dc/d9e/classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_1_1ProjectHolder}{Project\-Holder}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_a8a42e7c094f6ce608a5bfb1e5e79a11f}{Saved\-Project\-Adapter} (Context m\-Context, Array\-List$<$ \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject}{Saved\-Project} $>$ data)
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_a143869cd5a7b07ef9891db54b7aadd94}{get\-Count} ()
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1SavedProject}{Saved\-Project} \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_ae1b4a43ad80a736a832e74164a538e71}{get\-Item} (int i)
+\item 
+long \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_ae1ad9d54393c2f9187c9e5bce00bcea3}{get\-Item\-Id} (int i)
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_a80768fbb566b6f75f2e8c699122dcbc2}{get\-View} (int position, View convert\-View, View\-Group parent)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Adapter used for showing saved projects in a list. 
+
+Created by Abhishek on 01-\/06-\/2015. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_a8a42e7c094f6ce608a5bfb1e5e79a11f}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter}!Saved\-Project\-Adapter@{Saved\-Project\-Adapter}}
+\index{Saved\-Project\-Adapter@{Saved\-Project\-Adapter}!org::buildmlearn::toolkit::adapter::SavedProjectAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter}}
+\subsubsection[{Saved\-Project\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-adapter.\-Saved\-Project\-Adapter.\-Saved\-Project\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Context}]{m\-Context, }
+\item[{Array\-List$<$ {\bf Saved\-Project} $>$}]{data}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_a8a42e7c094f6ce608a5bfb1e5e79a11f}
+
+\begin{DoxyCode}
+26                                                                                \{
+27         this.mContext = mContext;
+28         this.data = data;
+29     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_a143869cd5a7b07ef9891db54b7aadd94}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter}!get\-Count@{get\-Count}}
+\index{get\-Count@{get\-Count}!org::buildmlearn::toolkit::adapter::SavedProjectAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter}}
+\subsubsection[{get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-adapter.\-Saved\-Project\-Adapter.\-get\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_a143869cd5a7b07ef9891db54b7aadd94}
+
+\begin{DoxyCode}
+35                           \{
+36         \textcolor{keywordflow}{return} data.size();
+37     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_ae1b4a43ad80a736a832e74164a538e71}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter}!get\-Item@{get\-Item}}
+\index{get\-Item@{get\-Item}!org::buildmlearn::toolkit::adapter::SavedProjectAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter}}
+\subsubsection[{get\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Saved\-Project} org.\-buildmlearn.\-toolkit.\-adapter.\-Saved\-Project\-Adapter.\-get\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_ae1b4a43ad80a736a832e74164a538e71}
+
+\begin{DoxyCode}
+43                                        \{
+44         \textcolor{keywordflow}{return} data.get(i);
+45     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_ae1ad9d54393c2f9187c9e5bce00bcea3}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter}!get\-Item\-Id@{get\-Item\-Id}}
+\index{get\-Item\-Id@{get\-Item\-Id}!org::buildmlearn::toolkit::adapter::SavedProjectAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter}}
+\subsubsection[{get\-Item\-Id}]{\setlength{\rightskip}{0pt plus 5cm}long org.\-buildmlearn.\-toolkit.\-adapter.\-Saved\-Project\-Adapter.\-get\-Item\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_ae1ad9d54393c2f9187c9e5bce00bcea3}
+
+\begin{DoxyCode}
+51                                  \{
+52         \textcolor{keywordflow}{return} i;
+53     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_a80768fbb566b6f75f2e8c699122dcbc2}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter}!get\-View@{get\-View}}
+\index{get\-View@{get\-View}!org::buildmlearn::toolkit::adapter::SavedProjectAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Saved\-Project\-Adapter}}
+\subsubsection[{get\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-adapter.\-Saved\-Project\-Adapter.\-get\-View (
+\begin{DoxyParamCaption}
+\item[{int}]{position, }
+\item[{View}]{convert\-View, }
+\item[{View\-Group}]{parent}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_a80768fbb566b6f75f2e8c699122dcbc2}
+
+\begin{DoxyCode}
+59                                                                           \{
+60         LayoutInflater mInflater;
+61         mInflater = LayoutInflater.from(mContext);
+62         ProjectHolder holder;
+63         \textcolor{keywordflow}{if} (convertView == null) \{
+64             convertView = mInflater.inflate(R.layout.item\_load\_project, parent, \textcolor{keyword}{false});
+65             holder = \textcolor{keyword}{new} ProjectHolder();
+66             holder.projectName = (TextViewPlus) convertView.findViewById(R.id.title);
+67             holder.projectIcon = (TextViewPlus) convertView.findViewById(R.id.icon);
+68             holder.details = (TextViewPlus) convertView.findViewById(R.id.subtitle);
+69         \} \textcolor{keywordflow}{else} \{
+70             holder = (ProjectHolder) convertView.getTag();
+71         \}
+72 
+73         SavedProject projectData = \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter_ae1b4a43ad80a736a832e74164a538e71}{getItem}(position);
+74         holder.details.setText(\textcolor{stringliteral}{"Modified: "} + projectData.getDate() + \textcolor{stringliteral}{", Author: "} + projectData.getAuthor(
+      ));
+75         holder.projectName.setText(projectData.getName());
+76         holder.projectIcon.setText(projectData.getName().substring(0, 1).toUpperCase(Locale.US));
+77         convertView.setTag(holder);
+78         \textcolor{keywordflow}{return} convertView;
+79     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/adapter/\hyperlink{SavedProjectAdapter_8java}{Saved\-Project\-Adapter.\-java}\end{DoxyCompactItemize}

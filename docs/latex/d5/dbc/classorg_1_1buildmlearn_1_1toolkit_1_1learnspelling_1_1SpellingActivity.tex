@@ -1,0 +1,207 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity}{\section{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Activity Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity}\index{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Activity@{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Activity}}
+}
+
+
+Simulator code for Learn Spelling Template.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Activity\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{db/d2d/classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Activity\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dd6/classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity_a49e2bfcf6bfd1b88d792116273dc6b0b}{on\-Create\-View} (Layout\-Inflater inflater, View\-Group container, Bundle saved\-Instance\-State)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity_a733cf45defffb845f8537d561c78c066}{on\-Destroy} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity_a3b7204b92129f62ba713292e933fc738}{on\-Init} (int status)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity_a343f93e211750af42f3a5c147f93e03e}{submit} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Learn Spelling Template. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity_a49e2bfcf6bfd1b88d792116273dc6b0b}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Activity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Activity}!on\-Create\-View@{on\-Create\-View}}
+\index{on\-Create\-View@{on\-Create\-View}!org::buildmlearn::toolkit::learnspelling::SpellingActivity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Activity}}
+\subsubsection[{on\-Create\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Activity.\-on\-Create\-View (
+\begin{DoxyParamCaption}
+\item[{Layout\-Inflater}]{inflater, }
+\item[{View\-Group}]{container, }
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity_a49e2bfcf6bfd1b88d792116273dc6b0b}
+
+\begin{DoxyCode}
+72                                                                                                       \{
+73 
+74         view = inflater.inflate(R.layout.spelling\_fragment\_spelling, container, \textcolor{keyword}{false});
+75 
+76         mBtn\_Spell = (Button) view.findViewById(R.id.btn\_ready);
+77 
+78         mBtn\_Skip = (Button) view.findViewById(R.id.btn\_skip);
+79         mSb\_SpeechRate = (SeekBar) view.findViewById(R.id.sb\_speech);
+80 
+81         mTv\_WordNumber = (TextView) view.findViewById(R.id.tv\_word\_number);
+82         textToSpeech = \textcolor{keyword}{new} TextToSpeech(getActivity(), \textcolor{keyword}{this});
+83         mManager = DataManager.getInstance();
+84         mWordList = mManager.getList();
+85         count = mManager.getActiveWordCount();
+86         mTv\_WordNumber.setText(\textcolor{stringliteral}{"Word #"} + (count + 1) + \textcolor{stringliteral}{" of "}
+87                 + mWordList.size());
+88 
+89         view.findViewById(R.id.btn\_skip).setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+90             @Override
+91             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+92                 \textcolor{keywordflow}{if} (count < mWordList.size() - 1) \{
+93 
+94                     count++;
+95                     mManager.increaseCount();
+96                     mTv\_WordNumber.setText(\textcolor{stringliteral}{"Word #"} + (count + 1) + \textcolor{stringliteral}{" of "}
+97                             + mWordList.size());
+98                     mBtn\_Spell.setEnabled(\textcolor{keyword}{false});
+99                     mBtn\_Skip.setEnabled(\textcolor{keyword}{false});
+100                     mBtn\_Skip.setTextColor(Color.WHITE);
+101                     mBtn\_Spell.setTextColor(Color.WHITE);
+102                 \} \textcolor{keywordflow}{else} \{
+103                     getActivity().getFragmentManager().beginTransaction().replace(R.id.container, \textcolor{keyword}{new} 
+      ResultActivity()).addToBackStack(null).commit();
+104                 \}
+105             \}
+106         \});
+107         view.findViewById(R.id.btn\_speak).setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+108             @Override
+109             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+110                 convertTextToSpeech(mWordList.get(count).getWord());
+111                 mBtn\_Spell.setEnabled(\textcolor{keyword}{true});
+112                 mBtn\_Skip.setEnabled(\textcolor{keyword}{true});
+113                 mBtn\_Skip.setTextColor(Color.RED);
+114                 mBtn\_Spell.setTextColor(Color.GREEN);
+115             \}
+116         \});
+117         view.findViewById(R.id.btn\_ready).setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+118             @Override
+119             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+120                 LayoutInflater factory = LayoutInflater.from(getActivity());
+121                 \textcolor{keyword}{final} View textEntryView = factory.inflate(
+122                         R.layout.spelling\_dialog\_spellinginput, null);
+123                 Builder builder = \textcolor{keyword}{new} Builder(getActivity());
+124                 mAlert = builder.create();
+125                 mAlert.setCancelable(\textcolor{keyword}{true});
+126                 mAlert.setView(textEntryView, 10, 10, 10, 10);
+127                 \textcolor{keywordflow}{if} (mAlert != null && !mAlert.isShowing()) \{
+128                     mAlert.show();
+129                 \}
+130                 mEt\_Spelling = (EditText) mAlert.findViewById(R.id.et\_spelling);
+131                 Button mBtn\_Submit = (Button) mAlert.findViewById(R.id.btn\_submit);
+132                 mBtn\_Submit.setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+133 
+134                     @Override
+135                     \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+136                         \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity_a343f93e211750af42f3a5c147f93e03e}{submit}();
+137                     \}
+138                 \});
+139             \}
+140         \});
+141 
+142         \textcolor{keywordflow}{return} view;
+143     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity_a733cf45defffb845f8537d561c78c066}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Activity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Activity}!on\-Destroy@{on\-Destroy}}
+\index{on\-Destroy@{on\-Destroy}!org::buildmlearn::toolkit::learnspelling::SpellingActivity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Activity}}
+\subsubsection[{on\-Destroy}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Activity.\-on\-Destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity_a733cf45defffb845f8537d561c78c066}
+Releases the resources used by the Text\-To\-Speech engine. It is good practice for instance to call this method in the \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity_a733cf45defffb845f8537d561c78c066}{on\-Destroy()} method of an Activity so the Text\-To\-Speech engine can be cleanly stopped.
+
+\begin{DoxySeeAlso}{See Also}
+android.\-app.\-Activity\-::on\-Destroy() 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}
+154                             \{
+155         super.onDestroy();
+156         textToSpeech.shutdown();
+157     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity_a3b7204b92129f62ba713292e933fc738}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Activity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Activity}!on\-Init@{on\-Init}}
+\index{on\-Init@{on\-Init}!org::buildmlearn::toolkit::learnspelling::SpellingActivity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Activity}}
+\subsubsection[{on\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Activity.\-on\-Init (
+\begin{DoxyParamCaption}
+\item[{int}]{status}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity_a3b7204b92129f62ba713292e933fc738}
+
+\begin{DoxyCode}
+172                                    \{
+173         \textcolor{keywordflow}{if} (status == TextToSpeech.SUCCESS) \{
+174             \textcolor{keywordtype}{int} result = textToSpeech.setLanguage(Locale.US);
+175             \textcolor{keywordflow}{if} (result == TextToSpeech.LANG\_MISSING\_DATA
+176                     || result == TextToSpeech.LANG\_NOT\_SUPPORTED) \{
+177                 Log.e(\textcolor{stringliteral}{"error"}, \textcolor{stringliteral}{"This Language is not supported"});
+178             \}
+179         \} \textcolor{keywordflow}{else} \{
+180             Log.e(\textcolor{stringliteral}{"error"}, \textcolor{stringliteral}{"Initilization Failed!"});
+181         \}
+182     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity_a343f93e211750af42f3a5c147f93e03e}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Activity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Activity}!submit@{submit}}
+\index{submit@{submit}!org::buildmlearn::toolkit::learnspelling::SpellingActivity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Spelling\-Activity}}
+\subsubsection[{submit}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-learnspelling.\-Spelling\-Activity.\-submit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1SpellingActivity_a343f93e211750af42f3a5c147f93e03e}
+
+\begin{DoxyCode}
+184                          \{
+185         String input = mEt\_Spelling.getText().toString().trim();
+186         \textcolor{keywordflow}{if} (input == null || input.length() == 0) \{
+187             Toast.makeText(getActivity(), \textcolor{stringliteral}{"Please enter the spelling"},
+188                     Toast.LENGTH\_SHORT).show();
+189 
+190         \} \textcolor{keywordflow}{else} \{
+191             mAlert.dismiss();
+192             \textcolor{keywordtype}{boolean} isCorrect = \textcolor{keyword}{false};
+193             \textcolor{keywordflow}{if} (mEt\_Spelling.getText().toString()
+194                     .equalsIgnoreCase(mWordList.get(count).getWord())) \{
+195                 isCorrect = \textcolor{keyword}{true};
+196                 mManager.incrementCorrect();
+197             \} \textcolor{keywordflow}{else} \{
+198                 mManager.incrementWrong();
+199             \}
+200 
+201             getActivity().getFragmentManager().beginTransaction().replace(R.id.container, 
+      WordInfoActivity.newInstance(isCorrect, count, input)).addToBackStack(null).commit();
+202 
+203         \}
+204     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/learnspelling/\hyperlink{SpellingActivity_8java}{Spelling\-Activity.\-java}\end{DoxyCompactItemize}

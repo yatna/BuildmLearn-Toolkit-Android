@@ -1,0 +1,108 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1TFTFragment}{\section{org.\-buildmlearn.\-toolkit.\-infotemplate.\-T\-F\-T\-Fragment Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1TFTFragment}\index{org.\-buildmlearn.\-toolkit.\-infotemplate.\-T\-F\-T\-Fragment@{org.\-buildmlearn.\-toolkit.\-infotemplate.\-T\-F\-T\-Fragment}}
+}
+
+
+Simulator code for Info Template.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-infotemplate.\-T\-F\-T\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{db/de4/classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1TFTFragment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-infotemplate.\-T\-F\-T\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{da/de1/classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1TFTFragment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1TFTFragment_a4a4867cab61afa60ca86661876849ec1}{on\-View\-Created} (View view, Bundle saved\-Instance\-State)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1TFTFragment_aac170e3f71bbcbb03c445c6afc5c43e0}{on\-List\-Item\-Click} (List\-View l, View v, int position, long id)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Fragment \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1TFTFragment_a519c0a4b7f3645327c1dff061d6c1226}{new\-Instance} (String path)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Info Template. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1TFTFragment_a519c0a4b7f3645327c1dff061d6c1226}{\index{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-T\-F\-T\-Fragment@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-T\-F\-T\-Fragment}!new\-Instance@{new\-Instance}}
+\index{new\-Instance@{new\-Instance}!org::buildmlearn::toolkit::infotemplate::TFTFragment@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-T\-F\-T\-Fragment}}
+\subsubsection[{new\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static Fragment org.\-buildmlearn.\-toolkit.\-infotemplate.\-T\-F\-T\-Fragment.\-new\-Instance (
+\begin{DoxyParamCaption}
+\item[{String}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1TFTFragment_a519c0a4b7f3645327c1dff061d6c1226}
+
+\begin{DoxyCode}
+46                                                     \{
+47         TFTFragment fragment = \textcolor{keyword}{new} TFTFragment();
+48         Bundle bundle = \textcolor{keyword}{new} Bundle();
+49         bundle.putString(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a5e8ea6ec23e727cbfc84e5b854ae311c}{Constants.SIMULATOR\_FILE\_PATH}, path);
+50         fragment.setArguments(bundle);
+51         \textcolor{keywordflow}{return} fragment;
+52     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1TFTFragment_aac170e3f71bbcbb03c445c6afc5c43e0}{\index{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-T\-F\-T\-Fragment@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-T\-F\-T\-Fragment}!on\-List\-Item\-Click@{on\-List\-Item\-Click}}
+\index{on\-List\-Item\-Click@{on\-List\-Item\-Click}!org::buildmlearn::toolkit::infotemplate::TFTFragment@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-T\-F\-T\-Fragment}}
+\subsubsection[{on\-List\-Item\-Click}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-infotemplate.\-T\-F\-T\-Fragment.\-on\-List\-Item\-Click (
+\begin{DoxyParamCaption}
+\item[{List\-View}]{l, }
+\item[{View}]{v, }
+\item[{int}]{position, }
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1TFTFragment_aac170e3f71bbcbb03c445c6afc5c43e0}
+
+\begin{DoxyCode}
+68                                                                            \{
+69 
+70         getActivity().getFragmentManager().beginTransaction().replace(R.id.container, 
+      DetailView.newInstance(position)).addToBackStack(null).commit();
+71     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1TFTFragment_a4a4867cab61afa60ca86661876849ec1}{\index{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-T\-F\-T\-Fragment@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-T\-F\-T\-Fragment}!on\-View\-Created@{on\-View\-Created}}
+\index{on\-View\-Created@{on\-View\-Created}!org::buildmlearn::toolkit::infotemplate::TFTFragment@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-T\-F\-T\-Fragment}}
+\subsubsection[{on\-View\-Created}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-infotemplate.\-T\-F\-T\-Fragment.\-on\-View\-Created (
+\begin{DoxyParamCaption}
+\item[{View}]{view, }
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1TFTFragment_a4a4867cab61afa60ca86661876849ec1}
+
+\begin{DoxyCode}
+55                                                                     \{
+56         GlobalData gd = GlobalData.getInstance();
+57         gd.readXml(getArguments().getString(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a5e8ea6ec23e727cbfc84e5b854ae311c}{Constants.SIMULATOR\_FILE\_PATH}));
+58         InfoListAdapter adapter = \textcolor{keyword}{new} InfoListAdapter(getActivity());
+59         setListAdapter(adapter);
+60         setEmptyText(\textcolor{stringliteral}{"No Data"});
+61         getListView().setBackgroundColor(getResources().getColor(R.color.info\_template\_blue\_background));
+62         adapter.setList(gd.mList);
+63 
+64 
+65     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/infotemplate/\hyperlink{TFTFragment_8java}{T\-F\-T\-Fragment.\-java}\end{DoxyCompactItemize}

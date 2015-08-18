@@ -1,0 +1,152 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1HomeActivity}{\section{org.\-buildmlearn.\-toolkit.\-activity.\-Home\-Activity Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1HomeActivity}\index{org.\-buildmlearn.\-toolkit.\-activity.\-Home\-Activity@{org.\-buildmlearn.\-toolkit.\-activity.\-Home\-Activity}}
+}
+
+
+Home screen of the application containg all the menus and settings.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-activity.\-Home\-Activity\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d80/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1HomeActivity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-activity.\-Home\-Activity\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d43/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1HomeActivity__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1HomeActivity_af75c80f626f8c3a7141c046108ff229f}{on\-Navigation\-Drawer\-Item\-Selected} (int position)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1HomeActivity_acd6a4343ee19b57250586b50bcafe8ae}{restore\-Action\-Bar} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1HomeActivity_a84a92cce3842759b4e3c18ecefbe2ced}{on\-Create} (Bundle saved\-Instance\-State)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Home screen of the application containg all the menus and settings. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1HomeActivity_a84a92cce3842759b4e3c18ecefbe2ced}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Home\-Activity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Home\-Activity}!on\-Create@{on\-Create}}
+\index{on\-Create@{on\-Create}!org::buildmlearn::toolkit::activity::HomeActivity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Home\-Activity}}
+\subsubsection[{on\-Create}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Home\-Activity.\-on\-Create (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1HomeActivity_a84a92cce3842759b4e3c18ecefbe2ced}
+
+\begin{DoxyCode}
+43                                                        \{
+44         super.onCreate(savedInstanceState);
+45 
+46         Fabric.with(\textcolor{keyword}{this}, \textcolor{keyword}{new} Crashlytics());
+47 
+48         setContentView(R.layout.activity\_home);
+49         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+50 
+51         mNavigationDrawerFragment = (NavigationDrawerFragment)
+52                 getSupportFragmentManager().findFragmentById(R.id.navigation\_drawer);
+53         mTitle = getTitle();
+54 
+55         \textcolor{comment}{// Set up the drawer.}
+56         mNavigationDrawerFragment.setUp(
+57                 R.id.navigation\_drawer,
+58                 (DrawerLayout) findViewById(R.id.drawer\_layout));
+59 
+60     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1HomeActivity_af75c80f626f8c3a7141c046108ff229f}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Home\-Activity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Home\-Activity}!on\-Navigation\-Drawer\-Item\-Selected@{on\-Navigation\-Drawer\-Item\-Selected}}
+\index{on\-Navigation\-Drawer\-Item\-Selected@{on\-Navigation\-Drawer\-Item\-Selected}!org::buildmlearn::toolkit::activity::HomeActivity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Home\-Activity}}
+\subsubsection[{on\-Navigation\-Drawer\-Item\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Home\-Activity.\-on\-Navigation\-Drawer\-Item\-Selected (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1HomeActivity_af75c80f626f8c3a7141c046108ff229f}
+Called when an item in the navigation drawer is selected. 
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1NavigationDrawerFragment_1_1NavigationDrawerCallbacks_a6068a4dec53d00ec47c222f995064e6c}{org.\-buildmlearn.\-toolkit.\-fragment.\-Navigation\-Drawer\-Fragment.\-Navigation\-Drawer\-Callbacks}.
+
+
+\begin{DoxyCode}
+66                                                              \{
+67         Section[] menuItem = Section.values();
+68         Section selectedMenuItem = menuItem[position];
+69         \textcolor{keywordflow}{if} (selectedMenuItem.getType() == \hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Section_a9afae152c2f7c91883417b9de909da27}{Section.ACTIVITY}) \{
+70             Class<?> c;
+71             \textcolor{keywordflow}{if} (selectedMenuItem.getViewName() != null) \{
+72                 \textcolor{keywordflow}{try} \{
+73                     c = Class.forName(selectedMenuItem.getViewName());
+74                     Intent intent = \textcolor{keyword}{new} Intent(\textcolor{keyword}{this}, c);
+75                     startActivity(intent);
+76 
+77                 \} \textcolor{keywordflow}{catch} (ClassNotFoundException e) \{
+78                     Toast.makeText(\textcolor{keyword}{this}, e.getLocalizedMessage(), Toast.LENGTH\_LONG).show();
+79                     e.printStackTrace();
+80                 \}
+81             \}
+82         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (selectedMenuItem.getType() == \hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Section_a536f7f08eb441bb4af16270238999cc4}{Section.FRAGMENT}) \{
+83             \textcolor{keywordflow}{if} (currentSection == null || selectedMenuItem != currentSection) \{
+84                 currentSection = selectedMenuItem;
+85                 FragmentManager fm = getFragmentManager();
+86                 FragmentTransaction ft = fm.beginTransaction().setTransition(FragmentTransaction.
+      TRANSIT\_FRAGMENT\_FADE);
+87                 Fragment f = fm.findFragmentById(R.id.container);
+88                 \textcolor{keywordflow}{if} (f != null) \{
+89                     \textcolor{keywordflow}{if} (currentSection.\hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Section_ae9b75c2d499a28b4aa0ee59fa73810f2}{isKeep}()) \{
+90                         ft.detach(f);
+91                     \} \textcolor{keywordflow}{else} \{
+92                         ft.remove(f);
+93                     \}
+94                 \}
+95                 String fragmentClassName = currentSection.getViewName();
+96                 \textcolor{keywordflow}{if} (currentSection.\hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Section_ae9b75c2d499a28b4aa0ee59fa73810f2}{isKeep}() && ((f = fm.findFragmentByTag(fragmentClassName)) != null
+      )) \{
+97                     ft.attach(f);
+98                 \} \textcolor{keywordflow}{else} \{
+99                     f = Fragment.instantiate(\textcolor{keyword}{this}, fragmentClassName);
+100                     ft.add(R.id.container, f, fragmentClassName);
+101                 \}
+102                 ft.commit();
+103 
+104 
+105             \}
+106         \}
+107     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1HomeActivity_acd6a4343ee19b57250586b50bcafe8ae}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Home\-Activity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Home\-Activity}!restore\-Action\-Bar@{restore\-Action\-Bar}}
+\index{restore\-Action\-Bar@{restore\-Action\-Bar}!org::buildmlearn::toolkit::activity::HomeActivity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Home\-Activity}}
+\subsubsection[{restore\-Action\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Home\-Activity.\-restore\-Action\-Bar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1HomeActivity_acd6a4343ee19b57250586b50bcafe8ae}
+
+\begin{DoxyCode}
+110                                    \{
+111         ActionBar actionBar = getSupportActionBar();
+112         actionBar.setDisplayShowTitleEnabled(\textcolor{keyword}{true});
+113         actionBar.setTitle(mTitle);
+114     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/activity/\hyperlink{HomeActivity_8java}{Home\-Activity.\-java}\end{DoxyCompactItemize}

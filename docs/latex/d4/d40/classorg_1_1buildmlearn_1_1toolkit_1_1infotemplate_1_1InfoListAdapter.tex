@@ -1,0 +1,163 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter}{\section{org.\-buildmlearn.\-toolkit.\-infotemplate.\-Info\-List\-Adapter Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter}\index{org.\-buildmlearn.\-toolkit.\-infotemplate.\-Info\-List\-Adapter@{org.\-buildmlearn.\-toolkit.\-infotemplate.\-Info\-List\-Adapter}}
+}
+
+
+Simulator code for Info Template.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-infotemplate.\-Info\-List\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{d4/d3d/classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-infotemplate.\-Info\-List\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{dc/d24/classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_1_1ViewHolder}{View\-Holder}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_a49ce5d5591a6c9a0259400029d9f9e95}{Info\-List\-Adapter} (Context context)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_a4340ea288f1a3992c6bcb81ee26a7ca3}{set\-List} (Array\-List$<$ \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoModel}{Info\-Model} $>$ list)
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_a24d1690e5fc525192391f448b373adf1}{get\-Count} ()
+\item 
+Object \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_ad2f2a34607cefa59eb5fcbbe950a9e97}{get\-Item} (int position)
+\item 
+long \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_a28df124e7c7e7afcb01cb533b3156567}{get\-Item\-Id} (int position)
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_ab16cce97943f53f33bbb5dc9337b756b}{get\-View} (final int position, View convert\-View, View\-Group parent)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Info Template. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_a49ce5d5591a6c9a0259400029d9f9e95}{\index{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter}!Info\-List\-Adapter@{Info\-List\-Adapter}}
+\index{Info\-List\-Adapter@{Info\-List\-Adapter}!org::buildmlearn::toolkit::infotemplate::InfoListAdapter@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter}}
+\subsubsection[{Info\-List\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-infotemplate.\-Info\-List\-Adapter.\-Info\-List\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Context}]{context}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_a49ce5d5591a6c9a0259400029d9f9e95}
+
+\begin{DoxyCode}
+22                                             \{
+23         mList = \textcolor{keyword}{new} ArrayList<InfoModel>();
+24         mContext = context;
+25     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_a24d1690e5fc525192391f448b373adf1}{\index{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter}!get\-Count@{get\-Count}}
+\index{get\-Count@{get\-Count}!org::buildmlearn::toolkit::infotemplate::InfoListAdapter@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter}}
+\subsubsection[{get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-infotemplate.\-Info\-List\-Adapter.\-get\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_a24d1690e5fc525192391f448b373adf1}
+
+\begin{DoxyCode}
+34                           \{
+35         \textcolor{keywordflow}{return} mList.size();
+36     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_ad2f2a34607cefa59eb5fcbbe950a9e97}{\index{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter}!get\-Item@{get\-Item}}
+\index{get\-Item@{get\-Item}!org::buildmlearn::toolkit::infotemplate::InfoListAdapter@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter}}
+\subsubsection[{get\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-buildmlearn.\-toolkit.\-infotemplate.\-Info\-List\-Adapter.\-get\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_ad2f2a34607cefa59eb5fcbbe950a9e97}
+
+\begin{DoxyCode}
+39                                         \{
+40         \textcolor{keywordflow}{return} mList.get(position);
+41     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_a28df124e7c7e7afcb01cb533b3156567}{\index{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter}!get\-Item\-Id@{get\-Item\-Id}}
+\index{get\-Item\-Id@{get\-Item\-Id}!org::buildmlearn::toolkit::infotemplate::InfoListAdapter@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter}}
+\subsubsection[{get\-Item\-Id}]{\setlength{\rightskip}{0pt plus 5cm}long org.\-buildmlearn.\-toolkit.\-infotemplate.\-Info\-List\-Adapter.\-get\-Item\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_a28df124e7c7e7afcb01cb533b3156567}
+
+\begin{DoxyCode}
+44                                         \{
+45         \textcolor{keywordflow}{return} position;
+46     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_ab16cce97943f53f33bbb5dc9337b756b}{\index{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter}!get\-View@{get\-View}}
+\index{get\-View@{get\-View}!org::buildmlearn::toolkit::infotemplate::InfoListAdapter@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter}}
+\subsubsection[{get\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-infotemplate.\-Info\-List\-Adapter.\-get\-View (
+\begin{DoxyParamCaption}
+\item[{final int}]{position, }
+\item[{View}]{convert\-View, }
+\item[{View\-Group}]{parent}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_ab16cce97943f53f33bbb5dc9337b756b}
+
+\begin{DoxyCode}
+49                                                                                 \{
+50         ViewHolder holder = null;
+51         \textcolor{keywordflow}{if} (convertView == null) \{
+52 
+53             LayoutInflater inflater = LayoutInflater.from(mContext);
+54             convertView = inflater.inflate(R.layout.info\_template\_app\_list\_item, parent,
+55                     \textcolor{keyword}{false});
+56 
+57             holder = \textcolor{keyword}{new} ViewHolder();
+58             holder.mTvInfoObject = (TextView) convertView
+59                     .findViewById(R.id.tv\_info\_object);
+60             convertView.setTag(holder);
+61 
+62         \} \textcolor{keywordflow}{else} \{
+63             holder = (ViewHolder) convertView.getTag();
+64         \}
+65         holder.mTvInfoObject.setTag(R.id.tv\_info\_object);
+66         holder.mTvInfoObject.setText(mList.get(position).getInfo\_object());
+67 
+68         \textcolor{keywordflow}{return} convertView;
+69     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_a4340ea288f1a3992c6bcb81ee26a7ca3}{\index{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter}!set\-List@{set\-List}}
+\index{set\-List@{set\-List}!org::buildmlearn::toolkit::infotemplate::InfoListAdapter@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Info\-List\-Adapter}}
+\subsubsection[{set\-List}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-infotemplate.\-Info\-List\-Adapter.\-set\-List (
+\begin{DoxyParamCaption}
+\item[{Array\-List$<$ {\bf Info\-Model} $>$}]{list}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter_a4340ea288f1a3992c6bcb81ee26a7ca3}
+
+\begin{DoxyCode}
+27                                                    \{
+28         mList = list;
+29         this.notifyDataSetChanged();
+30 
+31     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/infotemplate/\hyperlink{InfoListAdapter_8java}{Info\-List\-Adapter.\-java}\end{DoxyCompactItemize}

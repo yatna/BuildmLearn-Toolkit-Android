@@ -1,0 +1,108 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1AboutBuildmLearn}{\section{org.\-buildmlearn.\-toolkit.\-activity.\-About\-Buildm\-Learn Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1AboutBuildmLearn}\index{org.\-buildmlearn.\-toolkit.\-activity.\-About\-Buildm\-Learn@{org.\-buildmlearn.\-toolkit.\-activity.\-About\-Buildm\-Learn}}
+}
+
+
+Gives brief info about Buildm\-Learn community and toolkit.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-activity.\-About\-Buildm\-Learn\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{d1/dc1/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1AboutBuildmLearn__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-activity.\-About\-Buildm\-Learn\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{da/d3d/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1AboutBuildmLearn__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1AboutBuildmLearn_aae36faad42229bef35356768eb2456ea}{on\-Create\-Options\-Menu} (Menu menu)
+\item 
+boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1AboutBuildmLearn_adb420eeaf2bf93bff38b52f19bc16b31}{on\-Options\-Item\-Selected} (Menu\-Item item)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1AboutBuildmLearn_af8c59cecea3366aea895a28331d01e9b}{on\-Create} (Bundle saved\-Instance\-State)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gives brief info about Buildm\-Learn community and toolkit. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1AboutBuildmLearn_af8c59cecea3366aea895a28331d01e9b}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-About\-Buildm\-Learn@{org\-::buildmlearn\-::toolkit\-::activity\-::\-About\-Buildm\-Learn}!on\-Create@{on\-Create}}
+\index{on\-Create@{on\-Create}!org::buildmlearn::toolkit::activity::AboutBuildmLearn@{org\-::buildmlearn\-::toolkit\-::activity\-::\-About\-Buildm\-Learn}}
+\subsubsection[{on\-Create}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-About\-Buildm\-Learn.\-on\-Create (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1AboutBuildmLearn_af8c59cecea3366aea895a28331d01e9b}
+
+\begin{DoxyCode}
+20                                                        \{
+21         super.onCreate(savedInstanceState);
+22         setContentView(R.layout.activity\_about\_buildm\_learn);
+23 
+24         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+25         getSupportActionBar().setDisplayHomeAsUpEnabled(\textcolor{keyword}{true});
+26 
+27 
+28     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1AboutBuildmLearn_aae36faad42229bef35356768eb2456ea}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-About\-Buildm\-Learn@{org\-::buildmlearn\-::toolkit\-::activity\-::\-About\-Buildm\-Learn}!on\-Create\-Options\-Menu@{on\-Create\-Options\-Menu}}
+\index{on\-Create\-Options\-Menu@{on\-Create\-Options\-Menu}!org::buildmlearn::toolkit::activity::AboutBuildmLearn@{org\-::buildmlearn\-::toolkit\-::activity\-::\-About\-Buildm\-Learn}}
+\subsubsection[{on\-Create\-Options\-Menu}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-buildmlearn.\-toolkit.\-activity.\-About\-Buildm\-Learn.\-on\-Create\-Options\-Menu (
+\begin{DoxyParamCaption}
+\item[{Menu}]{menu}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1AboutBuildmLearn_aae36faad42229bef35356768eb2456ea}
+
+\begin{DoxyCode}
+34                                                   \{
+35         \textcolor{comment}{// Inflate the menu; this adds items to the action bar if it is present.}
+36         getMenuInflater().inflate(R.menu.menu\_about\_buildm\_learn, menu);
+37         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+38     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1AboutBuildmLearn_adb420eeaf2bf93bff38b52f19bc16b31}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-About\-Buildm\-Learn@{org\-::buildmlearn\-::toolkit\-::activity\-::\-About\-Buildm\-Learn}!on\-Options\-Item\-Selected@{on\-Options\-Item\-Selected}}
+\index{on\-Options\-Item\-Selected@{on\-Options\-Item\-Selected}!org::buildmlearn::toolkit::activity::AboutBuildmLearn@{org\-::buildmlearn\-::toolkit\-::activity\-::\-About\-Buildm\-Learn}}
+\subsubsection[{on\-Options\-Item\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-buildmlearn.\-toolkit.\-activity.\-About\-Buildm\-Learn.\-on\-Options\-Item\-Selected (
+\begin{DoxyParamCaption}
+\item[{Menu\-Item}]{item}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1AboutBuildmLearn_adb420eeaf2bf93bff38b52f19bc16b31}
+
+\begin{DoxyCode}
+44                                                         \{
+45         \textcolor{comment}{// Handle action bar item clicks here. The action bar will}
+46         \textcolor{comment}{// automatically handle clicks on the Home/Up button, so long}
+47         \textcolor{comment}{// as you specify a parent activity in AndroidManifest.xml.}
+48         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = item.getItemId();
+49 
+50         \textcolor{comment}{//noinspection SimplifiableIfStatement}
+51         \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == R.id.action\_settings) \{
+52             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+53         \}
+54 
+55         \textcolor{keywordflow}{return} super.onOptionsItemSelected(item);
+56     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/activity/\hyperlink{AboutBuildmLearn_8java}{About\-Buildm\-Learn.\-java}\end{DoxyCompactItemize}

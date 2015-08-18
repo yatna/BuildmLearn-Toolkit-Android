@@ -1,0 +1,582 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate}{\section{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate}\index{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template@{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template}}
+}
+
+
+Flash Card template code implementing methods of Template\-Interface.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d4/de9/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d0b/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a93eca3908cf039e1fa37e0408d0f4837}{Flash\-Template} ()
+\item 
+Base\-Adapter \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ad524e69199d8435959cf348558039b2d}{new\-Template\-Editor\-Adapter} (Context context)
+\begin{DoxyCompactList}\small\item\em Called from Template Editor when template editor is started for creating a new template project. \end{DoxyCompactList}\item 
+Base\-Adapter \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a70db96b6e7ec5e339fe106fc15d64860}{current\-Template\-Editor\-Adapter} ()
+\begin{DoxyCompactList}\small\item\em This function is used to get the adapter (containing template data) for a existing/current template project. \end{DoxyCompactList}\item 
+Base\-Adapter \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_aeee0f28447c5d3c1d5c7c4ef8bb2ae3e}{load\-Project\-Template\-Editor} (Context context, Array\-List$<$ Element $>$ data)
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ada55d7e95306576dd3a2f30183c3fc1e}{on\-Attach} ()
+\begin{DoxyCompactList}\small\item\em Called from Template\-Editor whenever a template is attached to Template\-Editor. \end{DoxyCompactList}\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_aed263c384b73d5d700e4144a97007245}{get\-Title} ()
+\begin{DoxyCompactList}\small\item\em Used to get the title of the templaye. Mainly used to update Action\-Bar in Template Editor. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a21bb61da956f40b08ae38bedb329639f}{add\-Item} (final Activity activity)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a45c5c7e833289f94be4f8f6f4034df42}{edit\-Item} (final Activity activity, int position)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a16cd72fbce16660fffb9381a2333d239}{delete\-Item} (int position)
+\begin{DoxyCompactList}\small\item\em Remove an item form template data list. \end{DoxyCompactList}\item 
+Array\-List$<$ Element $>$ \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_adac9ece8aeee9a46cd8b7ac97ba9aab0}{get\-Items} (Document doc)
+\item 
+Fragment \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ac30d95d8c0304ba6ca3735c2e97fd410}{get\-Simulator\-Fragment} (String file\-Path\-With\-Name)
+\begin{DoxyCompactList}\small\item\em Returns a fragment required for the Simulator Activity. \end{DoxyCompactList}\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_af05e9dceb6edcdd2ca6f3099a3ce2018}{get\-Assets\-File\-Name} ()
+\begin{DoxyCompactList}\small\item\em Name of the xml file congaing template data in the assets folders in the build apk. \end{DoxyCompactList}\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a081b149001c8d3829f6d5e81e0b80113}{get\-Assets\-File\-Path} ()
+\begin{DoxyCompactList}\small\item\em Folder path in which the apk is stored in the build A\-P\-K. \end{DoxyCompactList}\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ae0ed657e20c9619afcd89bd624deb888}{get\-Apk\-File\-Path} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a94a03d343059afa3914559725d911818}{on\-Activity\-Result} (Context context, int request\-Code, int result\-Code, Intent intent)
+\begin{DoxyCompactList}\small\item\em Called whenever on\-Activity\-Result is called in Template Editor. Can be used to perform action related to intent and callbacks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Flash Card template code implementing methods of Template\-Interface. 
+
+Created by abhishek on 11/07/15 at 7\-:33 P\-M. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a93eca3908cf039e1fa37e0408d0f4837}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!Flash\-Template@{Flash\-Template}}
+\index{Flash\-Template@{Flash\-Template}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{Flash\-Template}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-Flash\-Template (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a93eca3908cf039e1fa37e0408d0f4837}
+
+\begin{DoxyCode}
+50                            \{
+51         mData = \textcolor{keyword}{new} ArrayList<>();
+52     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a21bb61da956f40b08ae38bedb329639f}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!add\-Item@{add\-Item}}
+\index{add\-Item@{add\-Item}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{add\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-add\-Item (
+\begin{DoxyParamCaption}
+\item[{final Activity}]{activity}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a21bb61da956f40b08ae38bedb329639f}
+
+\begin{DoxyCode}
+93                                                  \{
+94 
+95         mIsPhotoAttached = \textcolor{keyword}{false};
+96 
+97         \textcolor{keyword}{final} MaterialDialog dialog = \textcolor{keyword}{new} MaterialDialog.Builder(activity)
+98                 .title(R.string.info\_add\_new\_title)
+99                 .customView(R.layout.flash\_dialog\_add\_edit\_item, \textcolor{keyword}{true})
+100                 .positiveText(R.string.info\_template\_add)
+101                 .negativeText(R.string.info\_template\_delete)
+102                 .build();
+103 
+104         \textcolor{keyword}{final} EditText question = (EditText) dialog.findViewById(R.id.flash\_question);
+105         \textcolor{keyword}{final} EditText answer = (EditText) dialog.findViewById(R.id.flash\_answer);
+106         \textcolor{keyword}{final} EditText answerHint = (EditText) dialog.findViewById(R.id.flash\_hint);
+107 
+108 
+109         mBannerImage = (ImageView) dialog.findViewById(R.id.banner\_image);
+110 
+111         \textcolor{keyword}{final} ImageView uploadButton = (ImageView) dialog.findViewById(R.id.flash\_upload\_image);
+112         uploadButton.setOnTouchListener(\textcolor{keyword}{new} View.OnTouchListener() \{
+113             @Override
+114             \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} onTouch(View v, MotionEvent event) \{
+115                 \textcolor{keywordflow}{if} (event.getAction() == MotionEvent.ACTION\_DOWN) \{
+116                     uploadButton.setImageResource(R.drawable.upload\_button\_presses);
+117                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (event.getAction() == MotionEvent.ACTION\_UP) \{
+118                     uploadButton.setImageResource(R.drawable.upload\_button);
+119                     Intent photoPickerIntent = makePhotoIntent(activity.getString(R.string.
+      flash\_photo\_source), activity);
+120                     activity.startActivityForResult(photoPickerIntent, REQUEST\_TAKE\_PHOTO);
+121                 \}
+122                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+123             \}
+124         \});
+125 
+126         uploadButton.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+127             @Override
+128             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+129 
+130             \}
+131         \});
+132 
+133         dialog.getActionButton(DialogAction.POSITIVE).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+134             @Override
+135             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+136 
+137                 \textcolor{keywordflow}{if} (validateData(question, answer, answerHint, activity)) \{
+138                     dialog.dismiss();
+139                     Bitmap bitmap = ((BitmapDrawable) mBannerImage.getDrawable()).getBitmap();
+140                     String questionText = question.getText().toString();
+141                     String answerText = answer.getText().toString();
+142                     String hintText = answerHint.getText().toString();
+143                     mData.add(\textcolor{keyword}{new} FlashCardModel(questionText, answerText, hintText, bitmap));
+144                     mAdapter.notifyDataSetChanged();
+145                 \}
+146 
+147             \}
+148         \});
+149 
+150         dialog.show();
+151     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a70db96b6e7ec5e339fe106fc15d64860}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!current\-Template\-Editor\-Adapter@{current\-Template\-Editor\-Adapter}}
+\index{current\-Template\-Editor\-Adapter@{current\-Template\-Editor\-Adapter}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{current\-Template\-Editor\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Adapter org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-current\-Template\-Editor\-Adapter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a70db96b6e7ec5e339fe106fc15d64860}
+
+
+This function is used to get the adapter (containing template data) for a existing/current template project. 
+
+\begin{DoxyReturn}{Returns}
+Base\-Adapter inherited Object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ae433eedc291006e78b65b0fc4135d560}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+62                                                       \{
+63         \textcolor{keywordflow}{return} mAdapter;
+64     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a16cd72fbce16660fffb9381a2333d239}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!delete\-Item@{delete\-Item}}
+\index{delete\-Item@{delete\-Item}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{delete\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-delete\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a16cd72fbce16660fffb9381a2333d239}
+
+
+Remove an item form template data list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position of the item to be removed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_aeb65a5ef72b939c20b24cd7c02a80a97}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+243                                          \{
+244         mData.remove(position);
+245         mAdapter.notifyDataSetChanged();
+246     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a45c5c7e833289f94be4f8f6f4034df42}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!edit\-Item@{edit\-Item}}
+\index{edit\-Item@{edit\-Item}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{edit\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-edit\-Item (
+\begin{DoxyParamCaption}
+\item[{final Activity}]{activity, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a45c5c7e833289f94be4f8f6f4034df42}
+
+\begin{DoxyCode}
+155                                                                 \{
+156         mIsPhotoAttached = \textcolor{keyword}{true};
+157 
+158         FlashCardModel data = mData.get(position);
+159 
+160         \textcolor{keyword}{final} MaterialDialog dialog = \textcolor{keyword}{new} MaterialDialog.Builder(activity)
+161                 .title(R.string.info\_add\_new\_title)
+162                 .customView(R.layout.flash\_dialog\_add\_edit\_item, \textcolor{keyword}{true})
+163                 .positiveText(R.string.info\_template\_add)
+164                 .negativeText(R.string.info\_template\_delete)
+165                 .build();
+166 
+167         \textcolor{keyword}{final} EditText question = (EditText) dialog.findViewById(R.id.flash\_question);
+168         \textcolor{keyword}{final} EditText answer = (EditText) dialog.findViewById(R.id.flash\_answer);
+169         \textcolor{keyword}{final} EditText answerHint = (EditText) dialog.findViewById(R.id.flash\_hint);
+170 
+171         question.setText(data.getQuestion());
+172         answer.setText(data.getAnswer());
+173         answerHint.setText(data.getHint());
+174 
+175         mBannerImage = (ImageView) dialog.findViewById(R.id.banner\_image);
+176         mBannerImage.setImageBitmap(data.getImageBitmap());
+177 
+178         \textcolor{keyword}{final} ImageView uploadButton = (ImageView) dialog.findViewById(R.id.flash\_upload\_image);
+179         uploadButton.setOnTouchListener(\textcolor{keyword}{new} View.OnTouchListener() \{
+180             @Override
+181             \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} onTouch(View v, MotionEvent event) \{
+182                 \textcolor{keywordflow}{if} (event.getAction() == MotionEvent.ACTION\_DOWN) \{
+183                     uploadButton.setImageResource(R.drawable.upload\_button\_presses);
+184                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (event.getAction() == MotionEvent.ACTION\_UP) \{
+185                     uploadButton.setImageResource(R.drawable.upload\_button);
+186                     Intent photoPickerIntent = makePhotoIntent(activity.getString(R.string.
+      flash\_photo\_source), activity);
+187                     activity.startActivityForResult(photoPickerIntent, REQUEST\_TAKE\_PHOTO);
+188                 \}
+189                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+190             \}
+191         \});
+192 
+193         uploadButton.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+194             @Override
+195             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+196 
+197             \}
+198         \});
+199 
+200         dialog.getActionButton(DialogAction.POSITIVE).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+201             @Override
+202             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+203 
+204                 \textcolor{keywordflow}{if} (validateData(question, answer, answerHint, activity)) \{
+205                     dialog.dismiss();
+206                     Bitmap bitmap = ((BitmapDrawable) mBannerImage.getDrawable()).getBitmap();
+207                     String questionText = question.getText().toString();
+208                     String answerText = answer.getText().toString();
+209                     String hintText = answerHint.getText().toString();
+210                     mData.add(\textcolor{keyword}{new} FlashCardModel(questionText, answerText, hintText, bitmap));
+211                     mAdapter.notifyDataSetChanged();
+212                 \}
+213 
+214             \}
+215         \});
+216 
+217         dialog.show();
+218     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ae0ed657e20c9619afcd89bd624deb888}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!get\-Apk\-File\-Path@{get\-Apk\-File\-Path}}
+\index{get\-Apk\-File\-Path@{get\-Apk\-File\-Path}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{get\-Apk\-File\-Path}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-get\-Apk\-File\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ae0ed657e20c9619afcd89bd624deb888}
+Path of the apk stored in assets
+
+\begin{DoxyReturn}{Returns}
+Apk file path 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a1bca348acb3790aebce645c04a9e0945}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+278                                    \{
+279         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"FlashCardTemplateApp.apk"};
+280     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_af05e9dceb6edcdd2ca6f3099a3ce2018}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!get\-Assets\-File\-Name@{get\-Assets\-File\-Name}}
+\index{get\-Assets\-File\-Name@{get\-Assets\-File\-Name}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{get\-Assets\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-get\-Assets\-File\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_af05e9dceb6edcdd2ca6f3099a3ce2018}
+
+
+Name of the xml file congaing template data in the assets folders in the build apk. 
+
+\begin{DoxyReturn}{Returns}
+Asset file name 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a5336064bba45a1ba2f6db891567e1b6e}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+268                                       \{
+269         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"flash\_content.xml"};
+270     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a081b149001c8d3829f6d5e81e0b80113}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!get\-Assets\-File\-Path@{get\-Assets\-File\-Path}}
+\index{get\-Assets\-File\-Path@{get\-Assets\-File\-Path}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{get\-Assets\-File\-Path}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-get\-Assets\-File\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a081b149001c8d3829f6d5e81e0b80113}
+
+
+Folder path in which the apk is stored in the build A\-P\-K. 
+
+\begin{DoxyReturn}{Returns}
+Assets folder path 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ae35d1ab3f2c88b79d0d2a79cde81155b}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+273                                       \{
+274         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"assets/"};
+275     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_adac9ece8aeee9a46cd8b7ac97ba9aab0}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!get\-Items@{get\-Items}}
+\index{get\-Items@{get\-Items}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{get\-Items}]{\setlength{\rightskip}{0pt plus 5cm}Array\-List$<$Element$>$ org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-get\-Items (
+\begin{DoxyParamCaption}
+\item[{Document}]{doc}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_adac9ece8aeee9a46cd8b7ac97ba9aab0}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9fb6e277f0ebfb2caea138017854473f}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+249                                                      \{
+250 
+251         ArrayList<Element> itemElements = \textcolor{keyword}{new} ArrayList<>();
+252 
+253 
+254         \textcolor{keywordflow}{for} (FlashCardModel data : mData) \{
+255 
+256             itemElements.add(data.getXml(doc));
+257         \}
+258 
+259         \textcolor{keywordflow}{return} itemElements;
+260     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ac30d95d8c0304ba6ca3735c2e97fd410}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!get\-Simulator\-Fragment@{get\-Simulator\-Fragment}}
+\index{get\-Simulator\-Fragment@{get\-Simulator\-Fragment}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{get\-Simulator\-Fragment}]{\setlength{\rightskip}{0pt plus 5cm}Fragment org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-get\-Simulator\-Fragment (
+\begin{DoxyParamCaption}
+\item[{String}]{file\-Path\-With\-Name}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ac30d95d8c0304ba6ca3735c2e97fd410}
+
+
+Returns a fragment required for the Simulator Activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Path\-With\-Name} & Path of the generated .buildmlearn file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a fragment required for the Simulator Activity. $\ast$$\ast$\-Dev Note\-: File Path should be used to populate data from actual .buildmlearn file in the Simulator. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9b7f8c39a34918a8832eec6b1eb1f3c0}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+263                                                                   \{
+264         \textcolor{keywordflow}{return} StartFragment.newInstance(filePathWithName);
+265     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_aed263c384b73d5d700e4144a97007245}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!get\-Title@{get\-Title}}
+\index{get\-Title@{get\-Title}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{get\-Title}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-get\-Title (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_aed263c384b73d5d700e4144a97007245}
+
+
+Used to get the title of the templaye. Mainly used to update Action\-Bar in Template Editor. 
+
+\begin{DoxyReturn}{Returns}
+Title as a string 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a98a8592a7e4928ce76d0c61df17cf5c8}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+88                              \{
+89         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Flash Template"};
+90     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_aeee0f28447c5d3c1d5c7c4ef8bb2ae3e}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!load\-Project\-Template\-Editor@{load\-Project\-Template\-Editor}}
+\index{load\-Project\-Template\-Editor@{load\-Project\-Template\-Editor}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{load\-Project\-Template\-Editor}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Adapter org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-load\-Project\-Template\-Editor (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{Array\-List$<$ Element $>$}]{data}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_aeee0f28447c5d3c1d5c7c4ef8bb2ae3e}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ac0637282a7f7b58a4e9b8e86a734bf93}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+67                                                                                            \{
+68 
+69         mData = \textcolor{keyword}{new} ArrayList<>();
+70         \textcolor{keywordflow}{for} (Element item : data) \{
+71             String question = item.getElementsByTagName(\textcolor{stringliteral}{"question"}).item(0).getTextContent();
+72             String answer = item.getElementsByTagName(\textcolor{stringliteral}{"answer"}).item(0).getTextContent();
+73             String hint = item.getElementsByTagName(\textcolor{stringliteral}{"hint"}).item(0).getTextContent();
+74             String image = item.getElementsByTagName(\textcolor{stringliteral}{"image"}).item(0).getTextContent();
+75             mData.add(\textcolor{keyword}{new} FlashCardModel(question, answer, hint, image));
+76 
+77         \}
+78         mAdapter = \textcolor{keyword}{new} FlashCardAdapter(context, mData);
+79         \textcolor{keywordflow}{return} mAdapter;
+80     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ad524e69199d8435959cf348558039b2d}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!new\-Template\-Editor\-Adapter@{new\-Template\-Editor\-Adapter}}
+\index{new\-Template\-Editor\-Adapter@{new\-Template\-Editor\-Adapter}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{new\-Template\-Editor\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Adapter org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-new\-Template\-Editor\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Context}]{context}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ad524e69199d8435959cf348558039b2d}
+
+
+Called from Template Editor when template editor is started for creating a new template project. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Application context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Base\-Adapter inherited Object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_af7d9d92709123fc39693504884e4f7e2}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+55                                                                  \{
+56 
+57         mAdapter = \textcolor{keyword}{new} FlashCardAdapter(context, mData);
+58         \textcolor{keywordflow}{return} mAdapter;
+59     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a94a03d343059afa3914559725d911818}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!on\-Activity\-Result@{on\-Activity\-Result}}
+\index{on\-Activity\-Result@{on\-Activity\-Result}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{on\-Activity\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-on\-Activity\-Result (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{int}]{request\-Code, }
+\item[{int}]{result\-Code, }
+\item[{Intent}]{intent}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a94a03d343059afa3914559725d911818}
+
+
+Called whenever on\-Activity\-Result is called in Template Editor. Can be used to perform action related to intent and callbacks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \\
+\hline
+{\em request\-Code} & \\
+\hline
+{\em result\-Code} & \\
+\hline
+{\em intent} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9c506bf3776973765d4d1e8d6954e95b}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+283                                                                                                   \{
+284         \textcolor{keywordflow}{if} (requestCode == REQUEST\_TAKE\_PHOTO && resultCode == Activity.RESULT\_OK) \{
+285             Bitmap bitmap = grabImage(context);
+286             \textcolor{keywordflow}{if} (bitmap != null) \{
+287                 bitmap = getResizedBitmap(bitmap, 300);
+288                 \textcolor{keywordflow}{if} (bitmap != null) \{
+289                     Log.d(TAG, \textcolor{stringliteral}{"Bitmap not null: From Camera"});
+290                 \}
+291             \} \textcolor{keywordflow}{else} \{
+292                 InputStream stream;
+293                 \textcolor{keywordflow}{try} \{
+294                     stream = context.getContentResolver().openInputStream(
+295                             intent.getData());
+296                     bitmap = BitmapFactory.decodeStream(stream);
+297                     bitmap = getResizedBitmap(bitmap, 300);
+298                     \textcolor{keywordflow}{if} (bitmap != null) \{
+299                         Log.d(TAG, \textcolor{stringliteral}{"Bitmap not null: From Gallery"});
+300                     \}
+301                 \} \textcolor{keywordflow}{catch} (FileNotFoundException e) \{
+302                     e.printStackTrace();
+303                 \}
+304 
+305             \}
+306 
+307             \textcolor{keywordflow}{if} (bitmap != null) \{
+308                 mBannerImage.setImageBitmap(bitmap);
+309                 mIsPhotoAttached = \textcolor{keyword}{true};
+310             \}
+311         \}
+312     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ada55d7e95306576dd3a2f30183c3fc1e}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}!on\-Attach@{on\-Attach}}
+\index{on\-Attach@{on\-Attach}!org::buildmlearn::toolkit::templates::FlashTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Template}}
+\subsubsection[{on\-Attach}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template.\-on\-Attach (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ada55d7e95306576dd3a2f30183c3fc1e}
+
+
+Called from Template\-Editor whenever a template is attached to Template\-Editor. 
+
+\begin{DoxyReturn}{Returns}
+Custom string 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_af511bc9b58d176182a53397494d14238}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+83                              \{
+84         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Flash card template"};
+85     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/templates/\hyperlink{FlashTemplate_8java}{Flash\-Template.\-java}\end{DoxyCompactItemize}

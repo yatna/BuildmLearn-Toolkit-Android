@@ -1,0 +1,336 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils}{\section{org.\-buildmlearn.\-toolkit.\-utilities.\-File\-Utils Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils}\index{org.\-buildmlearn.\-toolkit.\-utilities.\-File\-Utils@{org.\-buildmlearn.\-toolkit.\-utilities.\-File\-Utils}}
+}
+
+
+Helper functions related to String manipulation.  
+
+
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-utilities.\-File\-Utils\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{d4/d37/classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_a3985505c7367639777e7829b87fa625b}{un\-Zip} (String zip\-File\-Path, String destination\-Folder)  throws I\-O\-Exception 
+\begin{DoxyCompactList}\small\item\em Unzips a compressed file (.zip, .apk) \end{DoxyCompactList}\item 
+static void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_a40211ea6f81fcdd275cb33047c67c01a}{copy\-Assets} (Context context, String asset\-File\-Name, String destination\-Directory)
+\begin{DoxyCompactList}\small\item\em Copies a file from assets folder to a folder on device memory. \end{DoxyCompactList}\item 
+static boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_a37f577c0b56f2ffc56824657ac220fb7}{save\-Xml\-File} (String destination\-Folder, String file\-Name, Document doc)
+\begin{DoxyCompactList}\small\item\em Converts a given Document object to xml format file. \end{DoxyCompactList}\item 
+static void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_aa79713cc1d17fbf9b7294c60e851b774}{zip\-Folder} (String directory\-To\-Zip\-Path)  throws I\-O\-Exception 
+\begin{DoxyCompactList}\small\item\em Archives a folder into .zip compressed file. \end{DoxyCompactList}\item 
+static void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_aa61e000a3890f6d8b42c1a537f8c2df4}{get\-All\-Files} (File dir, List$<$ File $>$ file\-List)
+\begin{DoxyCompactList}\small\item\em Add all the files in a given folder into a list. \end{DoxyCompactList}\item 
+static void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_a22131f5eeefec02f52908ab439ab528b}{copy} (File src, File dst)  throws I\-O\-Exception 
+\begin{DoxyCompactList}\small\item\em Copies the content from one file to another. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper functions related to String manipulation. 
+
+Created by Abhishek on 23-\/05-\/2015. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_a22131f5eeefec02f52908ab439ab528b}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils}!copy@{copy}}
+\index{copy@{copy}!org::buildmlearn::toolkit::utilities::FileUtils@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}static void org.\-buildmlearn.\-toolkit.\-utilities.\-File\-Utils.\-copy (
+\begin{DoxyParamCaption}
+\item[{File}]{src, }
+\item[{File}]{dst}
+\end{DoxyParamCaption}
+) throws I\-O\-Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_a22131f5eeefec02f52908ab439ab528b}
+
+
+Copies the content from one file to another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Source file \\
+\hline
+{\em dst} & Destination file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\-O\-Exception} & Exception thrown in case of error \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyCode}
+257                                                                    \{
+258         InputStream in = \textcolor{keyword}{new} FileInputStream(src);
+259         OutputStream out = \textcolor{keyword}{new} FileOutputStream(dst);
+260 
+261         \textcolor{comment}{// Transfer bytes from in to out}
+262         byte[] buf = \textcolor{keyword}{new} byte[1024];
+263         \textcolor{keywordtype}{int} len;
+264         \textcolor{keywordflow}{while} ((len = in.read(buf)) > 0) \{
+265             out.write(buf, 0, len);
+266         \}
+267         in.close();
+268         out.close();
+269     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_a40211ea6f81fcdd275cb33047c67c01a}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils}!copy\-Assets@{copy\-Assets}}
+\index{copy\-Assets@{copy\-Assets}!org::buildmlearn::toolkit::utilities::FileUtils@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils}}
+\subsubsection[{copy\-Assets}]{\setlength{\rightskip}{0pt plus 5cm}static void org.\-buildmlearn.\-toolkit.\-utilities.\-File\-Utils.\-copy\-Assets (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{String}]{asset\-File\-Name, }
+\item[{String}]{destination\-Directory}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_a40211ea6f81fcdd275cb33047c67c01a}
+
+
+Copies a file from assets folder to a folder on device memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Application context \\
+\hline
+{\em asset\-File\-Name} & Name of the file stored in assets \\
+\hline
+{\em destination\-Directory} & Destination folder for saving the file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+108                                                                                                       \{
+109         AssetManager assetManager = context.getAssets();
+110         InputStream in;
+111         OutputStream out;
+112         \textcolor{keywordflow}{try} \{
+113             in = assetManager.open(assetFileName);
+114             String outPutPath = destinationDirectory;
+115             File f = \textcolor{keyword}{new} File(outPutPath);
+116             \textcolor{keywordflow}{if} (!f.isDirectory()) \{
+117                 f.mkdirs();
+118             \}
+119 
+120             File outFile = \textcolor{keyword}{new} File(outPutPath, assetFileName);
+121             out = \textcolor{keyword}{new} FileOutputStream(outFile);
+122             copyFile(in, out);
+123             in.close();
+124             out.flush();
+125             out.close();
+126         \} \textcolor{keywordflow}{catch} (IOException e) \{
+127             e.printStackTrace();
+128         \}
+129 
+130     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_aa61e000a3890f6d8b42c1a537f8c2df4}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils}!get\-All\-Files@{get\-All\-Files}}
+\index{get\-All\-Files@{get\-All\-Files}!org::buildmlearn::toolkit::utilities::FileUtils@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils}}
+\subsubsection[{get\-All\-Files}]{\setlength{\rightskip}{0pt plus 5cm}static void org.\-buildmlearn.\-toolkit.\-utilities.\-File\-Utils.\-get\-All\-Files (
+\begin{DoxyParamCaption}
+\item[{File}]{dir, }
+\item[{List$<$ File $>$}]{file\-List}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_aa61e000a3890f6d8b42c1a537f8c2df4}
+
+
+Add all the files in a given folder into a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & Source directory \\
+\hline
+{\em file\-List} & Referenced list. Files are added to this list \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+190                                                                   \{
+191         \textcolor{keywordflow}{try} \{
+192             File[] files = dir.listFiles();
+193             \textcolor{keywordflow}{for} (File file : files) \{
+194                 fileList.add(file);
+195                 \textcolor{keywordflow}{if} (file.isDirectory()) \{
+196                     System.out.println(\textcolor{stringliteral}{"directory:"} + file.getCanonicalPath());
+197                     \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_aa61e000a3890f6d8b42c1a537f8c2df4}{getAllFiles}(file, fileList);
+198                 \} \textcolor{keywordflow}{else} \{
+199                     System.out.println(\textcolor{stringliteral}{"     file:"} + file.getCanonicalPath());
+200                 \}
+201             \}
+202         \} \textcolor{keywordflow}{catch} (IOException e) \{
+203             e.printStackTrace();
+204         \}
+205     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_a37f577c0b56f2ffc56824657ac220fb7}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils}!save\-Xml\-File@{save\-Xml\-File}}
+\index{save\-Xml\-File@{save\-Xml\-File}!org::buildmlearn::toolkit::utilities::FileUtils@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils}}
+\subsubsection[{save\-Xml\-File}]{\setlength{\rightskip}{0pt plus 5cm}static boolean org.\-buildmlearn.\-toolkit.\-utilities.\-File\-Utils.\-save\-Xml\-File (
+\begin{DoxyParamCaption}
+\item[{String}]{destination\-Folder, }
+\item[{String}]{file\-Name, }
+\item[{Document}]{doc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_a37f577c0b56f2ffc56824657ac220fb7}
+
+
+Converts a given Document object to xml format file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination\-Folder} & Destination folder for saving the file \\
+\hline
+{\em file\-Name} & Destination file name \\
+\hline
+{\em doc} & Document object to be converted to xml formatted file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if successfully converted 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+147                                                                                                \{
+148 
+149         File f = \textcolor{keyword}{new} File(destinationFolder);
+150         \textcolor{keywordflow}{if} (!f.isDirectory()) \{
+151             f.mkdirs();
+152         \}
+153         TransformerFactory transformerFactory = TransformerFactory.newInstance();
+154         Transformer transformer;
+155         \textcolor{keywordflow}{try} \{
+156             transformer = transformerFactory.newTransformer();
+157             DOMSource source = \textcolor{keyword}{new} DOMSource(doc);
+158             StreamResult result = \textcolor{keyword}{new} StreamResult(\textcolor{keyword}{new} File(destinationFolder + fileName));
+159             transformer.transform(source, result);
+160             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+161         \} \textcolor{keywordflow}{catch} (TransformerConfigurationException e) \{
+162             e.printStackTrace();
+163         \} \textcolor{keywordflow}{catch} (TransformerException e) \{
+164             e.printStackTrace();
+165         \}
+166         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+167     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_a3985505c7367639777e7829b87fa625b}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils}!un\-Zip@{un\-Zip}}
+\index{un\-Zip@{un\-Zip}!org::buildmlearn::toolkit::utilities::FileUtils@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils}}
+\subsubsection[{un\-Zip}]{\setlength{\rightskip}{0pt plus 5cm}static void org.\-buildmlearn.\-toolkit.\-utilities.\-File\-Utils.\-un\-Zip (
+\begin{DoxyParamCaption}
+\item[{String}]{zip\-File\-Path, }
+\item[{String}]{destination\-Folder}
+\end{DoxyParamCaption}
+) throws I\-O\-Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_a3985505c7367639777e7829b87fa625b}
+
+
+Unzips a compressed file (.zip, .apk) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zip\-File\-Path} & Path of the source zip file \\
+\hline
+{\em destination\-Folder} & Destination folder for stroing the uncompresses files. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\-O\-Exception} & Exception thrown in case of some error. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyCode}
+48                                                                                               \{
+49         \textcolor{keywordtype}{int} size;
+50         byte[] buffer = \textcolor{keyword}{new} byte[BUFFER\_SIZE];
+51         \textcolor{keywordflow}{try} \{
+52             \textcolor{keywordflow}{if} (!destinationFolder.endsWith(\textcolor{stringliteral}{"/"})) \{
+53                 destinationFolder += \textcolor{stringliteral}{"/"};
+54             \}
+55             File f = \textcolor{keyword}{new} File(destinationFolder);
+56             \textcolor{keywordflow}{if} (!f.isDirectory()) \{
+57                 f.mkdirs();
+58             \}
+59 
+60             ZipInputStream zin = \textcolor{keyword}{new} ZipInputStream(\textcolor{keyword}{new} BufferedInputStream(\textcolor{keyword}{new} FileInputStream(zipFilePath
+      ), BUFFER\_SIZE));
+61             \textcolor{keywordflow}{try} \{
+62                 ZipEntry ze;
+63                 \textcolor{keywordflow}{while} ((ze = zin.getNextEntry()) != null) \{
+64                     String path = destinationFolder + ze.getName();
+65                     File unzipFile = \textcolor{keyword}{new} File(path);
+66 
+67                     \textcolor{keywordflow}{if} (ze.isDirectory()) \{
+68                         \textcolor{keywordflow}{if} (!unzipFile.isDirectory()) \{
+69                             unzipFile.mkdirs();
+70                         \}
+71                     \} \textcolor{keywordflow}{else} \{
+72 
+73                         File parentDir = unzipFile.getParentFile();
+74                         \textcolor{keywordflow}{if} (null != parentDir) \{
+75                             \textcolor{keywordflow}{if} (!parentDir.isDirectory()) \{
+76                                 parentDir.mkdirs();
+77                             \}
+78                         \}
+79 
+80                         FileOutputStream out = \textcolor{keyword}{new} FileOutputStream(unzipFile, \textcolor{keyword}{false});
+81                         BufferedOutputStream fout = \textcolor{keyword}{new} BufferedOutputStream(out, BUFFER\_SIZE);
+82                         \textcolor{keywordflow}{try} \{
+83                             \textcolor{keywordflow}{while} ((size = zin.read(buffer, 0, BUFFER\_SIZE)) != -1) \{
+84                                 fout.write(buffer, 0, size);
+85                             \}
+86 
+87                             zin.closeEntry();
+88                         \} \textcolor{keywordflow}{finally} \{
+89                             fout.flush();
+90                             fout.close();
+91                         \}
+92                     \}
+93                 \}
+94             \} \textcolor{keywordflow}{finally} \{
+95                 zin.close();
+96             \}
+97         \} \textcolor{keywordflow}{catch} (Exception e) \{
+98             e.printStackTrace();
+99         \}
+100     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_aa79713cc1d17fbf9b7294c60e851b774}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils}!zip\-Folder@{zip\-Folder}}
+\index{zip\-Folder@{zip\-Folder}!org::buildmlearn::toolkit::utilities::FileUtils@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-File\-Utils}}
+\subsubsection[{zip\-Folder}]{\setlength{\rightskip}{0pt plus 5cm}static void org.\-buildmlearn.\-toolkit.\-utilities.\-File\-Utils.\-zip\-Folder (
+\begin{DoxyParamCaption}
+\item[{String}]{directory\-To\-Zip\-Path}
+\end{DoxyParamCaption}
+) throws I\-O\-Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_aa79713cc1d17fbf9b7294c60e851b774}
+
+
+Archives a folder into .zip compressed file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory\-To\-Zip\-Path} & Source folder to be converted. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\-O\-Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyCode}
+174                                                                                \{
+175         File directoryToZip = \textcolor{keyword}{new} File(directoryToZipPath);
+176 
+177         List<File> fileList = \textcolor{keyword}{new} ArrayList<File>();
+178         System.out.println(\textcolor{stringliteral}{"---Getting references to all files in: "} + directoryToZip.getCanonicalPath());
+179         \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1FileUtils_aa61e000a3890f6d8b42c1a537f8c2df4}{getAllFiles}(directoryToZip, fileList);
+180         System.out.println(\textcolor{stringliteral}{"---Creating zip file"});
+181         writeZipFile(directoryToZip, fileList);
+182         System.out.println(\textcolor{stringliteral}{"---Done"});
+183     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/utilities/\hyperlink{FileUtils_8java}{File\-Utils.\-java}\end{DoxyCompactItemize}

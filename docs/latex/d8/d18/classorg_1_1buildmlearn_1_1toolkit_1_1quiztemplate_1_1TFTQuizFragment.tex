@@ -1,0 +1,116 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1TFTQuizFragment}{\section{org.\-buildmlearn.\-toolkit.\-quiztemplate.\-T\-F\-T\-Quiz\-Fragment Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1TFTQuizFragment}\index{org.\-buildmlearn.\-toolkit.\-quiztemplate.\-T\-F\-T\-Quiz\-Fragment@{org.\-buildmlearn.\-toolkit.\-quiztemplate.\-T\-F\-T\-Quiz\-Fragment}}
+}
+
+
+Simulator code for Quiz Template.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-quiztemplate.\-T\-F\-T\-Quiz\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{d2/d3a/classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1TFTQuizFragment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-quiztemplate.\-T\-F\-T\-Quiz\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{dc/d1a/classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1TFTQuizFragment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1TFTQuizFragment_a97685d61e8a055acf2b883edfba5a2ad}{on\-Create\-View} (Layout\-Inflater inflater, View\-Group container, Bundle saved\-Instance\-State)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Fragment \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1TFTQuizFragment_acd9062634877ea36ccd44914ef8f5e48}{new\-Instance} (String path)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1TFTQuizFragment_a7afa4100530fdde30947cc71add19eb8}{T\-A\-G} = \char`\"{}Q\-U\-I\-Z\-\_\-\-F\-R\-A\-G\-M\-E\-N\-T\-\_\-\-S\-T\-A\-R\-T\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Quiz Template. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1TFTQuizFragment_acd9062634877ea36ccd44914ef8f5e48}{\index{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-T\-F\-T\-Quiz\-Fragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-T\-F\-T\-Quiz\-Fragment}!new\-Instance@{new\-Instance}}
+\index{new\-Instance@{new\-Instance}!org::buildmlearn::toolkit::quiztemplate::TFTQuizFragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-T\-F\-T\-Quiz\-Fragment}}
+\subsubsection[{new\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static Fragment org.\-buildmlearn.\-toolkit.\-quiztemplate.\-T\-F\-T\-Quiz\-Fragment.\-new\-Instance (
+\begin{DoxyParamCaption}
+\item[{String}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1TFTQuizFragment_acd9062634877ea36ccd44914ef8f5e48}
+
+\begin{DoxyCode}
+55                                                     \{
+56         TFTQuizFragment fragment = \textcolor{keyword}{new} TFTQuizFragment();
+57         Bundle bundle = \textcolor{keyword}{new} Bundle();
+58         bundle.putString(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a5e8ea6ec23e727cbfc84e5b854ae311c}{Constants.SIMULATOR\_FILE\_PATH}, path);
+59         fragment.setArguments(bundle);
+60         \textcolor{keywordflow}{return} fragment;
+61     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1TFTQuizFragment_a97685d61e8a055acf2b883edfba5a2ad}{\index{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-T\-F\-T\-Quiz\-Fragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-T\-F\-T\-Quiz\-Fragment}!on\-Create\-View@{on\-Create\-View}}
+\index{on\-Create\-View@{on\-Create\-View}!org::buildmlearn::toolkit::quiztemplate::TFTQuizFragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-T\-F\-T\-Quiz\-Fragment}}
+\subsubsection[{on\-Create\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-quiztemplate.\-T\-F\-T\-Quiz\-Fragment.\-on\-Create\-View (
+\begin{DoxyParamCaption}
+\item[{Layout\-Inflater}]{inflater, }
+\item[{View\-Group}]{container, }
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1TFTQuizFragment_a97685d61e8a055acf2b883edfba5a2ad}
+
+\begin{DoxyCode}
+65                                                                                                       \{
+66 
+67         view = inflater.inflate(R.layout.quiz\_template\_fragment\_start\_view, container, \textcolor{keyword}{false});
+68 
+69         gd = GlobalData.getInstance();
+70         reInitialize();
+71         \textcolor{comment}{// gd.ReadContent(TFTQuizFragment.this);}
+72         gd.readXml(getArguments().getString(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a5e8ea6ec23e727cbfc84e5b854ae311c}{Constants.SIMULATOR\_FILE\_PATH}));
+73         TextView quizAuthor = (TextView) view.findViewById(R.id.tv\_author);
+74         TextView quizTitle = (TextView) view.findViewById(R.id.tv\_apptitle);
+75 
+76         quizAuthor.setText(gd.iQuizAuthor);
+77         quizTitle.setText(gd.iQuizTitle);
+78 
+79         Button startButton = (Button) view.findViewById(R.id.btn\_start);
+80         startButton.setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+81 
+82             @Override
+83             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View arg0) \{
+84 
+85                 getActivity().getFragmentManager().beginTransaction().replace(R.id.container, \textcolor{keyword}{new} 
+      QuestionFragment(), \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a921fda4a087f9a43ebe8a4f05eec015c}{QuestionFragment.TAG}).addToBackStack(null).commit();
+86             \}
+87         \});
+88 
+89         \textcolor{keywordflow}{return} view;
+90     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1TFTQuizFragment_a7afa4100530fdde30947cc71add19eb8}{\index{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-T\-F\-T\-Quiz\-Fragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-T\-F\-T\-Quiz\-Fragment}!T\-A\-G@{T\-A\-G}}
+\index{T\-A\-G@{T\-A\-G}!org::buildmlearn::toolkit::quiztemplate::TFTQuizFragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-T\-F\-T\-Quiz\-Fragment}}
+\subsubsection[{T\-A\-G}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-buildmlearn.\-toolkit.\-quiztemplate.\-T\-F\-T\-Quiz\-Fragment.\-T\-A\-G = \char`\"{}Q\-U\-I\-Z\-\_\-\-F\-R\-A\-G\-M\-E\-N\-T\-\_\-\-S\-T\-A\-R\-T\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1TFTQuizFragment_a7afa4100530fdde30947cc71add19eb8}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/quiztemplate/\hyperlink{TFTQuizFragment_8java}{T\-F\-T\-Quiz\-Fragment.\-java}\end{DoxyCompactItemize}

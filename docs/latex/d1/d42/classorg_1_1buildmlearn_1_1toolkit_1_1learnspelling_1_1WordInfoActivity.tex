@@ -1,0 +1,163 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1WordInfoActivity}{\section{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Word\-Info\-Activity Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1WordInfoActivity}\index{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Word\-Info\-Activity@{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Word\-Info\-Activity}}
+}
+
+
+Simulator code for Learn Spelling Template.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-learnspelling.\-Word\-Info\-Activity\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{db/d1a/classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1WordInfoActivity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-learnspelling.\-Word\-Info\-Activity\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{d8/d54/classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1WordInfoActivity__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1WordInfoActivity_afe7397dee801ecc5696822d9353cfb6b}{on\-Create\-View} (Layout\-Inflater inflater, View\-Group container, Bundle saved\-Instance\-State)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1WordInfoActivity_a127e7b2a66e32383935aa8c343584251}{on\-Destroy} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Fragment \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1WordInfoActivity_addeff677923916e06a7b1f5cd1fec20e}{new\-Instance} (boolean is\-Correct, int count, String word)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Learn Spelling Template. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1WordInfoActivity_addeff677923916e06a7b1f5cd1fec20e}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Word\-Info\-Activity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Word\-Info\-Activity}!new\-Instance@{new\-Instance}}
+\index{new\-Instance@{new\-Instance}!org::buildmlearn::toolkit::learnspelling::WordInfoActivity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Word\-Info\-Activity}}
+\subsubsection[{new\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static Fragment org.\-buildmlearn.\-toolkit.\-learnspelling.\-Word\-Info\-Activity.\-new\-Instance (
+\begin{DoxyParamCaption}
+\item[{boolean}]{is\-Correct, }
+\item[{int}]{count, }
+\item[{String}]{word}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1WordInfoActivity_addeff677923916e06a7b1f5cd1fec20e}
+
+\begin{DoxyCode}
+63                                                                                   \{
+64         Fragment fragment = \textcolor{keyword}{new} WordInfoActivity();
+65         Bundle bundle = \textcolor{keyword}{new} Bundle();
+66         bundle.putBoolean(\textcolor{stringliteral}{"result"}, isCorrect);
+67         bundle.putInt(\textcolor{stringliteral}{"index"}, count);
+68         bundle.putString(\textcolor{stringliteral}{"word"}, word);
+69 
+70         fragment.setArguments(bundle);
+71 
+72         \textcolor{keywordflow}{return} fragment;
+73     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1WordInfoActivity_afe7397dee801ecc5696822d9353cfb6b}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Word\-Info\-Activity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Word\-Info\-Activity}!on\-Create\-View@{on\-Create\-View}}
+\index{on\-Create\-View@{on\-Create\-View}!org::buildmlearn::toolkit::learnspelling::WordInfoActivity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Word\-Info\-Activity}}
+\subsubsection[{on\-Create\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-learnspelling.\-Word\-Info\-Activity.\-on\-Create\-View (
+\begin{DoxyParamCaption}
+\item[{Layout\-Inflater}]{inflater, }
+\item[{View\-Group}]{container, }
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1WordInfoActivity_afe7397dee801ecc5696822d9353cfb6b}
+
+\begin{DoxyCode}
+77                                                                                                       \{
+78 
+79         view = inflater.inflate(R.layout.spelling\_fragment\_word\_info, container, \textcolor{keyword}{false});
+80         mManager = DataManager.getInstance();
+81         mList = mManager.getList();
+82 
+83         isCorrect = getArguments().getBoolean(\textcolor{stringliteral}{"result"}, \textcolor{keyword}{false});
+84         position = getArguments().getInt(\textcolor{stringliteral}{"index"}, 0);
+85         enteredText = getArguments().getString(\textcolor{stringliteral}{"word"});
+86         mTv\_Result = (TextView) view.findViewById(R.id.tv\_result);
+87         mTv\_Word\_num = (TextView) view.findViewById(R.id.tv\_word\_num);
+88         mTv\_word = (TextView) view.findViewById(R.id.tv\_word);
+89         mTv\_enteredWord = (TextView) view.findViewById(R.id.tv\_input\_word);
+90 
+91         mTv\_description = (TextView) view.findViewById(R.id.tv\_description);
+92         mBtn\_Next = (Button) view.findViewById(R.id.btn\_next);
+93         \textcolor{keywordflow}{if} (position == mList.size() - 1) \{
+94             mBtn\_Next.setText(\textcolor{stringliteral}{"Finish"});
+95         \}
+96         \textcolor{keywordflow}{if} (isCorrect) \{
+97             mTv\_Result.setText(getString(R.string.msg\_successful));
+98             mTv\_Result.setTextColor(Color.GREEN);
+99             mTv\_enteredWord.setVisibility(View.GONE);
+100         \} \textcolor{keywordflow}{else} \{
+101             mTv\_Result.setText(getString(R.string.msg\_failure));
+102             mTv\_Result.setTextColor(Color.RED);
+103             mTv\_enteredWord.setText(getString(R.string.you\_entered) + \textcolor{stringliteral}{" "}
+104                     + enteredText.toLowerCase());
+105         \}
+106         textToSpeech = \textcolor{keyword}{new} TextToSpeech(getActivity(),
+107                 \textcolor{keyword}{new} TextToSpeech.OnInitListener() \{
+108 
+109                     @Override
+110                     \textcolor{keyword}{public} \textcolor{keywordtype}{void} onInit(\textcolor{keywordtype}{int} arg0) \{
+111                         \textcolor{keywordflow}{if} (arg0 == TextToSpeech.SUCCESS) \{
+112                             textToSpeech.setLanguage(Locale.US);
+113                             \textcolor{keywordflow}{if} (isCorrect)
+114                                 convertTextToSpeech(getString(R.string.msg\_successful));
+115                             \textcolor{keywordflow}{else}
+116                                 convertTextToSpeech(getString(R.string.msg\_failure));
+117                         \}
+118                     \}
+119                 \});
+120         mTv\_Word\_num.setText(\textcolor{stringliteral}{"Word #"} + (position + 1) + \textcolor{stringliteral}{" of "} + mList.size());
+121         mTv\_word.setText(mList.get(position).getWord().toLowerCase());
+122         mTv\_description.setText(mList.get(position).getDescription());
+123 
+124 
+125         view.findViewById(R.id.btn\_next).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+126             @Override
+127             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+128                 \textcolor{keywordflow}{if} (position < mList.size() - 1) \{
+129                     mManager.increaseCount();
+130                     getActivity().getFragmentManager().beginTransaction().replace(R.id.container, \textcolor{keyword}{new} 
+      SpellingActivity()).addToBackStack(null).commit();
+131                 \} \textcolor{keywordflow}{else} \{
+132                     getActivity().getFragmentManager().beginTransaction().replace(R.id.container, \textcolor{keyword}{new} 
+      ResultActivity()).addToBackStack(null).commit();
+133                 \}
+134             \}
+135         \});
+136         \textcolor{keywordflow}{return} view;
+137     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1WordInfoActivity_a127e7b2a66e32383935aa8c343584251}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Word\-Info\-Activity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Word\-Info\-Activity}!on\-Destroy@{on\-Destroy}}
+\index{on\-Destroy@{on\-Destroy}!org::buildmlearn::toolkit::learnspelling::WordInfoActivity@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Word\-Info\-Activity}}
+\subsubsection[{on\-Destroy}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-learnspelling.\-Word\-Info\-Activity.\-on\-Destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1WordInfoActivity_a127e7b2a66e32383935aa8c343584251}
+
+\begin{DoxyCode}
+141                             \{
+142         super.onDestroy();
+143         textToSpeech.shutdown();
+144     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/learnspelling/\hyperlink{WordInfoActivity_8java}{Word\-Info\-Activity.\-java}\end{DoxyCompactItemize}

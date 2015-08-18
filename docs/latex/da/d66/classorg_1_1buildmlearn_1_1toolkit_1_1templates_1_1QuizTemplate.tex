@@ -1,0 +1,600 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate}{\section{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate}\index{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template@{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template}}
+}
+
+
+Quiz template code implementing methods of Template\-Interface.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d8/db8/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{db/d9c/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a564252fd818d44d1f9d2221f58f3eec5}{Quiz\-Template} ()
+\item 
+Base\-Adapter \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a47d3029ad563737e60c7c209738b0a71}{new\-Template\-Editor\-Adapter} (Context context)
+\begin{DoxyCompactList}\small\item\em Called from Template Editor when template editor is started for creating a new template project. \end{DoxyCompactList}\item 
+Base\-Adapter \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_ab1d89e08da401108f6a6ec7bf208c973}{current\-Template\-Editor\-Adapter} ()
+\begin{DoxyCompactList}\small\item\em This function is used to get the adapter (containing template data) for a existing/current template project. \end{DoxyCompactList}\item 
+Base\-Adapter \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a546b1ec5e027883034daa14ef725c4ff}{load\-Project\-Template\-Editor} (Context context, Array\-List$<$ Element $>$ data)
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a775355616317bb56fd8adf0962d7e05b}{on\-Attach} ()
+\begin{DoxyCompactList}\small\item\em Called from Template\-Editor whenever a template is attached to Template\-Editor. \end{DoxyCompactList}\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a69f511c03a64a4945ffb41339666fcaa}{get\-Title} ()
+\begin{DoxyCompactList}\small\item\em Used to get the title of the templaye. Mainly used to update Action\-Bar in Template Editor. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_af16912a1df8554f8131d706f5ed491d9}{add\-Item} (final Activity activity)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a061e888a27db66b5b9d408a1067d4eac}{edit\-Item} (final Activity activity, final int position)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a71f43dadf52d381b71b0b8d4ce9d52a1}{delete\-Item} (int position)
+\begin{DoxyCompactList}\small\item\em Remove an item form template data list. \end{DoxyCompactList}\item 
+Array\-List$<$ Element $>$ \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a3d41a179fe1b10edd828d4ef4f0fb344}{get\-Items} (Document doc)
+\item 
+Fragment \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_acef98cb485fc56abca5f6ecff6fe28c1}{get\-Simulator\-Fragment} (String file\-Path\-With\-Name)
+\begin{DoxyCompactList}\small\item\em Returns a fragment required for the Simulator Activity. \end{DoxyCompactList}\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a76c88931863b00d9713007e729431e23}{get\-Assets\-File\-Name} ()
+\begin{DoxyCompactList}\small\item\em Name of the xml file congaing template data in the assets folders in the build apk. \end{DoxyCompactList}\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a7f0008da11aa1e2608a82214c92809e3}{get\-Assets\-File\-Path} ()
+\begin{DoxyCompactList}\small\item\em Folder path in which the apk is stored in the build A\-P\-K. \end{DoxyCompactList}\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_afe64be10f6c439dd611e843ceabb5ac4}{get\-Apk\-File\-Path} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a23bf444a6527a4be8b416f1d04a4912e}{on\-Activity\-Result} (Context context, int request\-Code, int result\-Code, Intent intent)
+\begin{DoxyCompactList}\small\item\em Called whenever on\-Activity\-Result is called in Template Editor. Can be used to perform action related to intent and callbacks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Quiz template code implementing methods of Template\-Interface. 
+
+Created by abhishek on 27/5/15. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a564252fd818d44d1f9d2221f58f3eec5}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!Quiz\-Template@{Quiz\-Template}}
+\index{Quiz\-Template@{Quiz\-Template}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{Quiz\-Template}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-Quiz\-Template (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a564252fd818d44d1f9d2221f58f3eec5}
+
+\begin{DoxyCode}
+36                           \{
+37         this.quizData = \textcolor{keyword}{new} ArrayList<>();
+38     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_af16912a1df8554f8131d706f5ed491d9}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!add\-Item@{add\-Item}}
+\index{add\-Item@{add\-Item}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{add\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-add\-Item (
+\begin{DoxyParamCaption}
+\item[{final Activity}]{activity}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_af16912a1df8554f8131d706f5ed491d9}
+
+\begin{DoxyCode}
+80                                                  \{
+81         \textcolor{keyword}{final} MaterialDialog dialog = \textcolor{keyword}{new} MaterialDialog.Builder(activity)
+82                 .title(R.string.quiz\_new\_question\_title)
+83                 .customView(R.layout.quiz\_dialog\_add\_question, \textcolor{keyword}{true})
+84                 .positiveText(R.string.quiz\_add)
+85                 .negativeText(R.string.quiz\_delete)
+86                 .build();
+87 
+88         \textcolor{keyword}{final} EditText question = (EditText) dialog.findViewById(R.id.quiz\_question);
+89         \textcolor{keyword}{final} ArrayList<RadioButton> buttons = \textcolor{keyword}{new} ArrayList<>();
+90         \textcolor{keyword}{final} ArrayList<EditText> options = \textcolor{keyword}{new} ArrayList<>();
+91         options.add((EditText) dialog.findViewById(R.id.quiz\_option\_1));
+92         options.add((EditText) dialog.findViewById(R.id.quiz\_option\_2));
+93         options.add((EditText) dialog.findViewById(R.id.quiz\_option\_3));
+94         options.add((EditText) dialog.findViewById(R.id.quiz\_option\_4));
+95         buttons.add((RadioButton) dialog.findViewById(R.id.quiz\_radio\_1));
+96         buttons.add((RadioButton) dialog.findViewById(R.id.quiz\_radio\_2));
+97         buttons.add((RadioButton) dialog.findViewById(R.id.quiz\_radio\_3));
+98         buttons.add((RadioButton) dialog.findViewById(R.id.quiz\_radio\_4));
+99 
+100         \textcolor{keywordflow}{for} (\textcolor{keyword}{final} RadioButton button : buttons) \{
+101             button.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+102                 @Override
+103                 \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+104                     checkButton(buttons, options, button.getId(), activity);
+105                 \}
+106             \});
+107         \}
+108 
+109         dialog.getActionButton(DialogAction.POSITIVE).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+110             @Override
+111             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+112 
+113                 \textcolor{keywordtype}{boolean} isValidated = \textcolor{keyword}{true};
+114                 \textcolor{keywordtype}{int} checkedAns = getCheckedAnswer(buttons);
+115                 \textcolor{keywordflow}{if} (checkedAns < 0) \{
+116                     Toast.makeText(activity, \textcolor{stringliteral}{"Choose a correct option"}, Toast.LENGTH\_SHORT).show();
+117                     isValidated = \textcolor{keyword}{false};
+118                 \}
+119                 \textcolor{keywordflow}{if} (question.getText().toString().equals(\textcolor{stringliteral}{""})) \{
+120 
+121                     question.setError(\textcolor{stringliteral}{"Question is required"});
+122                     isValidated = \textcolor{keyword}{false};
+123                 \}
+124 
+125                 \textcolor{keywordtype}{int} optionCount = 0;
+126                 \textcolor{keywordflow}{for} (EditText option : options) \{
+127                     \textcolor{keywordflow}{if} (!option.getText().toString().equals(\textcolor{stringliteral}{""})) \{
+128                         optionCount++;
+129                     \}
+130                 \}
+131                 \textcolor{keywordflow}{if} (optionCount < 2) \{
+132                     Toast.makeText(activity, \textcolor{stringliteral}{"Minimum two multiple answers are required."}, 
+      Toast.LENGTH\_SHORT).show();
+133                     isValidated = \textcolor{keyword}{false};
+134                 \}
+135 
+136                 \textcolor{keywordflow}{if} (isValidated) \{
+137                     dialog.dismiss();
+138                     ArrayList<String> answerOptions = \textcolor{keyword}{new} ArrayList<>();
+139                     \textcolor{keywordtype}{int} correctAnswer = 0;
+140                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < buttons.size(); i++) \{
+141                         \textcolor{keywordflow}{if} (buttons.get(i).isChecked() && !options.get(i).getText().toString().equals(\textcolor{stringliteral}{""})) 
+      \{
+142                             correctAnswer = answerOptions.size();
+143                             answerOptions.add(options.get(i).getText().toString());
+144                         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!options.get(i).getText().toString().equals(\textcolor{stringliteral}{""})) \{
+145                             answerOptions.add(options.get(i).getText().toString());
+146                         \}
+147                     \}
+148                     String questionText = question.getText().toString();
+149                     quizData.add(\textcolor{keyword}{new} QuizModel(questionText, answerOptions, correctAnswer));
+150                     mAdapter.notifyDataSetChanged();
+151                 \}
+152 
+153             \}
+154         \});
+155         dialog.show();
+156 
+157     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_ab1d89e08da401108f6a6ec7bf208c973}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!current\-Template\-Editor\-Adapter@{current\-Template\-Editor\-Adapter}}
+\index{current\-Template\-Editor\-Adapter@{current\-Template\-Editor\-Adapter}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{current\-Template\-Editor\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Adapter org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-current\-Template\-Editor\-Adapter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_ab1d89e08da401108f6a6ec7bf208c973}
+
+
+This function is used to get the adapter (containing template data) for a existing/current template project. 
+
+\begin{DoxyReturn}{Returns}
+Base\-Adapter inherited Object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ae433eedc291006e78b65b0fc4135d560}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+47                                                       \{
+48         \textcolor{keywordflow}{return} mAdapter;
+49     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a71f43dadf52d381b71b0b8d4ce9d52a1}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!delete\-Item@{delete\-Item}}
+\index{delete\-Item@{delete\-Item}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{delete\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-delete\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a71f43dadf52d381b71b0b8d4ce9d52a1}
+
+
+Remove an item form template data list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position of the item to be removed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_aeb65a5ef72b939c20b24cd7c02a80a97}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+248                                          \{
+249         quizData.remove(position);
+250         mAdapter.notifyDataSetChanged();
+251     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a061e888a27db66b5b9d408a1067d4eac}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!edit\-Item@{edit\-Item}}
+\index{edit\-Item@{edit\-Item}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{edit\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-edit\-Item (
+\begin{DoxyParamCaption}
+\item[{final Activity}]{activity, }
+\item[{final int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a061e888a27db66b5b9d408a1067d4eac}
+
+\begin{DoxyCode}
+160                                                                       \{
+161         QuizModel data = quizData.get(position);
+162 
+163         \textcolor{keyword}{final} MaterialDialog dialog = \textcolor{keyword}{new} MaterialDialog.Builder(activity)
+164                 .title(R.string.quiz\_edit)
+165                 .customView(R.layout.quiz\_dialog\_add\_question, \textcolor{keyword}{true})
+166                 .positiveText(R.string.quiz\_add)
+167                 .negativeText(R.string.quiz\_delete)
+168                 .build();
+169 
+170         \textcolor{keyword}{final} EditText question = (EditText) dialog.findViewById(R.id.quiz\_question);
+171         \textcolor{keyword}{final} ArrayList<RadioButton> buttons = \textcolor{keyword}{new} ArrayList<>();
+172         \textcolor{keyword}{final} ArrayList<EditText> options = \textcolor{keyword}{new} ArrayList<>();
+173         options.add((EditText) dialog.findViewById(R.id.quiz\_option\_1));
+174         options.add((EditText) dialog.findViewById(R.id.quiz\_option\_2));
+175         options.add((EditText) dialog.findViewById(R.id.quiz\_option\_3));
+176         options.add((EditText) dialog.findViewById(R.id.quiz\_option\_4));
+177         buttons.add((RadioButton) dialog.findViewById(R.id.quiz\_radio\_1));
+178         buttons.add((RadioButton) dialog.findViewById(R.id.quiz\_radio\_2));
+179         buttons.add((RadioButton) dialog.findViewById(R.id.quiz\_radio\_3));
+180         buttons.add((RadioButton) dialog.findViewById(R.id.quiz\_radio\_4));
+181 
+182         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < data.getOptions().size(); i++) \{
+183             options.get(i).setText(data.getOptions().get(i));
+184         \}
+185 
+186         question.setText(data.getQuestion());
+187         buttons.get(data.getCorrectAnswer()).setChecked(\textcolor{keyword}{true});
+188 
+189         \textcolor{keywordflow}{for} (\textcolor{keyword}{final} RadioButton button : buttons) \{
+190             button.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+191                 @Override
+192                 \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+193                     checkButton(buttons, options, button.getId(), activity);
+194                 \}
+195             \});
+196         \}
+197 
+198         dialog.getActionButton(DialogAction.POSITIVE).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+199             @Override
+200             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+201 
+202                 \textcolor{keywordtype}{boolean} isValidated = \textcolor{keyword}{true};
+203                 \textcolor{keywordtype}{int} checkedAns = getCheckedAnswer(buttons);
+204                 \textcolor{keywordflow}{if} (checkedAns < 0) \{
+205                     Toast.makeText(activity, \textcolor{stringliteral}{"Choose a correct option"}, Toast.LENGTH\_SHORT).show();
+206                     isValidated = \textcolor{keyword}{false};
+207                 \}
+208                 \textcolor{keywordflow}{if} (question.getText().toString().equals(\textcolor{stringliteral}{""})) \{
+209 
+210                     question.setError(\textcolor{stringliteral}{"Question is required"});
+211                     isValidated = \textcolor{keyword}{false};
+212                 \}
+213 
+214                 \textcolor{keywordtype}{int} optionCount = 0;
+215                 \textcolor{keywordflow}{for} (EditText option : options) \{
+216                     \textcolor{keywordflow}{if} (!option.getText().toString().equals(\textcolor{stringliteral}{""})) \{
+217                         optionCount++;
+218                     \}
+219                 \}
+220                 \textcolor{keywordflow}{if} (optionCount < 2) \{
+221                     Toast.makeText(activity, \textcolor{stringliteral}{"Minimum two multiple answers are required."}, 
+      Toast.LENGTH\_SHORT).show();
+222                     isValidated = \textcolor{keyword}{false};
+223                 \}
+224 
+225                 \textcolor{keywordflow}{if} (isValidated) \{
+226                     dialog.dismiss();
+227                     ArrayList<String> answerOptions = \textcolor{keyword}{new} ArrayList<>();
+228                     \textcolor{keywordtype}{int} correctAnswer = 0;
+229                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < buttons.size(); i++) \{
+230                         \textcolor{keywordflow}{if} (buttons.get(i).isChecked() && !options.get(i).getText().toString().equals(\textcolor{stringliteral}{""})) 
+      \{
+231                             correctAnswer = answerOptions.size();
+232                             answerOptions.add(options.get(i).getText().toString());
+233                         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!options.get(i).getText().toString().equals(\textcolor{stringliteral}{""})) \{
+234                             answerOptions.add(options.get(i).getText().toString());
+235                         \}
+236                     \}
+237                     String questionText = question.getText().toString();
+238                     quizData.set(position, \textcolor{keyword}{new} QuizModel(questionText, answerOptions, correctAnswer));
+239                     mAdapter.notifyDataSetChanged();
+240                 \}
+241 
+242             \}
+243         \});
+244         dialog.show();
+245     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_afe64be10f6c439dd611e843ceabb5ac4}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!get\-Apk\-File\-Path@{get\-Apk\-File\-Path}}
+\index{get\-Apk\-File\-Path@{get\-Apk\-File\-Path}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{get\-Apk\-File\-Path}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-get\-Apk\-File\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_afe64be10f6c439dd611e843ceabb5ac4}
+Path of the apk stored in assets
+
+\begin{DoxyReturn}{Returns}
+Apk file path 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a1bca348acb3790aebce645c04a9e0945}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+284                                    \{
+285         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"QuizTemplateApp.apk"};
+286     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a76c88931863b00d9713007e729431e23}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!get\-Assets\-File\-Name@{get\-Assets\-File\-Name}}
+\index{get\-Assets\-File\-Name@{get\-Assets\-File\-Name}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{get\-Assets\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-get\-Assets\-File\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a76c88931863b00d9713007e729431e23}
+
+
+Name of the xml file congaing template data in the assets folders in the build apk. 
+
+\begin{DoxyReturn}{Returns}
+Asset file name 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a5336064bba45a1ba2f6db891567e1b6e}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+274                                       \{
+275         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"quiz\_content.xml"};
+276     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a7f0008da11aa1e2608a82214c92809e3}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!get\-Assets\-File\-Path@{get\-Assets\-File\-Path}}
+\index{get\-Assets\-File\-Path@{get\-Assets\-File\-Path}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{get\-Assets\-File\-Path}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-get\-Assets\-File\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a7f0008da11aa1e2608a82214c92809e3}
+
+
+Folder path in which the apk is stored in the build A\-P\-K. 
+
+\begin{DoxyReturn}{Returns}
+Assets folder path 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ae35d1ab3f2c88b79d0d2a79cde81155b}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+279                                       \{
+280         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"assets/"};
+281     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a3d41a179fe1b10edd828d4ef4f0fb344}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!get\-Items@{get\-Items}}
+\index{get\-Items@{get\-Items}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{get\-Items}]{\setlength{\rightskip}{0pt plus 5cm}Array\-List$<$Element$>$ org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-get\-Items (
+\begin{DoxyParamCaption}
+\item[{Document}]{doc}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a3d41a179fe1b10edd828d4ef4f0fb344}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9fb6e277f0ebfb2caea138017854473f}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+254                                                      \{
+255 
+256         ArrayList<Element> itemElements = \textcolor{keyword}{new} ArrayList<>();
+257 
+258 
+259         \textcolor{keywordflow}{for} (QuizModel data : quizData) \{
+260 
+261             itemElements.add(data.getXml(doc));
+262         \}
+263 
+264         \textcolor{keywordflow}{return} itemElements;
+265 
+266     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_acef98cb485fc56abca5f6ecff6fe28c1}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!get\-Simulator\-Fragment@{get\-Simulator\-Fragment}}
+\index{get\-Simulator\-Fragment@{get\-Simulator\-Fragment}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{get\-Simulator\-Fragment}]{\setlength{\rightskip}{0pt plus 5cm}Fragment org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-get\-Simulator\-Fragment (
+\begin{DoxyParamCaption}
+\item[{String}]{file\-Path\-With\-Name}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_acef98cb485fc56abca5f6ecff6fe28c1}
+
+
+Returns a fragment required for the Simulator Activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Path\-With\-Name} & Path of the generated .buildmlearn file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a fragment required for the Simulator Activity. $\ast$$\ast$\-Dev Note\-: File Path should be used to populate data from actual .buildmlearn file in the Simulator. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9b7f8c39a34918a8832eec6b1eb1f3c0}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+269                                                                   \{
+270         \textcolor{keywordflow}{return} TFTQuizFragment.newInstance(filePathWithName);
+271     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a69f511c03a64a4945ffb41339666fcaa}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!get\-Title@{get\-Title}}
+\index{get\-Title@{get\-Title}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{get\-Title}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-get\-Title (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a69f511c03a64a4945ffb41339666fcaa}
+
+
+Used to get the title of the templaye. Mainly used to update Action\-Bar in Template Editor. 
+
+\begin{DoxyReturn}{Returns}
+Title as a string 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a98a8592a7e4928ce76d0c61df17cf5c8}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+75                              \{
+76         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Quiz Template"};
+77     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a546b1ec5e027883034daa14ef725c4ff}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!load\-Project\-Template\-Editor@{load\-Project\-Template\-Editor}}
+\index{load\-Project\-Template\-Editor@{load\-Project\-Template\-Editor}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{load\-Project\-Template\-Editor}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Adapter org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-load\-Project\-Template\-Editor (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{Array\-List$<$ Element $>$}]{data}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a546b1ec5e027883034daa14ef725c4ff}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ac0637282a7f7b58a4e9b8e86a734bf93}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+52                                                                                            \{
+53         quizData = \textcolor{keyword}{new} ArrayList<>();
+54         \textcolor{keywordflow}{for} (Element item : data) \{
+55             String question = item.getElementsByTagName(\textcolor{stringliteral}{"question"}).item(0).getTextContent();
+56             NodeList options = item.getElementsByTagName(\textcolor{stringliteral}{"option"});
+57             ArrayList<String> answers = \textcolor{keyword}{new} ArrayList<>();
+58             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < options.getLength(); i++) \{
+59                 answers.add(options.item(i).getTextContent());
+60             \}
+61             \textcolor{keywordtype}{int} answer = Integer.parseInt(item.getElementsByTagName(\textcolor{stringliteral}{"answer"}).item(0).getTextContent());
+62             quizData.add(\textcolor{keyword}{new} QuizModel(question, answers, answer));
+63 
+64         \}
+65         mAdapter = \textcolor{keyword}{new} QuizAdapter(context, quizData);
+66         \textcolor{keywordflow}{return} mAdapter;
+67     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a47d3029ad563737e60c7c209738b0a71}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!new\-Template\-Editor\-Adapter@{new\-Template\-Editor\-Adapter}}
+\index{new\-Template\-Editor\-Adapter@{new\-Template\-Editor\-Adapter}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{new\-Template\-Editor\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Adapter org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-new\-Template\-Editor\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Context}]{context}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a47d3029ad563737e60c7c209738b0a71}
+
+
+Called from Template Editor when template editor is started for creating a new template project. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Application context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Base\-Adapter inherited Object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_af7d9d92709123fc39693504884e4f7e2}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+41                                                                  \{
+42         mAdapter = \textcolor{keyword}{new} QuizAdapter(context, quizData);
+43         \textcolor{keywordflow}{return} mAdapter;
+44     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a23bf444a6527a4be8b416f1d04a4912e}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!on\-Activity\-Result@{on\-Activity\-Result}}
+\index{on\-Activity\-Result@{on\-Activity\-Result}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{on\-Activity\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-on\-Activity\-Result (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{int}]{request\-Code, }
+\item[{int}]{result\-Code, }
+\item[{Intent}]{intent}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a23bf444a6527a4be8b416f1d04a4912e}
+
+
+Called whenever on\-Activity\-Result is called in Template Editor. Can be used to perform action related to intent and callbacks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \\
+\hline
+{\em request\-Code} & \\
+\hline
+{\em result\-Code} & \\
+\hline
+{\em intent} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9c506bf3776973765d4d1e8d6954e95b}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+289                                                                                                   \{
+290 
+291     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a775355616317bb56fd8adf0962d7e05b}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}!on\-Attach@{on\-Attach}}
+\index{on\-Attach@{on\-Attach}!org::buildmlearn::toolkit::templates::QuizTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Template}}
+\subsubsection[{on\-Attach}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template.\-on\-Attach (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a775355616317bb56fd8adf0962d7e05b}
+
+
+Called from Template\-Editor whenever a template is attached to Template\-Editor. 
+
+\begin{DoxyReturn}{Returns}
+Custom string 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_af511bc9b58d176182a53397494d14238}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+70                              \{
+71         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Quiz Template"};
+72     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/templates/\hyperlink{QuizTemplate_8java}{Quiz\-Template.\-java}\end{DoxyCompactItemize}

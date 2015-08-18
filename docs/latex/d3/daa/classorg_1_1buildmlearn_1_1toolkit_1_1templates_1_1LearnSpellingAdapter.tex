@@ -1,0 +1,220 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter}{\section{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Adapter Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter}\index{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Adapter@{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Adapter}}
+}
+
+
+Adapter for displaying Learn Spelling Template Editor data.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{d7/ddc/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{d9/d6e/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_1_1LearnSpellingHolder}{Learn\-Spelling\-Holder}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_a7d6a79b3c3da83e213a1a606fca26083}{Learn\-Spelling\-Adapter} (Context m\-Context, Array\-List$<$ \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingModel}{Learn\-Spelling\-Model} $>$ data)
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_aa03e460bd84bbd1fb5d4ac881e859256}{get\-Count} ()
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingModel}{Learn\-Spelling\-Model} \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_af0b0934c215c709326ded3e7fc3b56aa}{get\-Item} (int position)
+\item 
+long \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_a6fb76396d65194c3e447ec6883124564}{get\-Item\-Id} (int position)
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_abdf6a7e409727aff2ac23c6b1993ee04}{get\-View} (final int position, View convert\-View, View\-Group parent)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Adapter for displaying Learn Spelling Template Editor data. 
+
+Created by abhishek on 17/06/15 at 9\-:48 P\-M. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_a7d6a79b3c3da83e213a1a606fca26083}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter}!Learn\-Spelling\-Adapter@{Learn\-Spelling\-Adapter}}
+\index{Learn\-Spelling\-Adapter@{Learn\-Spelling\-Adapter}!org::buildmlearn::toolkit::templates::LearnSpellingAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter}}
+\subsubsection[{Learn\-Spelling\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Adapter.\-Learn\-Spelling\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Context}]{m\-Context, }
+\item[{Array\-List$<$ {\bf Learn\-Spelling\-Model} $>$}]{data}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_a7d6a79b3c3da83e213a1a606fca26083}
+
+\begin{DoxyCode}
+29                                                                                       \{
+30         this.mContext = mContext;
+31         this.data = data;
+32     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_aa03e460bd84bbd1fb5d4ac881e859256}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter}!get\-Count@{get\-Count}}
+\index{get\-Count@{get\-Count}!org::buildmlearn::toolkit::templates::LearnSpellingAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter}}
+\subsubsection[{get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Adapter.\-get\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_aa03e460bd84bbd1fb5d4ac881e859256}
+
+\begin{DoxyCode}
+35                           \{
+36         \textcolor{keywordflow}{return} data.size();
+37     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_af0b0934c215c709326ded3e7fc3b56aa}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter}!get\-Item@{get\-Item}}
+\index{get\-Item@{get\-Item}!org::buildmlearn::toolkit::templates::LearnSpellingAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter}}
+\subsubsection[{get\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Learn\-Spelling\-Model} org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Adapter.\-get\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_af0b0934c215c709326ded3e7fc3b56aa}
+
+\begin{DoxyCode}
+40                                                     \{
+41         \textcolor{keywordflow}{return} data.get(position);
+42     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_a6fb76396d65194c3e447ec6883124564}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter}!get\-Item\-Id@{get\-Item\-Id}}
+\index{get\-Item\-Id@{get\-Item\-Id}!org::buildmlearn::toolkit::templates::LearnSpellingAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter}}
+\subsubsection[{get\-Item\-Id}]{\setlength{\rightskip}{0pt plus 5cm}long org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Adapter.\-get\-Item\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_a6fb76396d65194c3e447ec6883124564}
+
+\begin{DoxyCode}
+45                                         \{
+46         \textcolor{keywordflow}{return} position;
+47     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_abdf6a7e409727aff2ac23c6b1993ee04}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter}!get\-View@{get\-View}}
+\index{get\-View@{get\-View}!org::buildmlearn::toolkit::templates::LearnSpellingAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Learn\-Spelling\-Adapter}}
+\subsubsection[{get\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Adapter.\-get\-View (
+\begin{DoxyParamCaption}
+\item[{final int}]{position, }
+\item[{View}]{convert\-View, }
+\item[{View\-Group}]{parent}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_abdf6a7e409727aff2ac23c6b1993ee04}
+
+\begin{DoxyCode}
+50                                                                                 \{
+51 
+52         LearnSpellingHolder holder;
+53 
+54         \textcolor{keywordflow}{if} (convertView == null) \{
+55             LayoutInflater inflater = LayoutInflater.from(mContext);
+56             convertView = inflater.inflate(R.layout.info\_template\_item, parent, \textcolor{keyword}{false});
+57             holder = \textcolor{keyword}{new} LearnSpellingHolder();
+58         \} \textcolor{keywordflow}{else} \{
+59             holder = (LearnSpellingHolder) convertView.getTag();
+60         \}
+61 
+62         holder.word = (TextViewPlus) convertView.findViewById(R.id.info\_object);
+63         holder.meaning = (TextViewPlus) convertView.findViewById(R.id.info\_description);
+64 
+65         LearnSpellingModel info = \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_af0b0934c215c709326ded3e7fc3b56aa}{getItem}(position);
+66 
+67         holder.meaning.setText(info.getMeaning());
+68         holder.word.setText(info.getWord());
+69         convertView.setTag(holder);
+70 
+71         holder.deleteButton = (ImageView) convertView.findViewById(R.id.info\_template\_delete);
+72         holder.deleteButton.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+73             @Override
+74             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+75 
+76                 \textcolor{keyword}{final} MaterialDialog dialog = \textcolor{keyword}{new} MaterialDialog.Builder(mContext)
+77                         .title(R.string.info\_template\_delete)
+78                         .content(R.string.info\_delete\_item\_content)
+79                         .positiveText(R.string.dialog\_yes)
+80                         .negativeText(R.string.dialog\_no)
+81                         .build();
+82 
+83                 dialog.getActionButton(DialogAction.POSITIVE).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener()
+       \{
+84                     @Override
+85                     \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+86                         data.remove(position);
+87                         notifyDataSetChanged();
+88                         dialog.dismiss();
+89                     \}
+90                 \});
+91 
+92                 dialog.show();
+93 
+94             \}
+95         \});
+96 
+97         holder.editButton = (ImageView) convertView.findViewById(R.id.info\_template\_edit);
+98         holder.editButton.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+99             @Override
+100             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+101                 \textcolor{keyword}{final} MaterialDialog dialog = \textcolor{keyword}{new} MaterialDialog.Builder(mContext)
+102                         .title(R.string.info\_add\_new\_title)
+103                         .customView(R.layout.info\_dialog\_add\_edit\_data, \textcolor{keyword}{true})
+104                         .positiveText(R.string.info\_template\_add)
+105                         .negativeText(R.string.info\_template\_delete)
+106                         .build();
+107 
+108                 \textcolor{keyword}{final} LearnSpellingModel data = \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter_af0b0934c215c709326ded3e7fc3b56aa}{getItem}(position);
+109 
+110                 \textcolor{keyword}{final} EditText word = (EditText) dialog.findViewById(R.id.info\_word);
+111                 \textcolor{keyword}{final} EditText meaning = (EditText) dialog.findViewById(R.id.info\_meaning);
+112                 word.setText(data.getWord());
+113                 meaning.setText(data.getMeaning());
+114 
+115                 dialog.getActionButton(DialogAction.POSITIVE).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener()
+       \{
+116                     @Override
+117                     \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+118 
+119                         \textcolor{keywordflow}{if} (InfoTemplate.validated(mContext, word, meaning)) \{
+120                             String wordText = word.getText().toString();
+121                             String meaningText = meaning.getText().toString();
+122 
+123                             data.setWord(wordText);
+124                             data.setMeaning(meaningText);
+125 
+126                             notifyDataSetChanged();
+127                             dialog.dismiss();
+128                         \}
+129 
+130                     \}
+131                 \});
+132 
+133                 dialog.show();
+134             \}
+135         \});
+136 
+137 
+138         \textcolor{keywordflow}{return} convertView;
+139     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/templates/\hyperlink{LearnSpellingAdapter_8java}{Learn\-Spelling\-Adapter.\-java}\end{DoxyCompactItemize}

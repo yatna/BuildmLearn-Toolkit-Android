@@ -1,0 +1,6 @@
+<map id="org.buildmlearn.toolkit.model.TemplateInterface" name="org.buildmlearn.toolkit.model.TemplateInterface">
+<area shape="rect" id="node3" href="$d6/dbf/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate.html" title="Flash Card template code implementing methods of TemplateInterface. " alt="" coords="5,469,243,766"/>
+<area shape="rect" id="node4" href="$df/d53/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate.html" title="Info template code implementing methods of TemplateInterface. " alt="" coords="267,461,505,773"/>
+<area shape="rect" id="node5" href="$d7/dbc/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingTemplate.html" title="Learn Spelling template code implementing methods of TemplateInterface. " alt="" coords="530,461,768,773"/>
+<area shape="rect" id="node6" href="$da/d66/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate.html" title="Quiz template code implementing methods of TemplateInterface. " alt="" coords="793,469,1031,766"/>
+</map>

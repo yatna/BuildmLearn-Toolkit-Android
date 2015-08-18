@@ -1,0 +1,107 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1FirstRunActivity}{\section{org.\-buildmlearn.\-toolkit.\-activity.\-First\-Run\-Activity Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1FirstRunActivity}\index{org.\-buildmlearn.\-toolkit.\-activity.\-First\-Run\-Activity@{org.\-buildmlearn.\-toolkit.\-activity.\-First\-Run\-Activity}}
+}
+
+
+Shown on application first launch.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-activity.\-First\-Run\-Activity\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{d7/d56/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1FirstRunActivity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-activity.\-First\-Run\-Activity\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{d1/d9d/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1FirstRunActivity__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1FirstRunActivity_a847a7bc25bdbd77b2a7bc90cd3ca38bb}{on\-Create} (Bundle saved\-Instance\-State)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Shown on application first launch. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1FirstRunActivity_a847a7bc25bdbd77b2a7bc90cd3ca38bb}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-First\-Run\-Activity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-First\-Run\-Activity}!on\-Create@{on\-Create}}
+\index{on\-Create@{on\-Create}!org::buildmlearn::toolkit::activity::FirstRunActivity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-First\-Run\-Activity}}
+\subsubsection[{on\-Create}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-First\-Run\-Activity.\-on\-Create (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1FirstRunActivity_a847a7bc25bdbd77b2a7bc90cd3ca38bb}
+
+\begin{DoxyCode}
+33                                                        \{
+34         super.onCreate(savedInstanceState);
+35         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+36 
+37         \textcolor{keywordflow}{if} (prefs.getBoolean(FIRST\_RUN, \textcolor{keyword}{false})) \{
+38             startActivity(\textcolor{keyword}{new} Intent(getApplicationContext(), HomeActivity.class));
+39             finish();
+40         \}
+41         setContentView(R.layout.activity\_first\_run);
+42 
+43 
+44         findViewById(R.id.focus\_thief).clearFocus();
+45         YoYo.with(Techniques.BounceInUp)
+46                 .duration(2700)
+47                 .playOn(findViewById(R.id.first\_name));
+48 
+49 
+50         name = (EditText) findViewById(R.id.first\_name);
+51 
+52 
+53         name.setOnKeyListener(\textcolor{keyword}{new} View.OnKeyListener() \{
+54             @Override
+55             \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} onKey(View v, \textcolor{keywordtype}{int} keyCode, KeyEvent event) \{
+56                 \textcolor{keywordflow}{if} (event.getAction() == KeyEvent.ACTION\_DOWN) \{
+57                     \textcolor{keywordflow}{switch} (keyCode) \{
+58                         \textcolor{keywordflow}{case} KeyEvent.KEYCODE\_DPAD\_CENTER:
+59                         \textcolor{keywordflow}{case} KeyEvent.KEYCODE\_ENTER:
+60 
+61                             \textcolor{keywordflow}{if} (name.getText().toString().equals(\textcolor{stringliteral}{""})) \{
+62                                 Toast.makeText(getApplicationContext(), \textcolor{stringliteral}{"Enter name"}, Toast.LENGTH\_SHORT).
+      show();
+63                                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+64                             \}
+65 
+66 
+67                             SharedPreferences.Editor editor = prefs.edit();
+68 
+69                             editor.putString(getString(R.string.key\_user\_name), name.getText().toString());
+70                             editor.putBoolean(FIRST\_RUN, \textcolor{keyword}{true});
+71                             editor.commit();
+72                             Intent intent = \textcolor{keyword}{new} Intent(getApplicationContext(), TutorialActivity.class);
+73                             intent.putExtra(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a2799e097282009a747db0225f72508ff}{Constants.START\_ACTIVITY}, \textcolor{keyword}{true});
+74                             startActivity(intent);
+75                             finish();
+76                             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+77                         \textcolor{keywordflow}{default}:
+78                             \textcolor{keywordflow}{break};
+79                     \}
+80                 \}
+81                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+82             \}
+83         \});
+84     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/activity/\hyperlink{FirstRunActivity_8java}{First\-Run\-Activity.\-java}\end{DoxyCompactItemize}

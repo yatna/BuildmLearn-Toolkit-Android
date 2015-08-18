@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$de/dba/interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface.html" title="Interface containing methods for a implementing a template. " alt="" coords="163,102,376,143"/>
+<area shape="rect" id="node7" href="$d6/d15/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel.html" title="Model class for Flash Card Template Editor data. " alt="" coords="150,167,389,209"/>
+<area shape="rect" id="node8" href="$d8/d2b/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoModel.html" title="Model class for Info Template Editor data. " alt="" coords="150,233,389,274"/>
+<area shape="rect" id="node9" href="$d3/d30/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingModel.html" title="Model class for Learn Spelling Template Editor data. " alt="" coords="150,298,389,339"/>
+<area shape="rect" id="node10" href="$d5/d7e/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel.html" title="Model class for Quiz Template Editor data. " alt="" coords="150,363,389,405"/>
+<area shape="rect" id="node3" href="$d6/dbf/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate.html" title="Flash Card template code implementing methods of TemplateInterface. " alt="" coords="438,5,677,46"/>
+<area shape="rect" id="node4" href="$df/d53/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate.html" title="Info template code implementing methods of TemplateInterface. " alt="" coords="438,70,677,111"/>
+<area shape="rect" id="node5" href="$d7/dbc/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingTemplate.html" title="Learn Spelling template code implementing methods of TemplateInterface. " alt="" coords="438,135,677,177"/>
+<area shape="rect" id="node6" href="$da/d66/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate.html" title="Quiz template code implementing methods of TemplateInterface. " alt="" coords="438,201,677,242"/>
+</map>

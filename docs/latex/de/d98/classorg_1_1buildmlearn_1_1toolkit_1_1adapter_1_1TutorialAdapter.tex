@@ -1,0 +1,199 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter}{\section{org.\-buildmlearn.\-toolkit.\-adapter.\-Tutorial\-Adapter Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter}\index{org.\-buildmlearn.\-toolkit.\-adapter.\-Tutorial\-Adapter@{org.\-buildmlearn.\-toolkit.\-adapter.\-Tutorial\-Adapter}}
+}
+
+
+Adapter used for showing tutorial.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-adapter.\-Tutorial\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{df/d4a/classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-adapter.\-Tutorial\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{dc/d8e/classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_ad6e401b96ba7fcde9c0b57a3b9e5f60c}{Tutorial\-Adapter} (Activity activity, boolean start\-Activity)
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a1ea77519e1257a68116ea93bdf4a7618}{get\-Count} ()
+\item 
+\hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Tutorial}{Tutorial} \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a2b57538f443c66c7a706128443693eda}{get\-Item} (int position)
+\item 
+long \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a78742a37c61010923c051135bdbeef14}{get\-Item\-Id} (int position)
+\item 
+Object \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a61e4fd5e541db4d32b4888a2e73b129e}{instantiate\-Item} (View\-Group container, final int position)
+\item 
+boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_ae8d4ccac4b3da95a24e581b25dd03646}{is\-View\-From\-Object} (View view, Object object)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a486ba0a0346f2adf357bf97e57edb9c4}{destroy\-Item} (View\-Group container, int position, Object object)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Adapter used for showing tutorial. 
+
+Created by abhishek on 03/08/15 at 10\-:52 P\-M. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_ad6e401b96ba7fcde9c0b57a3b9e5f60c}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter}!Tutorial\-Adapter@{Tutorial\-Adapter}}
+\index{Tutorial\-Adapter@{Tutorial\-Adapter}!org::buildmlearn::toolkit::adapter::TutorialAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter}}
+\subsubsection[{Tutorial\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-adapter.\-Tutorial\-Adapter.\-Tutorial\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Activity}]{activity, }
+\item[{boolean}]{start\-Activity}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_ad6e401b96ba7fcde9c0b57a3b9e5f60c}
+
+\begin{DoxyCode}
+31                                                                      \{
+32         mActivity = activity;
+33         mTutorials = Tutorial.values();
+34         this.mStartActivity = startActivity;
+35     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a486ba0a0346f2adf357bf97e57edb9c4}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter}!destroy\-Item@{destroy\-Item}}
+\index{destroy\-Item@{destroy\-Item}!org::buildmlearn::toolkit::adapter::TutorialAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter}}
+\subsubsection[{destroy\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-adapter.\-Tutorial\-Adapter.\-destroy\-Item (
+\begin{DoxyParamCaption}
+\item[{View\-Group}]{container, }
+\item[{int}]{position, }
+\item[{Object}]{object}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a486ba0a0346f2adf357bf97e57edb9c4}
+
+\begin{DoxyCode}
+113                                                                               \{
+114         container.removeView((ViewGroup) \textcolor{keywordtype}{object});
+115     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a1ea77519e1257a68116ea93bdf4a7618}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter}!get\-Count@{get\-Count}}
+\index{get\-Count@{get\-Count}!org::buildmlearn::toolkit::adapter::TutorialAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter}}
+\subsubsection[{get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-adapter.\-Tutorial\-Adapter.\-get\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a1ea77519e1257a68116ea93bdf4a7618}
+
+\begin{DoxyCode}
+41                           \{
+42         \textcolor{keywordflow}{return} mTutorials.length;
+43     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a2b57538f443c66c7a706128443693eda}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter}!get\-Item@{get\-Item}}
+\index{get\-Item@{get\-Item}!org::buildmlearn::toolkit::adapter::TutorialAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter}}
+\subsubsection[{get\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tutorial} org.\-buildmlearn.\-toolkit.\-adapter.\-Tutorial\-Adapter.\-get\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a2b57538f443c66c7a706128443693eda}
+
+\begin{DoxyCode}
+46                                           \{
+47         \textcolor{keywordflow}{return} mTutorials[position];
+48     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a78742a37c61010923c051135bdbeef14}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter}!get\-Item\-Id@{get\-Item\-Id}}
+\index{get\-Item\-Id@{get\-Item\-Id}!org::buildmlearn::toolkit::adapter::TutorialAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter}}
+\subsubsection[{get\-Item\-Id}]{\setlength{\rightskip}{0pt plus 5cm}long org.\-buildmlearn.\-toolkit.\-adapter.\-Tutorial\-Adapter.\-get\-Item\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a78742a37c61010923c051135bdbeef14}
+
+\begin{DoxyCode}
+50                                         \{
+51         \textcolor{keywordflow}{return} position;
+52     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a61e4fd5e541db4d32b4888a2e73b129e}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter}!instantiate\-Item@{instantiate\-Item}}
+\index{instantiate\-Item@{instantiate\-Item}!org::buildmlearn::toolkit::adapter::TutorialAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter}}
+\subsubsection[{instantiate\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-buildmlearn.\-toolkit.\-adapter.\-Tutorial\-Adapter.\-instantiate\-Item (
+\begin{DoxyParamCaption}
+\item[{View\-Group}]{container, }
+\item[{final int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a61e4fd5e541db4d32b4888a2e73b129e}
+
+\begin{DoxyCode}
+58                                                                            \{
+59 
+60         LayoutInflater inflater = (LayoutInflater) container.getContext()
+61                 .getSystemService(Context.LAYOUT\_INFLATER\_SERVICE);
+62 
+63         Tutorial tutorial = \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_a2b57538f443c66c7a706128443693eda}{getItem}(position);
+64 
+65 
+66         View convertView;
+67         \textcolor{keywordflow}{if} (tutorial.isLastScreen()) \{
+68             convertView = inflater.inflate(R.layout.tutorial\_layout\_finish, null);
+69 
+70             convertView.findViewById(R.id.finish\_tutorial\_button).setOnClickListener(\textcolor{keyword}{new} View.
+      OnClickListener() \{
+71                 @Override
+72                 \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+73                     \textcolor{keywordflow}{if} (mStartActivity) \{
+74                         mActivity.startActivity(\textcolor{keyword}{new} Intent(mActivity, HomeActivity.class));
+75                     \}
+76                     mActivity.finish();
+77                 \}
+78             \});
+79         \} \textcolor{keywordflow}{else} \{
+80             convertView = inflater.inflate(R.layout.tutorial\_layout, null);
+81             ImageView deviceImage = (ImageView) convertView
+82                     .findViewById(R.id.device\_image);
+83             TextView title = (TextView) convertView
+84                     .findViewById(R.id.tutorial\_title);
+85             TextView description = (TextView) convertView
+86                     .findViewById(R.id.tutorial\_desc);
+87 
+88             \textcolor{keywordtype}{int} color = colors[position % colors.length].getColor();
+89 
+90             convertView.findViewById(R.id.tutorial\_layout).setBackgroundColor(color);
+91 
+92             deviceImage.setImageResource(tutorial.getImage());
+93             title.setText(tutorial.getTitle());
+94             description.setText(tutorial.getDescription());
+95         \}
+96         container.addView(convertView, 0);
+97 
+98         \textcolor{keywordflow}{return} convertView;
+99     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_ae8d4ccac4b3da95a24e581b25dd03646}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter}!is\-View\-From\-Object@{is\-View\-From\-Object}}
+\index{is\-View\-From\-Object@{is\-View\-From\-Object}!org::buildmlearn::toolkit::adapter::TutorialAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Tutorial\-Adapter}}
+\subsubsection[{is\-View\-From\-Object}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-buildmlearn.\-toolkit.\-adapter.\-Tutorial\-Adapter.\-is\-View\-From\-Object (
+\begin{DoxyParamCaption}
+\item[{View}]{view, }
+\item[{Object}]{object}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TutorialAdapter_ae8d4ccac4b3da95a24e581b25dd03646}
+
+\begin{DoxyCode}
+105                                                               \{
+106         \textcolor{keywordflow}{return} view == ((View) \textcolor{keywordtype}{object});
+107     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/adapter/\hyperlink{TutorialAdapter_8java}{Tutorial\-Adapter.\-java}\end{DoxyCompactItemize}

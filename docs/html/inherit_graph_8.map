@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$d3/d5f/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1AboutBuildmLearn.html" title="Gives brief info about BuildmLearn community and toolkit. " alt="" coords="331,78,547,119"/>
+<area shape="rect" id="node3" href="$d8/d00/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1FirstRunActivity.html" title="Shown on application first launch. " alt="" coords="331,143,547,185"/>
+<area shape="rect" id="node4" href="$d6/d8d/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1HomeActivity.html" title="Home screen of the application containg all the menus and settings. " alt="" coords="331,13,547,54"/>
+<area shape="rect" id="node5" href="$da/da2/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateActivity.html" title="Template activity show the list of available templates in the toolkit. Templates are defined in Templ..." alt="" coords="331,209,547,250"/>
+<area shape="rect" id="node6" href="$d9/dfb/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor.html" title="Placeholder activity for all the templates. " alt="" coords="331,274,547,315"/>
+<area shape="rect" id="node7" href="$df/dd9/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TutorialActivity.html" title="Shows the tutorial related to BuildmLearn toolkit usage. " alt="" coords="331,339,547,381"/>
+<area shape="rect" id="node8" href="$dc/d7c/classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator.html" title="This activity acts as a placeholder for Simulator fragment. Contains a Nexus 6 frame in which the fra..." alt="" coords="323,405,555,446"/>
+<area shape="rect" id="node9" href="$d5/dee/interfaceorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1NavigationDrawerFragment_1_1NavigationDrawerCallbacks.html" title="org.buildmlearn.toolkit.fragment.\lNavigationDrawerFragment.Navigation\lDrawerCallbacks" alt="" coords="6,5,274,61"/>
+</map>

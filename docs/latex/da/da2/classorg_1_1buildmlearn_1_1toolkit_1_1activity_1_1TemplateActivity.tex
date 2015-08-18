@@ -1,0 +1,122 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateActivity}{\section{org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Activity Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateActivity}\index{org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Activity@{org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Activity}}
+}
+
+
+Template activity show the list of available templates in the toolkit. Templates are defined in \hyperlink{Template_8java}{Template.\-java} enum file.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Activity\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{de/d3f/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateActivity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Activity\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{db/dc2/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateActivity__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateActivity_aa4a2a52e7548ca9b54a353420f79ff75}{on\-Create\-Options\-Menu} (Menu menu)
+\item 
+boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateActivity_a93ae9651ee39cf090f15caac413e9892}{on\-Options\-Item\-Selected} (Menu\-Item item)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateActivity_a0bef4534d603cda941537d9527010576}{on\-Create} (Bundle saved\-Instance\-State)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Template activity show the list of available templates in the toolkit. Templates are defined in \hyperlink{Template_8java}{Template.\-java} enum file. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateActivity_a0bef4534d603cda941537d9527010576}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Activity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Activity}!on\-Create@{on\-Create}}
+\index{on\-Create@{on\-Create}!org::buildmlearn::toolkit::activity::TemplateActivity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Activity}}
+\subsubsection[{on\-Create}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Activity.\-on\-Create (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateActivity_a0bef4534d603cda941537d9527010576}
+
+\begin{DoxyCode}
+28                                                        \{
+29         super.onCreate(savedInstanceState);
+30         setContentView(R.layout.activity\_template);
+31         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+32         ActionBar actionBar = getSupportActionBar();
+33         actionBar.setDisplayHomeAsUpEnabled(\textcolor{keyword}{true});
+34         actionBar.setHomeButtonEnabled(\textcolor{keyword}{true});
+35         ListAdapter mAdapter = \textcolor{keyword}{new} TemplateAdapter(\textcolor{keyword}{this}, 6);
+36         AbsListView mListView = (AbsListView) findViewById(android.R.id.list);
+37         mListView.setAdapter(mAdapter);
+38 
+39         mListView.setOnItemClickListener(\textcolor{keyword}{new} AdapterView.OnItemClickListener() \{
+40             @Override
+41             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onItemClick(AdapterView<?> parent, View view, \textcolor{keywordtype}{int} position, \textcolor{keywordtype}{long} \textcolor{keywordtype}{id}) \{
+42                 \textcolor{keywordtype}{int} templateId = position;
+43 
+44                 Intent intent = \textcolor{keyword}{new} Intent(getApplicationContext(), TemplateEditor.class);
+45                 intent.putExtra(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a2ee9d59d6a353dc4664ed2e2086dae9d}{Constants.TEMPLATE\_ID}, templateId);
+46                 startActivity(intent);
+47 
+48             \}
+49         \});
+50     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateActivity_aa4a2a52e7548ca9b54a353420f79ff75}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Activity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Activity}!on\-Create\-Options\-Menu@{on\-Create\-Options\-Menu}}
+\index{on\-Create\-Options\-Menu@{on\-Create\-Options\-Menu}!org::buildmlearn::toolkit::activity::TemplateActivity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Activity}}
+\subsubsection[{on\-Create\-Options\-Menu}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Activity.\-on\-Create\-Options\-Menu (
+\begin{DoxyParamCaption}
+\item[{Menu}]{menu}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateActivity_aa4a2a52e7548ca9b54a353420f79ff75}
+
+\begin{DoxyCode}
+56                                                   \{
+57         \textcolor{comment}{// Inflate the menu; this adds items to the action bar if it is present.}
+58         getMenuInflater().inflate(R.menu.menu\_template, menu);
+59         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+60     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateActivity_a93ae9651ee39cf090f15caac413e9892}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Activity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Activity}!on\-Options\-Item\-Selected@{on\-Options\-Item\-Selected}}
+\index{on\-Options\-Item\-Selected@{on\-Options\-Item\-Selected}!org::buildmlearn::toolkit::activity::TemplateActivity@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Activity}}
+\subsubsection[{on\-Options\-Item\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Activity.\-on\-Options\-Item\-Selected (
+\begin{DoxyParamCaption}
+\item[{Menu\-Item}]{item}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateActivity_a93ae9651ee39cf090f15caac413e9892}
+
+\begin{DoxyCode}
+66                                                         \{
+67         \textcolor{comment}{// Handle action bar item clicks here. The action bar will}
+68         \textcolor{comment}{// automatically handle clicks on the Home/Up button, so long}
+69         \textcolor{comment}{// as you specify a parent activity in AndroidManifest.xml.}
+70         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = item.getItemId();
+71 
+72         \textcolor{comment}{//noinspection SimplifiableIfStatement}
+73         \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == R.id.action\_settings) \{
+74             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+75         \}
+76 
+77         \textcolor{keywordflow}{return} super.onOptionsItemSelected(item);
+78     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/activity/\hyperlink{TemplateActivity_8java}{Template\-Activity.\-java}\end{DoxyCompactItemize}

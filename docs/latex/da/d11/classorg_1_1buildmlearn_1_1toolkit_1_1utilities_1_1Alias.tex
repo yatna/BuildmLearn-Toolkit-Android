@@ -1,0 +1,279 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias}{\section{org.\-buildmlearn.\-toolkit.\-utilities.\-Alias Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias}\index{org.\-buildmlearn.\-toolkit.\-utilities.\-Alias@{org.\-buildmlearn.\-toolkit.\-utilities.\-Alias}}
+}
+
+
+Model class for storing \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias}{Alias} data for keystore.  
+
+
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-utilities.\-Alias\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d5/dab/classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_ad854360fe849540917362f3fda65b118}{get\-Id} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a46050f92ad4ea5360c50aa865c177ff1}{set\-Id} (long id)
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Keystore}{Keystore} \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_ae6fd9833900335696443e219d50e900e}{get\-Keystore} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a1b6a7ec467e6a3a20794086af1f34057}{set\-Keystore} (\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Keystore}{Keystore} keystore)
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a0bb609953ae521ac184a0cf3ed347703}{get\-Name} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a78e04df1f7e80d248a219d89c91a6034}{set\-Name} (String name)
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_adc60c0bcd710831f5a9281c3ef884d0d}{get\-Display\-Name} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a3b06eeb819f1640f253022a44fa925cc}{set\-Display\-Name} (String display\-Name)
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_aa19ddc355d3eac8fa1317b6ebe66fe30}{get\-Password} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a00ba075722c71303485f0991413f659b}{set\-Password} (String password)
+\item 
+boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a0b7267664c59b5c2ebd7eaa300270bc6}{is\-Selected} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a31f1875c4a77412a7d9207f285aea841}{set\-Selected} (boolean selected)
+\item 
+boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_afaf811300872e304bef8328df31ce3cc}{remember\-Password} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a761275eebde7f3c1900bc0c627ffc3ae}{set\-Remember\-Password} (boolean remember\-Password)
+\item 
+boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a5a34c06a2fd102242a9a6fa97846ca3d}{equals} (Object o)
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a8ca9bfa9fd2e0441decc1ab8169a7e05}{hash\-Code} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Model class for storing \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias}{Alias} data for keystore. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a5a34c06a2fd102242a9a6fa97846ca3d}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!equals@{equals}}
+\index{equals@{equals}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-equals (
+\begin{DoxyParamCaption}
+\item[{Object}]{o}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a5a34c06a2fd102242a9a6fa97846ca3d}
+
+\begin{DoxyCode}
+73                                     \{
+74         \textcolor{keywordflow}{if} (\textcolor{keyword}{this} == o) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+75         \textcolor{keywordflow}{if} (o == null || getClass() != o.getClass()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+76 
+77         Alias alias = (Alias) o;
+78 
+79         \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} != alias.id) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+80 
+81         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+82     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_adc60c0bcd710831f5a9281c3ef884d0d}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!get\-Display\-Name@{get\-Display\-Name}}
+\index{get\-Display\-Name@{get\-Display\-Name}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{get\-Display\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-get\-Display\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_adc60c0bcd710831f5a9281c3ef884d0d}
+
+\begin{DoxyCode}
+40                                    \{
+41         \textcolor{keywordflow}{return} displayName;
+42     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_ad854360fe849540917362f3fda65b118}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!get\-Id@{get\-Id}}
+\index{get\-Id@{get\-Id}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{get\-Id}]{\setlength{\rightskip}{0pt plus 5cm}long org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-get\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_ad854360fe849540917362f3fda65b118}
+
+\begin{DoxyCode}
+16                         \{
+17         \textcolor{keywordflow}{return} id;
+18     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_ae6fd9833900335696443e219d50e900e}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!get\-Keystore@{get\-Keystore}}
+\index{get\-Keystore@{get\-Keystore}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{get\-Keystore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Keystore} org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-get\-Keystore (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_ae6fd9833900335696443e219d50e900e}
+
+\begin{DoxyCode}
+24                                   \{
+25         \textcolor{keywordflow}{return} keystore;
+26     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a0bb609953ae521ac184a0cf3ed347703}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a0bb609953ae521ac184a0cf3ed347703}
+
+\begin{DoxyCode}
+32                             \{
+33         \textcolor{keywordflow}{return} name;
+34     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_aa19ddc355d3eac8fa1317b6ebe66fe30}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!get\-Password@{get\-Password}}
+\index{get\-Password@{get\-Password}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{get\-Password}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-get\-Password (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_aa19ddc355d3eac8fa1317b6ebe66fe30}
+
+\begin{DoxyCode}
+48                                 \{
+49         \textcolor{keywordflow}{return} password;
+50     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a8ca9bfa9fd2e0441decc1ab8169a7e05}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!hash\-Code@{hash\-Code}}
+\index{hash\-Code@{hash\-Code}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{hash\-Code}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-hash\-Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a8ca9bfa9fd2e0441decc1ab8169a7e05}
+
+\begin{DoxyCode}
+85                           \{
+86         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int}) (\textcolor{keywordtype}{id} ^ (\textcolor{keywordtype}{id} >>> 32));
+87     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a0b7267664c59b5c2ebd7eaa300270bc6}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!is\-Selected@{is\-Selected}}
+\index{is\-Selected@{is\-Selected}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{is\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-is\-Selected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a0b7267664c59b5c2ebd7eaa300270bc6}
+
+\begin{DoxyCode}
+56                                 \{
+57         \textcolor{keywordflow}{return} selected;
+58     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_afaf811300872e304bef8328df31ce3cc}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!remember\-Password@{remember\-Password}}
+\index{remember\-Password@{remember\-Password}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{remember\-Password}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-remember\-Password (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_afaf811300872e304bef8328df31ce3cc}
+
+\begin{DoxyCode}
+64                                       \{
+65         \textcolor{keywordflow}{return} \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_afaf811300872e304bef8328df31ce3cc}{rememberPassword};
+66     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a3b06eeb819f1640f253022a44fa925cc}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!set\-Display\-Name@{set\-Display\-Name}}
+\index{set\-Display\-Name@{set\-Display\-Name}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{set\-Display\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-set\-Display\-Name (
+\begin{DoxyParamCaption}
+\item[{String}]{display\-Name}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a3b06eeb819f1640f253022a44fa925cc}
+
+\begin{DoxyCode}
+44                                                    \{
+45         this.displayName = displayName;
+46     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a46050f92ad4ea5360c50aa865c177ff1}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!set\-Id@{set\-Id}}
+\index{set\-Id@{set\-Id}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{set\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-set\-Id (
+\begin{DoxyParamCaption}
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a46050f92ad4ea5360c50aa865c177ff1}
+
+\begin{DoxyCode}
+20                                \{
+21         this.id = id;
+22     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a1b6a7ec467e6a3a20794086af1f34057}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!set\-Keystore@{set\-Keystore}}
+\index{set\-Keystore@{set\-Keystore}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{set\-Keystore}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-set\-Keystore (
+\begin{DoxyParamCaption}
+\item[{{\bf Keystore}}]{keystore}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a1b6a7ec467e6a3a20794086af1f34057}
+
+\begin{DoxyCode}
+28                                                \{
+29         this.keystore = keystore;
+30     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a78e04df1f7e80d248a219d89c91a6034}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!set\-Name@{set\-Name}}
+\index{set\-Name@{set\-Name}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-set\-Name (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a78e04df1f7e80d248a219d89c91a6034}
+
+\begin{DoxyCode}
+36                                      \{
+37         this.name = name;
+38     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a00ba075722c71303485f0991413f659b}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!set\-Password@{set\-Password}}
+\index{set\-Password@{set\-Password}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{set\-Password}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-set\-Password (
+\begin{DoxyParamCaption}
+\item[{String}]{password}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a00ba075722c71303485f0991413f659b}
+
+\begin{DoxyCode}
+52                                              \{
+53         this.password = password;
+54     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a761275eebde7f3c1900bc0c627ffc3ae}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!set\-Remember\-Password@{set\-Remember\-Password}}
+\index{set\-Remember\-Password@{set\-Remember\-Password}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{set\-Remember\-Password}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-set\-Remember\-Password (
+\begin{DoxyParamCaption}
+\item[{boolean}]{remember\-Password}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a761275eebde7f3c1900bc0c627ffc3ae}
+
+\begin{DoxyCode}
+68                                                               \{
+69         this.rememberPassword = \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_afaf811300872e304bef8328df31ce3cc}{rememberPassword};
+70     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a31f1875c4a77412a7d9207f285aea841}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}!set\-Selected@{set\-Selected}}
+\index{set\-Selected@{set\-Selected}!org::buildmlearn::toolkit::utilities::Alias@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Alias}}
+\subsubsection[{set\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-utilities.\-Alias.\-set\-Selected (
+\begin{DoxyParamCaption}
+\item[{boolean}]{selected}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1Alias_a31f1875c4a77412a7d9207f285aea841}
+
+\begin{DoxyCode}
+60                                               \{
+61         this.selected = selected;
+62     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/utilities/\hyperlink{Alias_8java}{Alias.\-java}\end{DoxyCompactItemize}

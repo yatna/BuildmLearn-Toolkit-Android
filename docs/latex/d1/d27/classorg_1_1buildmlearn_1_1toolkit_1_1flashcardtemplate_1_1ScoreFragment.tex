@@ -1,0 +1,86 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1ScoreFragment}{\section{org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Score\-Fragment Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1ScoreFragment}\index{org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Score\-Fragment@{org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Score\-Fragment}}
+}
+
+
+Simulator code for Flash Card Template.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Score\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{dc/d62/classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1ScoreFragment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Score\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d2f/classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1ScoreFragment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1ScoreFragment_a5cb863d29628a8e6ae7054ac410aecee}{on\-Create\-View} (Layout\-Inflater inflater, View\-Group container, Bundle saved\-Instance\-State)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Flash Card Template. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1ScoreFragment_a5cb863d29628a8e6ae7054ac410aecee}{\index{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Score\-Fragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Score\-Fragment}!on\-Create\-View@{on\-Create\-View}}
+\index{on\-Create\-View@{on\-Create\-View}!org::buildmlearn::toolkit::flashcardtemplate::ScoreFragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Score\-Fragment}}
+\subsubsection[{on\-Create\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Score\-Fragment.\-on\-Create\-View (
+\begin{DoxyParamCaption}
+\item[{Layout\-Inflater}]{inflater, }
+\item[{View\-Group}]{container, }
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1ScoreFragment_a5cb863d29628a8e6ae7054ac410aecee}
+
+\begin{DoxyCode}
+26                                                                                                       \{
+27 
+28         View view = inflater.inflate(R.layout.flash\_simu\_finish, container, \textcolor{keyword}{false});
+29         gd = GlobalData.getInstance();
+30         TextView mCardQuizName = (TextView) view.findViewById(R.id.tv\_lastcard);
+31         mCardQuizName.setText(gd.iQuizTitle);
+32 
+33         Button startAgainButton = (Button) view.findViewById(R.id.btn\_restart);
+34         startAgainButton.setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+35 
+36             @Override
+37             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View arg0) \{
+38 
+39                 getActivity().getFragmentManager().beginTransaction().replace(R.id.container, 
+      StartFragment.newInstance(getActivity().getIntent().getStringExtra(Constants.SIMULATOR\_FILE\_PATH)), StartFragment.TAG)
+      .addToBackStack(null).commit();
+40 \textcolor{comment}{//t}
+41             \}
+42         \});
+43 
+44         Button quitButton = (Button) view.findViewById(R.id.btn\_exit);
+45         quitButton.setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+46 
+47             @Override
+48             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View arg0) \{
+49                 getActivity().finish();
+50             \}
+51         \});
+52         \textcolor{keywordflow}{return} view;
+53     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/flashcardtemplate/\hyperlink{flashcardtemplate_2ScoreFragment_8java}{Score\-Fragment.\-java}\end{DoxyCompactItemize}

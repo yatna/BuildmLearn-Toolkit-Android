@@ -1,0 +1,171 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter}{\section{org.\-buildmlearn.\-toolkit.\-adapter.\-Navigation\-Drawer\-Menu\-Adapter Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter}\index{org.\-buildmlearn.\-toolkit.\-adapter.\-Navigation\-Drawer\-Menu\-Adapter@{org.\-buildmlearn.\-toolkit.\-adapter.\-Navigation\-Drawer\-Menu\-Adapter}}
+}
+
+
+Adapter used for showing menus in the side panel.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-adapter.\-Navigation\-Drawer\-Menu\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{de/d9a/classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-adapter.\-Navigation\-Drawer\-Menu\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{d2/d59/classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_a148e19ae5430bf4ca719570d18d7aba8}{Navigation\-Drawer\-Menu\-Adapter} (Context context, Layout\-Inflater inflater)
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_a05a59638b45d17d3852db05405de25c1}{get\-Count} ()
+\item 
+\hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Section}{Section} \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_a5a1da2dcdb45463a2e24f39f4dc111b9}{get\-Item} (int position)
+\item 
+long \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_af4eeb5996c4511df23d9c08f35d2738a}{get\-Item\-Id} (int position)
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_afb2f8f5d68ab2fe433550cc122479be4}{get\-View} (int position, View convert\-View, View\-Group parent)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Adapter used for showing menus in the side panel. 
+
+Created by Abhishek on 21/04/15. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_a148e19ae5430bf4ca719570d18d7aba8}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter}!Navigation\-Drawer\-Menu\-Adapter@{Navigation\-Drawer\-Menu\-Adapter}}
+\index{Navigation\-Drawer\-Menu\-Adapter@{Navigation\-Drawer\-Menu\-Adapter}!org::buildmlearn::toolkit::adapter::NavigationDrawerMenuAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter}}
+\subsubsection[{Navigation\-Drawer\-Menu\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-adapter.\-Navigation\-Drawer\-Menu\-Adapter.\-Navigation\-Drawer\-Menu\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{Layout\-Inflater}]{inflater}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_a148e19ae5430bf4ca719570d18d7aba8}
+
+\begin{DoxyCode}
+34                                                                                  \{
+35         this.inflater = inflater;
+36         this.context = context;
+37         \textcolor{comment}{// Select the primary color to tint the current section}
+38         TypedArray a = context.getTheme().obtainStyledAttributes(\textcolor{keyword}{new} \textcolor{keywordtype}{int}[]\{R.attr.colorPrimary\});
+39         \textcolor{keywordflow}{try} \{
+40             currentSectionForegroundColor = a.getColor(0, context.getResources().getColor(R.color.
+      color\_primary));
+41         \} \textcolor{keywordflow}{finally} \{
+42             a.recycle();
+43         \}
+44         currentSectionBackgroundColor = context.getResources().getColor(R.color.translucent\_grey);
+45     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_a05a59638b45d17d3852db05405de25c1}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter}!get\-Count@{get\-Count}}
+\index{get\-Count@{get\-Count}!org::buildmlearn::toolkit::adapter::NavigationDrawerMenuAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter}}
+\subsubsection[{get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-adapter.\-Navigation\-Drawer\-Menu\-Adapter.\-get\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_a05a59638b45d17d3852db05405de25c1}
+
+\begin{DoxyCode}
+51                           \{
+52         \textcolor{keywordflow}{return} sections.length;
+53     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_a5a1da2dcdb45463a2e24f39f4dc111b9}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter}!get\-Item@{get\-Item}}
+\index{get\-Item@{get\-Item}!org::buildmlearn::toolkit::adapter::NavigationDrawerMenuAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter}}
+\subsubsection[{get\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Section} org.\-buildmlearn.\-toolkit.\-adapter.\-Navigation\-Drawer\-Menu\-Adapter.\-get\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_a5a1da2dcdb45463a2e24f39f4dc111b9}
+
+\begin{DoxyCode}
+58                                          \{
+59         \textcolor{keywordflow}{return} sections[position];
+60     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_af4eeb5996c4511df23d9c08f35d2738a}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter}!get\-Item\-Id@{get\-Item\-Id}}
+\index{get\-Item\-Id@{get\-Item\-Id}!org::buildmlearn::toolkit::adapter::NavigationDrawerMenuAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter}}
+\subsubsection[{get\-Item\-Id}]{\setlength{\rightskip}{0pt plus 5cm}long org.\-buildmlearn.\-toolkit.\-adapter.\-Navigation\-Drawer\-Menu\-Adapter.\-get\-Item\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_af4eeb5996c4511df23d9c08f35d2738a}
+
+\begin{DoxyCode}
+65                                         \{
+66         \textcolor{keywordflow}{return} position;
+67     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_afb2f8f5d68ab2fe433550cc122479be4}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter}!get\-View@{get\-View}}
+\index{get\-View@{get\-View}!org::buildmlearn::toolkit::adapter::NavigationDrawerMenuAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Navigation\-Drawer\-Menu\-Adapter}}
+\subsubsection[{get\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-adapter.\-Navigation\-Drawer\-Menu\-Adapter.\-get\-View (
+\begin{DoxyParamCaption}
+\item[{int}]{position, }
+\item[{View}]{convert\-View, }
+\item[{View\-Group}]{parent}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_afb2f8f5d68ab2fe433550cc122479be4}
+
+\begin{DoxyCode}
+72                                                                           \{
+73 
+74         Section menu = \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter_a5a1da2dcdb45463a2e24f39f4dc111b9}{getItem}(position);
+75         \textcolor{keywordflow}{if} (menu.getType() == Section.ACTIVITY || menu.getType() == Section.FRAGMENT) \{
+76             \textcolor{keywordflow}{if} (convertView == null) \{
+77                 convertView = inflater.inflate(R.layout.item\_main\_menu, parent, \textcolor{keyword}{false});
+78             \}
+79             TextView tv = (TextView) convertView.findViewById(R.id.section\_text);
+80             SpannableString sectionTitle = \textcolor{keyword}{new} SpannableString(context.getString(menu.getTitleResId()));
+81             Drawable sectionIcon;
+82             \textcolor{keywordflow}{if} (android.os.Build.VERSION.SDK\_INT >= Build.VERSION\_CODES.LOLLIPOP) \{
+83                 sectionIcon = context.getDrawable(menu.getIconResId());
+84             \} \textcolor{keywordflow}{else} \{
+85                 sectionIcon = context.getResources().getDrawable(menu.getIconResId());
+86             \}
+87             \textcolor{keywordtype}{int} backgroundColor;
+88             \textcolor{keywordflow}{if} (menu.isSelected()) \{
+89                 \textcolor{comment}{// Special color for the current section}
+90 \textcolor{comment}{//            sectionTitle.setSpan(new StyleSpan(Typeface.BOLD), 0, sectionTitle.length(),
+       Spanned.SPAN\_EXCLUSIVE\_EXCLUSIVE);}
+91                 sectionTitle.setSpan(\textcolor{keyword}{new} ForegroundColorSpan(currentSectionForegroundColor), 0, 
+      sectionTitle.length(), Spanned.SPAN\_EXCLUSIVE\_EXCLUSIVE);
+92                 \textcolor{comment}{// We need to mutate the drawable before applying the ColorFilter, or else all the similar
+       drawable instances will be tinted.}
+93                 sectionIcon.mutate().setColorFilter(currentSectionForegroundColor, PorterDuff.Mode.SRC\_IN);
+94                 backgroundColor = currentSectionBackgroundColor;
+95             \} \textcolor{keywordflow}{else} \{
+96                 backgroundColor = Color.TRANSPARENT;
+97             \}
+98             tv.setText(sectionTitle);
+99             tv.setCompoundDrawablesWithIntrinsicBounds(sectionIcon, null, null, null);
+100             tv.setBackgroundColor(backgroundColor);
+101         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (menu.getType() == \hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Section_acc0a57a45c96711214e40f17b5b3cfe0}{Section.SECTION\_DIVIDER}) \{
+102             \textcolor{keywordflow}{if} (convertView == null) \{
+103                 convertView = inflater.inflate(R.layout.item\_section\_divider, parent, \textcolor{keyword}{false});
+104             \}
+105         \}
+106         \textcolor{keywordflow}{return} convertView;
+107     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/adapter/\hyperlink{NavigationDrawerMenuAdapter_8java}{Navigation\-Drawer\-Menu\-Adapter.\-java}\end{DoxyCompactItemize}

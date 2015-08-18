@@ -1,0 +1,199 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator}{\section{org.\-buildmlearn.\-toolkit.\-simulator.\-Simulator Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator}\index{org.\-buildmlearn.\-toolkit.\-simulator.\-Simulator@{org.\-buildmlearn.\-toolkit.\-simulator.\-Simulator}}
+}
+
+
+This activity acts as a placeholder for \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator}{Simulator} fragment. Contains a Nexus 6 frame in which the fragments are laodded.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-simulator.\-Simulator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{da/dc4/classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-simulator.\-Simulator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{d5/d64/classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_aa4b646ec6491ad85b3c96e35c6efcd6b}{on\-Create\-Options\-Menu} (Menu menu)
+\item 
+boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_aaa92074738110f36217c7fa33d920fb1}{on\-Options\-Item\-Selected} (Menu\-Item item)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_aa1564faa9391f86b07b713365af01ee8}{on\-Create} (Bundle saved\-Instance\-State)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_a7bcd184d22530dd1683487621e6dd5bf}{set\-Up\-Template\-Editor} ()
+\begin{DoxyCompactList}\small\item\em Fetches the instance from the Template Enum for given template object. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_a5df030ae2efb3c7cd3b2597867fceaf4}{restore\-Template\-Editor} (Bundle saved\-Instance\-State)
+\begin{DoxyCompactList}\small\item\em Restores simulator state on configuration change. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_a56b9664eb7326624e8933961d3e0c535}{on\-Save\-Instance\-State} (Bundle out\-State)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This activity acts as a placeholder for \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator}{Simulator} fragment. Contains a Nexus 6 frame in which the fragments are laodded. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_aa1564faa9391f86b07b713365af01ee8}{\index{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator@{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator}!on\-Create@{on\-Create}}
+\index{on\-Create@{on\-Create}!org::buildmlearn::toolkit::simulator::Simulator@{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator}}
+\subsubsection[{on\-Create}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-simulator.\-Simulator.\-on\-Create (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_aa1564faa9391f86b07b713365af01ee8}
+
+\begin{DoxyCode}
+32                                                        \{
+33         super.onCreate(savedInstanceState);
+34         setContentView(R.layout.activity\_simulator);
+35         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+36         ActionBar actionBar = getSupportActionBar();
+37         actionBar.setDisplayHomeAsUpEnabled(\textcolor{keyword}{true});
+38         templateId = getIntent().getIntExtra(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a2ee9d59d6a353dc4664ed2e2086dae9d}{Constants.TEMPLATE\_ID}, -1);
+39         \textcolor{keywordflow}{if} (templateId == -1) \{
+40             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Invalid template ID, closing Template Editor activity"}, Toast.LENGTH\_LONG
+      ).show();
+41             finish();
+42             \textcolor{keywordflow}{return};
+43         \}
+44         \textcolor{keywordflow}{if} (savedInstanceState == null) \{
+45             \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_a7bcd184d22530dd1683487621e6dd5bf}{setUpTemplateEditor}();
+46         \} \textcolor{keywordflow}{else} \{
+47             \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_a5df030ae2efb3c7cd3b2597867fceaf4}{restoreTemplateEditor}(savedInstanceState);
+48         \}
+49         getFragmentManager().beginTransaction().replace(R.id.container, selectedTemplate.
+      \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9b7f8c39a34918a8832eec6b1eb1f3c0}{getSimulatorFragment}(getIntent().getStringExtra(Constants.SIMULATOR\_FILE\_PATH)), 
+      selectedTemplate.getTitle()).addToBackStack(null).commit();
+50     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_aa4b646ec6491ad85b3c96e35c6efcd6b}{\index{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator@{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator}!on\-Create\-Options\-Menu@{on\-Create\-Options\-Menu}}
+\index{on\-Create\-Options\-Menu@{on\-Create\-Options\-Menu}!org::buildmlearn::toolkit::simulator::Simulator@{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator}}
+\subsubsection[{on\-Create\-Options\-Menu}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-buildmlearn.\-toolkit.\-simulator.\-Simulator.\-on\-Create\-Options\-Menu (
+\begin{DoxyParamCaption}
+\item[{Menu}]{menu}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_aa4b646ec6491ad85b3c96e35c6efcd6b}
+
+\begin{DoxyCode}
+56                                                   \{
+57         \textcolor{comment}{// Inflate the menu; this adds items to the action bar if it is present.}
+58         getMenuInflater().inflate(R.menu.menu\_simulator, menu);
+59         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+60     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_aaa92074738110f36217c7fa33d920fb1}{\index{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator@{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator}!on\-Options\-Item\-Selected@{on\-Options\-Item\-Selected}}
+\index{on\-Options\-Item\-Selected@{on\-Options\-Item\-Selected}!org::buildmlearn::toolkit::simulator::Simulator@{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator}}
+\subsubsection[{on\-Options\-Item\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-buildmlearn.\-toolkit.\-simulator.\-Simulator.\-on\-Options\-Item\-Selected (
+\begin{DoxyParamCaption}
+\item[{Menu\-Item}]{item}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_aaa92074738110f36217c7fa33d920fb1}
+
+\begin{DoxyCode}
+66                                                         \{
+67         \textcolor{comment}{// Handle action bar item clicks here. The action bar will}
+68         \textcolor{comment}{// automatically handle clicks on the Home/Up button, so long}
+69         \textcolor{comment}{// as you specify a parent activity in AndroidManifest.xml.}
+70         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = item.getItemId();
+71 
+72         \textcolor{comment}{//noinspection SimplifiableIfStatement}
+73         \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == R.id.action\_settings) \{
+74             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+75         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == android.R.id.home) \{
+76             onBackPressed();
+77         \}
+78 
+79         \textcolor{keywordflow}{return} super.onOptionsItemSelected(item);
+80     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_a56b9664eb7326624e8933961d3e0c535}{\index{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator@{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator}!on\-Save\-Instance\-State@{on\-Save\-Instance\-State}}
+\index{on\-Save\-Instance\-State@{on\-Save\-Instance\-State}!org::buildmlearn::toolkit::simulator::Simulator@{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator}}
+\subsubsection[{on\-Save\-Instance\-State}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-simulator.\-Simulator.\-on\-Save\-Instance\-State (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{out\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_a56b9664eb7326624e8933961d3e0c535}
+
+\begin{DoxyCode}
+120                                                         \{
+121         outState.putSerializable(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a9e2658a69f3f70584955bbdc947ca0bc}{Constants.TEMPLATE\_OBJECT}, selectedTemplate);
+122         super.onSaveInstanceState(outState);
+123     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_a5df030ae2efb3c7cd3b2597867fceaf4}{\index{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator@{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator}!restore\-Template\-Editor@{restore\-Template\-Editor}}
+\index{restore\-Template\-Editor@{restore\-Template\-Editor}!org::buildmlearn::toolkit::simulator::Simulator@{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator}}
+\subsubsection[{restore\-Template\-Editor}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-simulator.\-Simulator.\-restore\-Template\-Editor (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_a5df030ae2efb3c7cd3b2597867fceaf4}
+
+
+Restores simulator state on configuration change. 
+
+
+\begin{DoxyCode}
+104                                                                     \{
+105         Log.d(TAG, \textcolor{stringliteral}{"Activity Restored"});
+106         selectedTemplate = (TemplateInterface) savedInstanceState.getSerializable(Constants.TEMPLATE\_OBJECT
+      );
+107         \textcolor{keywordflow}{if} (selectedTemplate == null) \{
+108             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Unable to restore Activity state, finsihing Template Editor activity"}, 
+      Toast.LENGTH\_LONG).show();
+109             finish();
+110         \} \textcolor{keywordflow}{else} \{
+111             Toast.makeText(\textcolor{keyword}{this}, selectedTemplate.onAttach(), Toast.LENGTH\_LONG).show();
+112 
+113         \}
+114     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_a7bcd184d22530dd1683487621e6dd5bf}{\index{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator@{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator}!set\-Up\-Template\-Editor@{set\-Up\-Template\-Editor}}
+\index{set\-Up\-Template\-Editor@{set\-Up\-Template\-Editor}!org::buildmlearn::toolkit::simulator::Simulator@{org\-::buildmlearn\-::toolkit\-::simulator\-::\-Simulator}}
+\subsubsection[{set\-Up\-Template\-Editor}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-simulator.\-Simulator.\-set\-Up\-Template\-Editor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1simulator_1_1Simulator_a7bcd184d22530dd1683487621e6dd5bf}
+
+
+Fetches the instance from the Template Enum for given template object. 
+
+
+\begin{DoxyCode}
+85                                          \{
+86         Template[] templates = Template.values();
+87         \textcolor{keyword}{template} = templates[templateId];
+88         Class templateClass = template.getTemplateClass();
+89         \textcolor{keywordflow}{try} \{
+90             Object templateObject = templateClass.newInstance();
+91             selectedTemplate = (TemplateInterface) templateObject;
+92             Toast.makeText(\textcolor{keyword}{this}, selectedTemplate.onAttach(), Toast.LENGTH\_LONG).show();
+93 
+94         \} \textcolor{keywordflow}{catch} (InstantiationException e) \{
+95             e.printStackTrace();
+96         \} \textcolor{keywordflow}{catch} (IllegalAccessException e) \{
+97             e.printStackTrace();
+98         \}
+99     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/simulator/\hyperlink{Simulator_8java}{Simulator.\-java}\end{DoxyCompactItemize}

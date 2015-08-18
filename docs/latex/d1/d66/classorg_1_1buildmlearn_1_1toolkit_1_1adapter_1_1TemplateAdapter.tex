@@ -1,0 +1,145 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter}{\section{org.\-buildmlearn.\-toolkit.\-adapter.\-Template\-Adapter Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter}\index{org.\-buildmlearn.\-toolkit.\-adapter.\-Template\-Adapter@{org.\-buildmlearn.\-toolkit.\-adapter.\-Template\-Adapter}}
+}
+
+
+Adapter used for showing Templates available in the toolkit.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-adapter.\-Template\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{df/d01/classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-adapter.\-Template\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{d0/d53/classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_a12a3a1aa862a0430af201161d1a9228e}{Template\-Adapter} (Context context, int count)
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_aca56e48f1ee0920f7fdefb5a45399ff8}{get\-Count} ()
+\item 
+\hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Template}{Template} \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_a0a369687833d55da928db3df41b65c39}{get\-Item} (int i)
+\item 
+long \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_af7269011268e606de6d4c841d349149f}{get\-Item\-Id} (int i)
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_aa56bb0fb4cc820bb38099719ee72faa6}{get\-View} (int i, View view, View\-Group view\-Group)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Adapter used for showing Templates available in the toolkit. 
+
+Created by Abhishek on 23-\/05-\/2015. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_a12a3a1aa862a0430af201161d1a9228e}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter}!Template\-Adapter@{Template\-Adapter}}
+\index{Template\-Adapter@{Template\-Adapter}!org::buildmlearn::toolkit::adapter::TemplateAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter}}
+\subsubsection[{Template\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-adapter.\-Template\-Adapter.\-Template\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_a12a3a1aa862a0430af201161d1a9228e}
+
+\begin{DoxyCode}
+30                                                        \{
+31         this.context = context;
+32         this.count = count;
+33     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_aca56e48f1ee0920f7fdefb5a45399ff8}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter}!get\-Count@{get\-Count}}
+\index{get\-Count@{get\-Count}!org::buildmlearn::toolkit::adapter::TemplateAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter}}
+\subsubsection[{get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-adapter.\-Template\-Adapter.\-get\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_aca56e48f1ee0920f7fdefb5a45399ff8}
+
+\begin{DoxyCode}
+39                           \{
+40         \textcolor{keywordflow}{return} templates.length;
+41     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_a0a369687833d55da928db3df41b65c39}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter}!get\-Item@{get\-Item}}
+\index{get\-Item@{get\-Item}!org::buildmlearn::toolkit::adapter::TemplateAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter}}
+\subsubsection[{get\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template} org.\-buildmlearn.\-toolkit.\-adapter.\-Template\-Adapter.\-get\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_a0a369687833d55da928db3df41b65c39}
+
+\begin{DoxyCode}
+47                                    \{
+48         \textcolor{keywordflow}{return} templates[i];
+49     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_af7269011268e606de6d4c841d349149f}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter}!get\-Item\-Id@{get\-Item\-Id}}
+\index{get\-Item\-Id@{get\-Item\-Id}!org::buildmlearn::toolkit::adapter::TemplateAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter}}
+\subsubsection[{get\-Item\-Id}]{\setlength{\rightskip}{0pt plus 5cm}long org.\-buildmlearn.\-toolkit.\-adapter.\-Template\-Adapter.\-get\-Item\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_af7269011268e606de6d4c841d349149f}
+
+\begin{DoxyCode}
+55                                  \{
+56         \textcolor{keywordflow}{return} i;
+57     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_aa56bb0fb4cc820bb38099719ee72faa6}{\index{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter}!get\-View@{get\-View}}
+\index{get\-View@{get\-View}!org::buildmlearn::toolkit::adapter::TemplateAdapter@{org\-::buildmlearn\-::toolkit\-::adapter\-::\-Template\-Adapter}}
+\subsubsection[{get\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-adapter.\-Template\-Adapter.\-get\-View (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{View}]{view, }
+\item[{View\-Group}]{view\-Group}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_aa56bb0fb4cc820bb38099719ee72faa6}
+
+\begin{DoxyCode}
+63                                                                \{
+64 
+65         LayoutInflater mInflater;
+66         mInflater = LayoutInflater.from(context);
+67 
+68         \textcolor{keywordflow}{if} (i % 2 == 0) \{
+69             view = mInflater.inflate(R.layout.item\_template\_right, viewGroup, \textcolor{keyword}{false});
+70         \} \textcolor{keywordflow}{else} \{
+71             view = mInflater.inflate(R.layout.item\_template\_left, viewGroup, \textcolor{keyword}{false});
+72         \}
+73 
+74         Template \textcolor{keyword}{template} = \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter_a0a369687833d55da928db3df41b65c39}{getItem}(i);
+75 
+76         ((TextView) view.findViewById(R.id.title)).setText(\textcolor{keyword}{template}.getTitle());
+77         ((TextView) view.findViewById(R.id.description)).setText(\textcolor{keyword}{template}.getDescription());
+78         ((ImageView) view.findViewById(R.id.image)).setImageResource(\textcolor{keyword}{template}.getImage());
+79 
+80         \textcolor{keywordtype}{int} color = colors[i % colors.length].getColor();
+81         ((CardView) view.findViewById(R.id.card\_view)).setCardBackgroundColor(color);
+82 
+83         \textcolor{keywordflow}{return} view;
+84     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/adapter/\hyperlink{TemplateAdapter_8java}{Template\-Adapter.\-java}\end{DoxyCompactItemize}

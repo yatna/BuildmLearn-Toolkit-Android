@@ -1,0 +1,233 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment}{\section{org.\-buildmlearn.\-toolkit.\-fragment.\-Load\-Project\-Fragment Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment}\index{org.\-buildmlearn.\-toolkit.\-fragment.\-Load\-Project\-Fragment@{org.\-buildmlearn.\-toolkit.\-fragment.\-Load\-Project\-Fragment}}
+}
+
+
+Fragment used for loading existing projects into a list.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-fragment.\-Load\-Project\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{d0/dc4/classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-fragment.\-Load\-Project\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{dd/d1f/classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_aa3475b8770215affec67dd109da8e9cb}{on\-Create} (Bundle saved\-Instance\-State)
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_a00df408d1104d5e9da684300c7d1a373}{on\-Create\-View} (Layout\-Inflater inflater, View\-Group container, Bundle saved\-Instance\-State)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_a486509578e69cb110ec10c53c6c813c6}{on\-View\-Created} (View view, Bundle saved\-Instance\-State)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_ab3fd6e093c178f367cf3403496d30fd5}{on\-Item\-Click} (Adapter\-View$<$?$>$ parent, View view, int position, long id)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_af7ebf8d42c3c401e7fcad1fa3850001c}{on\-Resume} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fragment used for loading existing projects into a list. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_aa3475b8770215affec67dd109da8e9cb}{\index{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment@{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment}!on\-Create@{on\-Create}}
+\index{on\-Create@{on\-Create}!org::buildmlearn::toolkit::fragment::LoadProjectFragment@{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment}}
+\subsubsection[{on\-Create}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-fragment.\-Load\-Project\-Fragment.\-on\-Create (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_aa3475b8770215affec67dd109da8e9cb}
+
+\begin{DoxyCode}
+51                                                     \{
+52         super.onCreate(savedInstanceState);
+53 
+54         mToolkit = (ToolkitApplication) getActivity().getApplicationContext();
+55         savedProjects = \textcolor{keyword}{new} ArrayList<>();
+56 
+57         String path = mToolkit.getSavedDir();
+58         Log.d(\textcolor{stringliteral}{"Files"}, \textcolor{stringliteral}{"Path: "} + path);
+59 
+60 
+61         File f = \textcolor{keyword}{new} File(path);
+62         File file[] = f.listFiles();
+63         \textcolor{keywordflow}{if} (file == null) \{
+64             \textcolor{keywordflow}{return};
+65         \}
+66 
+67         Log.d(\textcolor{stringliteral}{"Files"}, \textcolor{stringliteral}{"Size: "} + file.length);
+68         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < file.length; i++) \{
+69 
+70             Log.d(TAG, file[i].getAbsolutePath());
+71             File fXmlFile = \textcolor{keyword}{new} File(file[i].getAbsolutePath());
+72             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+73             DocumentBuilder dBuilder;
+74             \textcolor{keywordflow}{try} \{
+75                 dBuilder = dbFactory.newDocumentBuilder();
+76                 Document doc = dBuilder.parse(fXmlFile);
+77                 doc.getDocumentElement().normalize();
+78                 Log.d(\textcolor{stringliteral}{"Files"}, \textcolor{stringliteral}{"Root element :"} + doc.getDocumentElement().getAttribute(\textcolor{stringliteral}{"type"}));
+79                 savedProjects.add(\textcolor{keyword}{new} SavedProject(fXmlFile, fXmlFile.getName(), fXmlFile.lastModified(), 
+      doc.getDocumentElement().getAttribute(\textcolor{stringliteral}{"type"}), fXmlFile.getAbsolutePath()));
+80             \} \textcolor{keywordflow}{catch} (ParserConfigurationException e) \{
+81                 e.printStackTrace();
+82             \} \textcolor{keywordflow}{catch} (SAXException e) \{
+83                 e.printStackTrace();
+84             \} \textcolor{keywordflow}{catch} (IOException e) \{
+85                 e.printStackTrace();
+86             \} \textcolor{keywordflow}{catch} (DOMException e) \{
+87                 e.printStackTrace();
+88             \}
+89         \}
+90 
+91         Collections.sort(savedProjects, \textcolor{keyword}{new} Comparator<SavedProject>() \{
+92             \textcolor{keyword}{public} \textcolor{keywordtype}{int} compare(SavedProject f1, SavedProject f2) \{
+93                 \textcolor{keywordflow}{return} Long.valueOf(f1.getFile().lastModified()).compareTo(f2.getFile().lastModified());
+94             \}
+95         \});
+96 
+97         Collections.reverse(savedProjects);
+98     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_a00df408d1104d5e9da684300c7d1a373}{\index{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment@{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment}!on\-Create\-View@{on\-Create\-View}}
+\index{on\-Create\-View@{on\-Create\-View}!org::buildmlearn::toolkit::fragment::LoadProjectFragment@{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment}}
+\subsubsection[{on\-Create\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-fragment.\-Load\-Project\-Fragment.\-on\-Create\-View (
+\begin{DoxyParamCaption}
+\item[{Layout\-Inflater}]{inflater, }
+\item[{View\-Group}]{container, }
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_a00df408d1104d5e9da684300c7d1a373}
+
+\begin{DoxyCode}
+105                                                         \{
+106         View view = inflater.inflate(R.layout.fragment\_loadproject, container, \textcolor{keyword}{false});
+107         \textcolor{keywordflow}{return} view;
+108     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_ab3fd6e093c178f367cf3403496d30fd5}{\index{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment@{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment}!on\-Item\-Click@{on\-Item\-Click}}
+\index{on\-Item\-Click@{on\-Item\-Click}!org::buildmlearn::toolkit::fragment::LoadProjectFragment@{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment}}
+\subsubsection[{on\-Item\-Click}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-fragment.\-Load\-Project\-Fragment.\-on\-Item\-Click (
+\begin{DoxyParamCaption}
+\item[{Adapter\-View$<$?$>$}]{parent, }
+\item[{View}]{view, }
+\item[{int}]{position, }
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_ab3fd6e093c178f367cf3403496d30fd5}
+
+\begin{DoxyCode}
+125                                                                                      \{
+126         SavedProject project = savedProjects.get(position);
+127         Template[] templates = Template.values();
+128         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < templates.length; i++) \{
+129             \textcolor{keywordflow}{if} (project.getType().equals(getString(templates[i].getType()))) \{
+130                 Intent intent = \textcolor{keyword}{new} Intent(getActivity(), TemplateEditor.class);
+131                 intent.putExtra(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a2ee9d59d6a353dc4664ed2e2086dae9d}{Constants.TEMPLATE\_ID}, i);
+132                 intent.putExtra(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_ab2586e8aa144cd7e8b4928186d709ea8}{Constants.PROJECT\_FILE\_PATH}, project.getFullPath
+      ());
+133                 startActivity(intent);
+134                 \textcolor{keywordflow}{return};
+135             \}
+136         \}
+137         Toast.makeText(getActivity(), \textcolor{stringliteral}{"Invalid project file"}, Toast.LENGTH\_SHORT).show();
+138     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_af7ebf8d42c3c401e7fcad1fa3850001c}{\index{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment@{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment}!on\-Resume@{on\-Resume}}
+\index{on\-Resume@{on\-Resume}!org::buildmlearn::toolkit::fragment::LoadProjectFragment@{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment}}
+\subsubsection[{on\-Resume}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-fragment.\-Load\-Project\-Fragment.\-on\-Resume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_af7ebf8d42c3c401e7fcad1fa3850001c}
+
+\begin{DoxyCode}
+158                            \{
+159         \textcolor{keywordflow}{if} (mAdapter != null) \{
+160 
+161             savedProjects.clear();
+162 
+163             String path = mToolkit.getSavedDir();
+164             Log.d(\textcolor{stringliteral}{"Files"}, \textcolor{stringliteral}{"Path: "} + path);
+165 
+166 
+167             File f = \textcolor{keyword}{new} File(path);
+168             File file[] = f.listFiles();
+169             \textcolor{keywordflow}{if} (file == null) \{
+170                 \textcolor{keywordflow}{return};
+171             \}
+172 
+173 
+174             Log.d(\textcolor{stringliteral}{"Files"}, \textcolor{stringliteral}{"Size: "} + file.length);
+175             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < file.length; i++) \{
+176                 File fXmlFile = \textcolor{keyword}{new} File(file[i].getAbsolutePath());
+177                 DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+178                 DocumentBuilder dBuilder;
+179                 \textcolor{keywordflow}{try} \{
+180                     dBuilder = dbFactory.newDocumentBuilder();
+181                     Document doc = dBuilder.parse(fXmlFile);
+182                     doc.getDocumentElement().normalize();
+183                     Log.d(\textcolor{stringliteral}{"Files"}, \textcolor{stringliteral}{"Root element :"} + doc.getDocumentElement().getAttribute(\textcolor{stringliteral}{"type"}));
+184                     savedProjects.add(\textcolor{keyword}{new} SavedProject(fXmlFile, fXmlFile.getName(), fXmlFile.lastModified(
+      ), doc.getDocumentElement().getAttribute(\textcolor{stringliteral}{"type"}), fXmlFile.getAbsolutePath()));
+185                 \} \textcolor{keywordflow}{catch} (ParserConfigurationException e) \{
+186                     e.printStackTrace();
+187                 \} \textcolor{keywordflow}{catch} (SAXException e) \{
+188                     e.printStackTrace();
+189                 \} \textcolor{keywordflow}{catch} (IOException e) \{
+190                     e.printStackTrace();
+191                 \} \textcolor{keywordflow}{catch} (DOMException e) \{
+192                     e.printStackTrace();
+193                 \}
+194             \}
+195 
+196             Collections.sort(savedProjects, \textcolor{keyword}{new} Comparator<SavedProject>() \{
+197                 \textcolor{keyword}{public} \textcolor{keywordtype}{int} compare(SavedProject f1, SavedProject f2) \{
+198                     \textcolor{keywordflow}{return} Long.valueOf(f1.getFile().lastModified()).compareTo(f2.getFile().lastModified())
+      ;
+199                 \}
+200             \});
+201 
+202             Collections.reverse(savedProjects);
+203             mAdapter.notifyDataSetChanged();
+204         \}
+205         super.onResume();
+206     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_a486509578e69cb110ec10c53c6c813c6}{\index{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment@{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment}!on\-View\-Created@{on\-View\-Created}}
+\index{on\-View\-Created@{on\-View\-Created}!org::buildmlearn::toolkit::fragment::LoadProjectFragment@{org\-::buildmlearn\-::toolkit\-::fragment\-::\-Load\-Project\-Fragment}}
+\subsubsection[{on\-View\-Created}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-fragment.\-Load\-Project\-Fragment.\-on\-View\-Created (
+\begin{DoxyParamCaption}
+\item[{View}]{view, }
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1fragment_1_1LoadProjectFragment_a486509578e69cb110ec10c53c6c813c6}
+
+\begin{DoxyCode}
+114                                                                     \{
+115         mAdapter = \textcolor{keyword}{new} SavedProjectAdapter(getActivity(), savedProjects);
+116         mListView = (AbsListView) view.findViewById(android.R.id.list);
+117         setAdapter(mAdapter);
+118         mListView.setOnItemClickListener(\textcolor{keyword}{this});
+119     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/fragment/\hyperlink{LoadProjectFragment_8java}{Load\-Project\-Fragment.\-java}\end{DoxyCompactItemize}

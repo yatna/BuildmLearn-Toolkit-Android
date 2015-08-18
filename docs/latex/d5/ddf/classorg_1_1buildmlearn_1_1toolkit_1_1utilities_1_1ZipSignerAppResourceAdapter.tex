@@ -1,0 +1,103 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1ZipSignerAppResourceAdapter}{\section{org.\-buildmlearn.\-toolkit.\-utilities.\-Zip\-Signer\-App\-Resource\-Adapter Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1ZipSignerAppResourceAdapter}\index{org.\-buildmlearn.\-toolkit.\-utilities.\-Zip\-Signer\-App\-Resource\-Adapter@{org.\-buildmlearn.\-toolkit.\-utilities.\-Zip\-Signer\-App\-Resource\-Adapter}}
+}
+
+
+Provides internationalized progress and error strings to the zipsigner-\/lib A\-P\-I.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-utilities.\-Zip\-Signer\-App\-Resource\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{d0/dc1/classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1ZipSignerAppResourceAdapter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-utilities.\-Zip\-Signer\-App\-Resource\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{d7/d6e/classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1ZipSignerAppResourceAdapter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1ZipSignerAppResourceAdapter_a7393c43bc6a0252ff9e94867fc04486c}{Zip\-Signer\-App\-Resource\-Adapter} (Resources resources)
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1ZipSignerAppResourceAdapter_a6c0a4c811d706b3989851dc63f45c88a}{get\-String} (Item item, Object...\-args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides internationalized progress and error strings to the zipsigner-\/lib A\-P\-I. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1ZipSignerAppResourceAdapter_a7393c43bc6a0252ff9e94867fc04486c}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Zip\-Signer\-App\-Resource\-Adapter@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Zip\-Signer\-App\-Resource\-Adapter}!Zip\-Signer\-App\-Resource\-Adapter@{Zip\-Signer\-App\-Resource\-Adapter}}
+\index{Zip\-Signer\-App\-Resource\-Adapter@{Zip\-Signer\-App\-Resource\-Adapter}!org::buildmlearn::toolkit::utilities::ZipSignerAppResourceAdapter@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Zip\-Signer\-App\-Resource\-Adapter}}
+\subsubsection[{Zip\-Signer\-App\-Resource\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-utilities.\-Zip\-Signer\-App\-Resource\-Adapter.\-Zip\-Signer\-App\-Resource\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Resources}]{resources}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1ZipSignerAppResourceAdapter_a7393c43bc6a0252ff9e94867fc04486c}
+
+\begin{DoxyCode}
+16                                                             \{
+17         this.resources = resources;
+18     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1ZipSignerAppResourceAdapter_a6c0a4c811d706b3989851dc63f45c88a}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Zip\-Signer\-App\-Resource\-Adapter@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Zip\-Signer\-App\-Resource\-Adapter}!get\-String@{get\-String}}
+\index{get\-String@{get\-String}!org::buildmlearn::toolkit::utilities::ZipSignerAppResourceAdapter@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Zip\-Signer\-App\-Resource\-Adapter}}
+\subsubsection[{get\-String}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-utilities.\-Zip\-Signer\-App\-Resource\-Adapter.\-get\-String (
+\begin{DoxyParamCaption}
+\item[{Item}]{item, }
+\item[{Object...}]{args}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1ZipSignerAppResourceAdapter_a6c0a4c811d706b3989851dc63f45c88a}
+
+\begin{DoxyCode}
+21                                                        \{
+22         \textcolor{keywordflow}{switch} (item) \{
+23             \textcolor{keywordflow}{case} INPUT\_SAME\_AS\_OUTPUT\_ERROR:
+24                 \textcolor{comment}{// return "Input and output files are the same.  Specify a different name for the output.";}
+25                 \textcolor{keywordflow}{return} resources.getString(R.string.InputFileSameAsOutput);
+26             \textcolor{keywordflow}{case} AUTO\_KEY\_SELECTION\_ERROR:
+27                 \textcolor{comment}{// return "Unable to auto-select key for signing " + args[0];}
+28                 \textcolor{keywordflow}{return} resources.getString(R.string.AutoKeySelectionError, args[0]);
+29             \textcolor{keywordflow}{case} LOADING\_CERTIFICATE\_AND\_KEY:
+30                 \textcolor{comment}{// return "Loading certificate and private key";}
+31                 \textcolor{keywordflow}{return} resources.getString(R.string.LoadingCertificateAnKey);
+32             \textcolor{keywordflow}{case} PARSING\_CENTRAL\_DIRECTORY:
+33                 \textcolor{comment}{// return "Parsing the input's central directory";}
+34                 \textcolor{keywordflow}{return} resources.getString(R.string.ParsingCentralDirectory);
+35             \textcolor{keywordflow}{case} GENERATING\_MANIFEST:
+36                 \textcolor{comment}{// return "Generating manifest";}
+37                 \textcolor{keywordflow}{return} resources.getString(R.string.GeneratingManifest);
+38             \textcolor{keywordflow}{case} GENERATING\_SIGNATURE\_FILE:
+39                 \textcolor{comment}{// return "Generating signature file";}
+40                 \textcolor{keywordflow}{return} resources.getString(R.string.GeneratingSignatureFile);
+41             \textcolor{keywordflow}{case} GENERATING\_SIGNATURE\_BLOCK:
+42                 \textcolor{comment}{// return "Generating signature block file";}
+43                 \textcolor{keywordflow}{return} resources.getString(R.string.GeneratingSignatureBlock);
+44             \textcolor{keywordflow}{case} COPYING\_ZIP\_ENTRY:
+45                 \textcolor{comment}{// return String.format("Copying zip entry %d of %d", args[0], args[1]);}
+46                 \textcolor{keywordflow}{return} resources.getString(R.string.CopyingZipEntry, (int) args[0], (\textcolor{keywordtype}{int}) args[1]);
+47             \textcolor{keywordflow}{default}:
+48                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} IllegalArgumentException(\textcolor{stringliteral}{"Unknown item "} + item);
+49         \}
+50     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/utilities/\hyperlink{ZipSignerAppResourceAdapter_8java}{Zip\-Signer\-App\-Resource\-Adapter.\-java}\end{DoxyCompactItemize}

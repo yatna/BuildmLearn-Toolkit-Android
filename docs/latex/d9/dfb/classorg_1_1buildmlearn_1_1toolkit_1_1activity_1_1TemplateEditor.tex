@@ -1,0 +1,776 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor}{\section{org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor}\index{org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor@{org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor}}
+}
+
+
+Placeholder activity for all the templates.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{d4/da7/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{d4/d61/classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a8dd35a4525cae8911df21beed169de02}{on\-Activity\-Result} (int request\-Code, int result\-Code, Intent intent)
+\item 
+boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a9ce2150056a19a2bbd3222f061e1d4b2}{on\-Create\-Options\-Menu} (Menu menu)
+\item 
+boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a4113877eb08f8665000bd3eb733737ef}{on\-Prepare\-Options\-Menu} (Menu menu)
+\item 
+boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a619c591e1af2eba8188da92a021bc222}{on\-Options\-Item\-Selected} (Menu\-Item item)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_ae1fb961405f616070237c13e64f5b5bc}{restore\-Selected\-View} ()
+\begin{DoxyCompactList}\small\item\em Removes selected color from the selected List\-View item when switching from edit mode to normal mode. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a579696858455696ea2bac7bea2dccbd0}{change\-Color\-Scheme} ()
+\begin{DoxyCompactList}\small\item\em Changes the color scheme when switching from normal mode to edit mode. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a596abe1f201578b28de1e3491b4f8cd6}{restore\-Color\-Scheme} ()
+\begin{DoxyCompactList}\small\item\em Restores the color scheme when switching from edit mode to normal mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_abe4f4b6fa4f8ca3bc10f9c01e3b81f73}{on\-Create} (Bundle saved\-Instance\-State)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a6f0e3399d8b62597bfed2bb402d44ae0}{on\-Save\-Instance\-State} (Bundle out\-State)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_ade293345372081f3d43450df42e26092}{populate\-List\-View} (final Base\-Adapter adapter)
+\begin{DoxyCompactList}\small\item\em Populates List\-View item by setting adapter to List\-View. Also inflates Header View. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a5bd38be8a926fff23a40e8014b71cb13}{set\-Up\-Action\-Bar} ()
+\begin{DoxyCompactList}\small\item\em Initialization function for setting up action bar. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a064ac90668a94f32256938cb08fe896e}{set\-Up\-Template\-Editor} ()
+\begin{DoxyCompactList}\small\item\em Initialization function when the Temlpate Editor is created. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a957831b300058bc26fbfc187517962a8}{restore\-Template\-Editor} (Bundle saved\-Instance\-State)
+\begin{DoxyCompactList}\small\item\em Initialization function when the Temlpate Editor is restored. \end{DoxyCompactList}\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_aaec7f80eb29a74505a25bed11c20c29d}{save\-Project} ()
+\begin{DoxyCompactList}\small\item\em Saves the current project into a .buildmlearn file. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a0f4842fdb6b28f218c6f2ac5c69e62e1}{start\-Simulator} ()
+\begin{DoxyCompactList}\small\item\em Start the simulator activity. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_aef3001b6ab6df927e92ada78c02bc7da}{parse\-Saved\-File} (String path)
+\begin{DoxyCompactList}\small\item\em Converts an existing .buildmlearn file to Template\-Interface Object. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a3d785b7595c43249fc5a73e4f69daf41}{update\-Header\-Details} (String name, String title)
+\begin{DoxyCompactList}\small\item\em Updates the title and author name in the header view. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a5c1e35aa985ed2199d9795ad1ab03e0d}{set\-Adapter} (Base\-Adapter adapter)
+\begin{DoxyCompactList}\small\item\em Sets the adapter to the List\-View. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_afd3a9fb9738a176e2043f19a25cd7936}{set\-Empty\-View} ()
+\begin{DoxyCompactList}\small\item\em Toggles the visibility of empty text if adapter has zero elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Placeholder activity for all the templates. 
+
+A placeholder activty in which all the templates are loaded and allows the user to enter respective template data, generate and save projects, A\-P\-Ks and sharing options. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a579696858455696ea2bac7bea2dccbd0}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!change\-Color\-Scheme@{change\-Color\-Scheme}}
+\index{change\-Color\-Scheme@{change\-Color\-Scheme}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{change\-Color\-Scheme}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-change\-Color\-Scheme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a579696858455696ea2bac7bea2dccbd0}
+
+
+Changes the color scheme when switching from normal mode to edit mode. 
+
+Edit mode is triggered, when the list item is long pressed. 
+\begin{DoxyCode}
+376                                     \{
+377         \textcolor{keywordtype}{int} primaryColor = getResources().getColor(R.color.color\_primary\_dark);
+378         \textcolor{keywordtype}{int} primaryColorDark = getResources().getColor(R.color.color\_selected\_dark);
+379         getSupportActionBar().setBackgroundDrawable(\textcolor{keyword}{new} ColorDrawable(primaryColor));
+380         ThemeSingleton.get().positiveColor = primaryColor;
+381         ThemeSingleton.get().neutralColor = primaryColor;
+382         ThemeSingleton.get().negativeColor = primaryColor;
+383         ThemeSingleton.get().widgetColor = primaryColor;
+384         \textcolor{keywordflow}{if} (Build.VERSION.SDK\_INT >= Build.VERSION\_CODES.LOLLIPOP) \{
+385             getWindow().setStatusBarColor(primaryColorDark);
+386             getWindow().setNavigationBarColor(primaryColor);
+387         \}
+388 
+389         showTemplateSelectedMenu = \textcolor{keyword}{true};
+390         invalidateOptionsMenu();
+391     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a8dd35a4525cae8911df21beed169de02}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!on\-Activity\-Result@{on\-Activity\-Result}}
+\index{on\-Activity\-Result@{on\-Activity\-Result}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{on\-Activity\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-on\-Activity\-Result (
+\begin{DoxyParamCaption}
+\item[{int}]{request\-Code, }
+\item[{int}]{result\-Code, }
+\item[{Intent}]{intent}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a8dd35a4525cae8911df21beed169de02}
+
+\begin{DoxyCode}
+131                                                                                  \{
+132         Log.d(TAG, \textcolor{stringliteral}{"On activity result"});
+133         selectedTemplate.onActivityResult(\textcolor{keyword}{this}, requestCode, resultCode, intent);
+134         super.onActivityResult(requestCode, resultCode, intent);
+135     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_abe4f4b6fa4f8ca3bc10f9c01e3b81f73}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!on\-Create@{on\-Create}}
+\index{on\-Create@{on\-Create}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{on\-Create}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-on\-Create (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_abe4f4b6fa4f8ca3bc10f9c01e3b81f73}
+
+\begin{DoxyCode}
+81                                                        \{
+82         super.onCreate(savedInstanceState);
+83         oldFileName = null;
+84         setContentView(R.layout.activity\_template\_editor);
+85         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+86         toolkit = (ToolkitApplication) getApplicationContext();
+87         templateId = getIntent().getIntExtra(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a2ee9d59d6a353dc4664ed2e2086dae9d}{Constants.TEMPLATE\_ID}, -1);
+88         \textcolor{keywordflow}{if} (templateId == -1) \{
+89             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Invalid template ID, closing Template Editor activity"}, Toast.LENGTH\_LONG
+      ).show();
+90             finish();
+91         \}
+92 
+93 
+94         \textcolor{keywordflow}{if} (savedInstanceState == null) \{
+95             String path = getIntent().getStringExtra(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_ab2586e8aa144cd7e8b4928186d709ea8}{Constants.PROJECT\_FILE\_PATH}
+      );
+96             \textcolor{keywordflow}{if} (path == null) \{
+97                 \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a064ac90668a94f32256938cb08fe896e}{setUpTemplateEditor}();
+98             \} \textcolor{keywordflow}{else} \{
+99                 \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_aef3001b6ab6df927e92ada78c02bc7da}{parseSavedFile}(path);
+100                 oldFileName = path;
+101             \}
+102         \} \textcolor{keywordflow}{else} \{
+103             \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a957831b300058bc26fbfc187517962a8}{restoreTemplateEditor}(savedInstanceState);
+104         \}
+105 
+106         findViewById(R.id.button\_add\_item).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+107             @Override
+108             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+109                 selectedTemplate.addItem(TemplateEditor.this);
+110                 hideEmptyView();
+111             \}
+112         \});
+113 
+114     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a9ce2150056a19a2bbd3222f061e1d4b2}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!on\-Create\-Options\-Menu@{on\-Create\-Options\-Menu}}
+\index{on\-Create\-Options\-Menu@{on\-Create\-Options\-Menu}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{on\-Create\-Options\-Menu}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-on\-Create\-Options\-Menu (
+\begin{DoxyParamCaption}
+\item[{Menu}]{menu}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a9ce2150056a19a2bbd3222f061e1d4b2}
+
+\begin{DoxyCode}
+241                                                   \{
+242         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+243     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a619c591e1af2eba8188da92a021bc222}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!on\-Options\-Item\-Selected@{on\-Options\-Item\-Selected}}
+\index{on\-Options\-Item\-Selected@{on\-Options\-Item\-Selected}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{on\-Options\-Item\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-on\-Options\-Item\-Selected (
+\begin{DoxyParamCaption}
+\item[{Menu\-Item}]{item}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a619c591e1af2eba8188da92a021bc222}
+
+\begin{DoxyCode}
+263                                                         \{
+264         \textcolor{comment}{// Handle action bar item clicks here. The action bar will}
+265         \textcolor{comment}{// automatically handle clicks on the Home/Up button, so long}
+266         \textcolor{comment}{// as you specify a parent activity in AndroidManifest.xml.}
+267         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = item.getItemId();
+268 
+269         \textcolor{keywordflow}{switch} (\textcolor{keywordtype}{id}) \{
+270             \textcolor{keywordflow}{case} R.id.action\_delete:
+271 
+272                 \textcolor{keyword}{final} MaterialDialog dialog = \textcolor{keyword}{new} MaterialDialog.Builder(\textcolor{keyword}{this})
+273                         .title(R.string.dialog\_delete\_title)
+274                         .content(R.string.dialog\_delete\_msg)
+275                         .positiveText(R.string.dialog\_yes)
+276                         .negativeText(R.string.dialog\_no)
+277                         .build();
+278 
+279                 dialog.getActionButton(DialogAction.POSITIVE).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener()
+       \{
+280                     @Override
+281                     \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+282                         dialog.dismiss();
+283                         selectedTemplate.deleteItem(selectedPosition);
+284                         \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_ae1fb961405f616070237c13e64f5b5bc}{restoreSelectedView}();
+285                     \}
+286                 \});
+287 
+288                 dialog.show();
+289 
+290                 \textcolor{keywordflow}{break};
+291             \textcolor{keywordflow}{case} R.id.action\_edit:
+292                 selectedTemplate.editItem(\textcolor{keyword}{this}, selectedPosition);
+293                 \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_ae1fb961405f616070237c13e64f5b5bc}{restoreSelectedView}();
+294                 \textcolor{keywordflow}{break};
+295             \textcolor{keywordflow}{case} R.id.action\_save:
+296                 \textcolor{keyword}{new} BottomSheet.Builder(\textcolor{keyword}{this}).sheet(R.menu.bottom\_sheet\_template).listener(\textcolor{keyword}{new} 
+      DialogInterface.OnClickListener() \{
+297                     @Override
+298                     \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(DialogInterface dialog, \textcolor{keywordtype}{int} \textcolor{keywordtype}{id}) \{
+299                         \textcolor{keywordflow}{switch} (\textcolor{keywordtype}{id}) \{
+300                             \textcolor{keywordflow}{case} R.id.save\_project:
+301                                 \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_aaec7f80eb29a74505a25bed11c20c29d}{saveProject}();
+302                                 \textcolor{keywordflow}{break};
+303                             \textcolor{keywordflow}{case} R.id.share\_apk:
+304                                 Uri fileUri = Uri.fromFile(\textcolor{keyword}{new} File(toolkit.
+      \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1ToolkitApplication_a976b0d6036419bd9382ffdca98b79fb4}{getApkDir}() + \textcolor{stringliteral}{"FlashCardTemplateApp\_v2.0.apk"}));
+305                                 \textcolor{keywordflow}{try} \{
+306                                     ArrayList<Uri> uris = \textcolor{keyword}{new} ArrayList<Uri>();
+307                                     Intent sendIntent = \textcolor{keyword}{new} Intent(Intent.ACTION\_SEND\_MULTIPLE);
+308                                     sendIntent.setType(\textcolor{stringliteral}{"application/vnd.android.package-archive"});
+309                                     uris.add(fileUri);
+310                                     sendIntent.putParcelableArrayListExtra(Intent.EXTRA\_STREAM, uris);
+311                                     startActivity(Intent.createChooser(sendIntent, null));
+312 
+313 
+314                                 \} \textcolor{keywordflow}{catch} (Exception e) \{
+315 
+316                                     ArrayList<Uri> uris = \textcolor{keyword}{new} ArrayList<Uri>();
+317                                     Intent sendIntent = \textcolor{keyword}{new} Intent(Intent.ACTION\_SEND\_MULTIPLE);
+318                                     sendIntent.setType(\textcolor{stringliteral}{"application/zip"});
+319                                     uris.add(fileUri);
+320                                     sendIntent.putParcelableArrayListExtra(Intent.EXTRA\_STREAM, uris);
+321                                     startActivity(Intent.createChooser(sendIntent, null));
+322                                 \}
+323                                 \textcolor{keywordflow}{break};
+324                             \textcolor{keywordflow}{case} R.id.save\_apk:
+325                                 String keyPassword = getString(R.string.key\_password);
+326                                 String aliasName = getString(R.string.alias\_name);
+327                                 String aliaspassword = getString(R.string.alias\_password);
+328                                 KeyStoreDetails keyStoreDetails = \textcolor{keyword}{new} KeyStoreDetails(\textcolor{stringliteral}{"TestKeyStore.jks"}, 
+      keyPassword, aliasName, aliaspassword);
+329                                 SignerThread signer = \textcolor{keyword}{new} SignerThread(getApplicationContext(), 
+      selectedTemplate.\hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a1bca348acb3790aebce645c04a9e0945}{getApkFilePath}(), \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_aaec7f80eb29a74505a25bed11c20c29d}{saveProject}(), keyStoreDetails, 
+      selectedTemplate.getAssetsFilePath(), selectedTemplate.\hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a5336064bba45a1ba2f6db891567e1b6e}{getAssetsFileName}());
+330 
+331                                 signer.setSignerThreadListener(\textcolor{keyword}{new} SignerThread.OnSignComplete() \{
+332                                     @Override
+333                                     \textcolor{keyword}{public} \textcolor{keywordtype}{void} onSuccess() \{
+334                                         Log.d(TAG, \textcolor{stringliteral}{"APK generated"});
+335                                     \}
+336 
+337                                     @Override
+338                                     \textcolor{keyword}{public} \textcolor{keywordtype}{void} onFail(Exception e) \{
+339                                         \textcolor{keywordflow}{if} (e != null) \{
+340                                             e.printStackTrace();
+341                                         \}
+342                                     \}
+343                                 \});
+344 
+345                                 signer.start();
+346                         \}
+347                     \}
+348                 \}).show();
+349                 \textcolor{keywordflow}{break};
+350             \textcolor{keywordflow}{case} R.id.action\_simulate:
+351                 \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a0f4842fdb6b28f218c6f2ac5c69e62e1}{startSimulator}();
+352                 \textcolor{keywordflow}{break};
+353             \textcolor{keywordflow}{case} android.R.id.home:
+354                 onBackPressed();
+355                 \textcolor{keywordflow}{break};
+356         \}
+357         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+358     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a4113877eb08f8665000bd3eb733737ef}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!on\-Prepare\-Options\-Menu@{on\-Prepare\-Options\-Menu}}
+\index{on\-Prepare\-Options\-Menu@{on\-Prepare\-Options\-Menu}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{on\-Prepare\-Options\-Menu}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-on\-Prepare\-Options\-Menu (
+\begin{DoxyParamCaption}
+\item[{Menu}]{menu}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a4113877eb08f8665000bd3eb733737ef}
+
+\begin{DoxyCode}
+249                                                    \{
+250         Log.d(TAG, \textcolor{stringliteral}{"onPrepareOptionsMenu"});
+251         \textcolor{keywordflow}{if} (showTemplateSelectedMenu) \{
+252             getMenuInflater().inflate(R.menu.menu\_template\_item\_selected, menu);
+253         \} \textcolor{keywordflow}{else} \{
+254             getMenuInflater().inflate(R.menu.menu\_template\_editor, menu);
+255         \}
+256         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+257     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a6f0e3399d8b62597bfed2bb402d44ae0}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!on\-Save\-Instance\-State@{on\-Save\-Instance\-State}}
+\index{on\-Save\-Instance\-State@{on\-Save\-Instance\-State}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{on\-Save\-Instance\-State}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-on\-Save\-Instance\-State (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{out\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a6f0e3399d8b62597bfed2bb402d44ae0}
+
+\begin{DoxyCode}
+120                                                         \{
+121         outState.putSerializable(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a9e2658a69f3f70584955bbdc947ca0bc}{Constants.TEMPLATE\_OBJECT}, selectedTemplate);
+122         outState.putInt(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a2ee9d59d6a353dc4664ed2e2086dae9d}{Constants.TEMPLATE\_ID}, templateId);
+123         outState.putString(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_ab2586e8aa144cd7e8b4928186d709ea8}{Constants.PROJECT\_FILE\_PATH}, oldFileName);
+124         super.onSaveInstanceState(outState);
+125     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_aef3001b6ab6df927e92ada78c02bc7da}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!parse\-Saved\-File@{parse\-Saved\-File}}
+\index{parse\-Saved\-File@{parse\-Saved\-File}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{parse\-Saved\-File}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-parse\-Saved\-File (
+\begin{DoxyParamCaption}
+\item[{String}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_aef3001b6ab6df927e92ada78c02bc7da}
+
+
+Converts an existing .buildmlearn file to Template\-Interface Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path of the existing .buildmlearn file This function is used in loading existing files to editor. Reads file at a given path, parse the file and convert into and convert it into Template\-Interface object. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+510                                                \{
+511 
+512         \textcolor{keywordflow}{try} \{
+513             File fXmlFile = \textcolor{keyword}{new} File(path);
+514             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+515             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+516             Document doc;
+517             doc = dBuilder.parse(fXmlFile);
+518             doc.getDocumentElement().normalize();
+519             Element authorElement = (Element) doc.getElementsByTagName(\textcolor{stringliteral}{"author"}).item(0);
+520             Element nameElement = (Element) authorElement.getElementsByTagName(\textcolor{stringliteral}{"name"}).item(0);
+521             String name = nameElement.getTextContent();
+522             String title = doc.getElementsByTagName(\textcolor{stringliteral}{"title"}).item(0).getTextContent();
+523             NodeList nList = doc.getElementsByTagName(\textcolor{stringliteral}{"item"});
+524             ArrayList<Element> items = \textcolor{keyword}{new} ArrayList<>();
+525             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nList.getLength(); i++) \{
+526                 Node nodeItem = nList.item(i);
+527                 \textcolor{keywordflow}{if} (nodeItem.getNodeType() == Node.ELEMENT\_NODE) \{
+528                     items.add((Element) nodeItem);
+529                 \}
+530             \}
+531 
+532             Log.d(TAG, \textcolor{stringliteral}{"Activity Created"});
+533             Template[] templates = Template.values();
+534             \textcolor{keyword}{template} = templates[templateId];
+535             Class templateClass = template.getTemplateClass();
+536 
+537             Object templateObject = templateClass.newInstance();
+538             selectedTemplate = (TemplateInterface) templateObject;
+539             \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_ade293345372081f3d43450df42e26092}{populateListView}(selectedTemplate.loadProjectTemplateEditor(\textcolor{keyword}{this}, items));
+540             \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a5bd38be8a926fff23a40e8014b71cb13}{setUpActionBar}();
+541             \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a3d785b7595c43249fc5a73e4f69daf41}{updateHeaderDetails}(name, title);
+542 
+543 
+544         \} \textcolor{keywordflow}{catch} (SAXException | IOException | ParserConfigurationException | IllegalAccessException e) \{
+545             e.printStackTrace();
+546         \} \textcolor{keywordflow}{catch} (InstantiationException e) \{
+547             e.printStackTrace();
+548         \}
+549 
+550 
+551     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_ade293345372081f3d43450df42e26092}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!populate\-List\-View@{populate\-List\-View}}
+\index{populate\-List\-View@{populate\-List\-View}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{populate\-List\-View}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-populate\-List\-View (
+\begin{DoxyParamCaption}
+\item[{final Base\-Adapter}]{adapter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_ade293345372081f3d43450df42e26092}
+
+
+Populates List\-View item by setting adapter to List\-View. Also inflates Header View. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adapter} & Adapter containing template data Header view contains the editable author name and template title fields. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+144                                                                \{
+145         \textcolor{keywordflow}{if} (templateEdtiorList == null) \{
+146             templateEdtiorList = (ListView) findViewById(R.id.template\_editor\_listview);
+147         \}
+148         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT\_INFLATER\_SERVICE);
+149         View templateHeader = inflater.inflate(R.layout.listview\_header\_template, templateEdtiorList, \textcolor{keyword}{false}
+      );
+150         templateEdtiorList.addHeaderView(templateHeader, null, \textcolor{keyword}{false});
+151 
+152         EditText authorEditText = (EditText) findViewById(R.id.author\_name);
+153         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext
+      ());
+154         authorEditText.setText(preferences.getString(getString(R.string.key\_user\_name), \textcolor{stringliteral}{""}));
+155         \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a5c1e35aa985ed2199d9795ad1ab03e0d}{setAdapter}(adapter);
+156 
+157         templateEdtiorList.setOnItemLongClickListener(\textcolor{keyword}{new} AdapterView.OnItemLongClickListener() \{
+158             @Override
+159             \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} onItemLongClick(AdapterView<?> parent, View view, \textcolor{keywordtype}{int} position, \textcolor{keywordtype}{long} \textcolor{keywordtype}{id}) \{
+160 
+161                 \textcolor{keywordflow}{if} (position == 0) \{
+162                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+163                 \}
+164 
+165                 \textcolor{keywordflow}{if} (selectedPosition == position - 1) \{
+166                     selectedPosition = -1;
+167                     view.setBackgroundResource(0);
+168                     \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a596abe1f201578b28de1e3491b4f8cd6}{restoreColorScheme}();
+169                 \} \textcolor{keywordflow}{else} \{
+170                     \textcolor{keywordflow}{if} (selectedView != null) \{
+171                         selectedView.setBackgroundResource(0);
+172                     \}
+173                     selectedView = view;
+174                     selectedPosition = position - 1;
+175                     Log.d(TAG, \textcolor{stringliteral}{"Position: "} + selectedPosition);
+176                     view.setBackgroundColor(getResources().getColor(R.color.color\_divider));
+177                     \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a579696858455696ea2bac7bea2dccbd0}{changeColorScheme}();
+178                 \}
+179                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+180             \}
+181         \});
+182 
+183     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a596abe1f201578b28de1e3491b4f8cd6}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!restore\-Color\-Scheme@{restore\-Color\-Scheme}}
+\index{restore\-Color\-Scheme@{restore\-Color\-Scheme}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{restore\-Color\-Scheme}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-restore\-Color\-Scheme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a596abe1f201578b28de1e3491b4f8cd6}
+
+
+Restores the color scheme when switching from edit mode to normal mode. 
+
+Edit mode is triggered, when the list item is long pressed. 
+\begin{DoxyCode}
+398                                      \{
+399         \textcolor{keywordtype}{int} primaryColor = getResources().getColor(R.color.color\_primary);
+400         \textcolor{keywordtype}{int} primaryColorDark = getResources().getColor(R.color.color\_primary\_dark);
+401         getSupportActionBar().setBackgroundDrawable(\textcolor{keyword}{new} ColorDrawable(primaryColor));
+402         ThemeSingleton.get().positiveColor = primaryColor;
+403         ThemeSingleton.get().neutralColor = primaryColor;
+404         ThemeSingleton.get().negativeColor = primaryColor;
+405         ThemeSingleton.get().widgetColor = primaryColor;
+406         \textcolor{keywordflow}{if} (Build.VERSION.SDK\_INT >= Build.VERSION\_CODES.LOLLIPOP) \{
+407             getWindow().setStatusBarColor(primaryColorDark);
+408             getWindow().setNavigationBarColor(primaryColor);
+409         \}
+410         showTemplateSelectedMenu = \textcolor{keyword}{false};
+411         invalidateOptionsMenu();
+412     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_ae1fb961405f616070237c13e64f5b5bc}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!restore\-Selected\-View@{restore\-Selected\-View}}
+\index{restore\-Selected\-View@{restore\-Selected\-View}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{restore\-Selected\-View}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-restore\-Selected\-View (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_ae1fb961405f616070237c13e64f5b5bc}
+
+
+Removes selected color from the selected List\-View item when switching from edit mode to normal mode. 
+
+
+\begin{DoxyCode}
+363                                       \{
+364         \textcolor{keywordflow}{if} (selectedView != null) \{
+365             selectedView.setBackgroundResource(0);
+366         \}
+367 
+368         \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a596abe1f201578b28de1e3491b4f8cd6}{restoreColorScheme}();
+369     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a957831b300058bc26fbfc187517962a8}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!restore\-Template\-Editor@{restore\-Template\-Editor}}
+\index{restore\-Template\-Editor@{restore\-Template\-Editor}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{restore\-Template\-Editor}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-restore\-Template\-Editor (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a957831b300058bc26fbfc187517962a8}
+
+
+Initialization function when the Temlpate Editor is restored. 
+
+
+\begin{DoxyCode}
+221                                                                     \{
+222         selectedTemplate = (TemplateInterface) savedInstanceState.getSerializable(Constants.TEMPLATE\_OBJECT
+      );
+223         oldFileName = savedInstanceState.getString(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_ab2586e8aa144cd7e8b4928186d709ea8}{Constants.PROJECT\_FILE\_PATH});
+224         templateId = savedInstanceState.getInt(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a2ee9d59d6a353dc4664ed2e2086dae9d}{Constants.TEMPLATE\_ID});
+225         Template[] templates = Template.values();
+226         \textcolor{keyword}{template} = templates[templateId];
+227         \textcolor{keywordflow}{if} (selectedTemplate == null) \{
+228             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Unable to restore Activity state, finishing Template Editor activity"}, 
+      Toast.LENGTH\_LONG).show();
+229             finish();
+230         \} \textcolor{keywordflow}{else} \{
+231             Toast.makeText(\textcolor{keyword}{this}, selectedTemplate.onAttach(), Toast.LENGTH\_LONG).show();
+232             \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_ade293345372081f3d43450df42e26092}{populateListView}(selectedTemplate.
+      \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ae433eedc291006e78b65b0fc4135d560}{currentTemplateEditorAdapter}());
+233             \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a5bd38be8a926fff23a40e8014b71cb13}{setUpActionBar}();
+234         \}
+235     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_aaec7f80eb29a74505a25bed11c20c29d}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!save\-Project@{save\-Project}}
+\index{save\-Project@{save\-Project}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{save\-Project}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-save\-Project (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_aaec7f80eb29a74505a25bed11c20c29d}
+
+
+Saves the current project into a .buildmlearn file. 
+
+Converts the current Template\-Interface object into a xml file. Xml file is saved in S\-A\-V\-E Directory (defined in constants). File name is of the format\-: $<$title$>$\-\_\-by\-\_\-$<$author$>$.\-buildmlearn
+
+\begin{DoxyReturn}{Returns}
+Absolute path of the saved file. Null if there is some error. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+421                                    \{
+422 
+423         EditText authorEditText = ((EditText) findViewById(R.id.author\_name));
+424         EditText titleEditText = ((EditText) findViewById(R.id.template\_title));
+425         String author = ((EditText) findViewById(R.id.author\_name)).getText().toString();
+426         String title = ((EditText) findViewById(R.id.template\_title)).getText().toString();
+427         \textcolor{keywordflow}{if} (author.equals(\textcolor{stringliteral}{""})) \{
+428             authorEditText.setError(\textcolor{stringliteral}{"Author name is required"});
+429         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (title.equals(\textcolor{stringliteral}{""})) \{
+430             titleEditText.setError(\textcolor{stringliteral}{"Title is required"});
+431         \} \textcolor{keywordflow}{else} \{
+432 
+433             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+434             DocumentBuilder docBuilder;
+435             \textcolor{keywordflow}{try} \{
+436 
+437                 docBuilder = docFactory.newDocumentBuilder();
+438                 Document doc = docBuilder.newDocument();
+439                 Element rootElement = doc.createElement(\textcolor{stringliteral}{"buildmlearn\_application"});
+440                 Attr attr = doc.createAttribute(\textcolor{stringliteral}{"type"});
+441                 attr.setValue(getResources().getString(template.getType()));
+442                 rootElement.setAttributeNode(attr);
+443 
+444                 Element authorElement = doc.createElement(\textcolor{stringliteral}{"author"});
+445                 rootElement.appendChild(authorElement);
+446 
+447                 Element nameElement = doc.createElement(\textcolor{stringliteral}{"name"});
+448                 nameElement.appendChild(doc.createTextNode(author));
+449 
+450                 authorElement.appendChild(nameElement);
+451 
+452                 Element titleElement = doc.createElement(\textcolor{stringliteral}{"title"});
+453                 titleElement.appendChild(doc.createTextNode(title));
+454                 rootElement.appendChild(titleElement);
+455 
+456                 doc.appendChild(rootElement);
+457                 Element dataElement = doc.createElement(\textcolor{stringliteral}{"data"});
+458                 rootElement.appendChild(dataElement);
+459                 \textcolor{keywordflow}{if} (selectedTemplate.\hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9fb6e277f0ebfb2caea138017854473f}{getItems}(doc).size() == 0) \{
+460                     Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Unable to perform action: No Data"}, Toast.LENGTH\_SHORT).show();
+461                     \textcolor{keywordflow}{return} null;
+462                 \}
+463                 \textcolor{keywordflow}{for} (Element item : selectedTemplate.\hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9fb6e277f0ebfb2caea138017854473f}{getItems}(doc)) \{
+464                     dataElement.appendChild(item);
+465                 \}
+466                 \textcolor{keywordflow}{if} (oldFileName != null) \{
+467                     File tempFile = \textcolor{keyword}{new} File(oldFileName);
+468                     tempFile.delete();
+469                 \}
+470                 String saveFileName = title + \textcolor{stringliteral}{" by "} + author + \textcolor{stringliteral}{".buildmlearn"};
+471                 saveFileName = saveFileName.replaceAll(\textcolor{stringliteral}{" "}, \textcolor{stringliteral}{"-"});
+472 
+473 
+474                 FileUtils.saveXmlFile(toolkit.getSavedDir(), saveFileName, doc);
+475 
+476 
+477                 \textcolor{keywordflow}{return} toolkit.getSavedDir() + saveFileName;
+478             \} \textcolor{keywordflow}{catch} (ParserConfigurationException e) \{
+479                 e.printStackTrace();
+480             \}
+481         \}
+482         \textcolor{keywordflow}{return} null;
+483     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a5c1e35aa985ed2199d9795ad1ab03e0d}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!set\-Adapter@{set\-Adapter}}
+\index{set\-Adapter@{set\-Adapter}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{set\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-set\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Base\-Adapter}]{adapter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a5c1e35aa985ed2199d9795ad1ab03e0d}
+
+
+Sets the adapter to the List\-View. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adapter} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+569                                                    \{
+570         templateEdtiorList.setAdapter(adapter);
+571         \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_afd3a9fb9738a176e2043f19a25cd7936}{setEmptyView}();
+572     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_afd3a9fb9738a176e2043f19a25cd7936}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!set\-Empty\-View@{set\-Empty\-View}}
+\index{set\-Empty\-View@{set\-Empty\-View}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{set\-Empty\-View}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-set\-Empty\-View (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_afd3a9fb9738a176e2043f19a25cd7936}
+
+
+Toggles the visibility of empty text if adapter has zero elements. 
+
+
+\begin{DoxyCode}
+577                                   \{
+578 
+579         \textcolor{keywordflow}{if} (templateEdtiorList.getAdapter().getCount() == 1) \{
+580             findViewById(R.id.empty).setVisibility(View.VISIBLE);
+581         \} \textcolor{keywordflow}{else} \{
+582             findViewById(R.id.empty).setVisibility(View.GONE);
+583         \}
+584     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a5bd38be8a926fff23a40e8014b71cb13}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!set\-Up\-Action\-Bar@{set\-Up\-Action\-Bar}}
+\index{set\-Up\-Action\-Bar@{set\-Up\-Action\-Bar}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{set\-Up\-Action\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-set\-Up\-Action\-Bar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a5bd38be8a926fff23a40e8014b71cb13}
+
+
+Initialization function for setting up action bar. 
+
+
+\begin{DoxyCode}
+188                                     \{
+189         ActionBar actionBar = getSupportActionBar();
+190         templateEdtiorList = (ListView) findViewById(R.id.template\_editor\_listview);
+191         \textcolor{keywordflow}{if} (actionBar == null) \{
+192             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} AssertionError();
+193         \}
+194         actionBar.setTitle(selectedTemplate.getTitle());
+195         actionBar.setDisplayHomeAsUpEnabled(\textcolor{keyword}{true});
+196     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a064ac90668a94f32256938cb08fe896e}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!set\-Up\-Template\-Editor@{set\-Up\-Template\-Editor}}
+\index{set\-Up\-Template\-Editor@{set\-Up\-Template\-Editor}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{set\-Up\-Template\-Editor}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-set\-Up\-Template\-Editor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a064ac90668a94f32256938cb08fe896e}
+
+
+Initialization function when the Temlpate Editor is created. 
+
+
+\begin{DoxyCode}
+201                                          \{
+202         Template[] templates = Template.values();
+203         \textcolor{keyword}{template} = templates[templateId];
+204 
+205         Class templateClass = template.getTemplateClass();
+206         \textcolor{keywordflow}{try} \{
+207             Object templateObject = templateClass.newInstance();
+208             selectedTemplate = (TemplateInterface) templateObject;
+209             \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_ade293345372081f3d43450df42e26092}{populateListView}(selectedTemplate.newTemplateEditorAdapter(\textcolor{keyword}{this}));
+210             \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a5bd38be8a926fff23a40e8014b71cb13}{setUpActionBar}();
+211         \} \textcolor{keywordflow}{catch} (InstantiationException e) \{
+212             e.printStackTrace();
+213         \} \textcolor{keywordflow}{catch} (IllegalAccessException e) \{
+214             e.printStackTrace();
+215         \}
+216     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a0f4842fdb6b28f218c6f2ac5c69e62e1}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!start\-Simulator@{start\-Simulator}}
+\index{start\-Simulator@{start\-Simulator}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{start\-Simulator}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-start\-Simulator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a0f4842fdb6b28f218c6f2ac5c69e62e1}
+
+
+Start the simulator activity. 
+
+Start the simulator with the fragment returned by the selected template. Simulator is started as a new activity. 
+\begin{DoxyCode}
+490                                     \{
+491         String filePath = \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_aaec7f80eb29a74505a25bed11c20c29d}{saveProject}();
+492         \textcolor{keywordflow}{if} (filePath == null || filePath.equals(\textcolor{stringliteral}{""})) \{
+493             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Build unsuccessful"}, Toast.LENGTH\_SHORT).show();
+494             \textcolor{keywordflow}{return};
+495         \}
+496         Intent simulatorIntent = \textcolor{keyword}{new} Intent(getApplicationContext(), Simulator.class);
+497         simulatorIntent.putExtra(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a2ee9d59d6a353dc4664ed2e2086dae9d}{Constants.TEMPLATE\_ID}, templateId);
+498         simulatorIntent.putExtra(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a5e8ea6ec23e727cbfc84e5b854ae311c}{Constants.SIMULATOR\_FILE\_PATH}, filePath);
+499         startActivity(simulatorIntent);
+500 
+501     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a3d785b7595c43249fc5a73e4f69daf41}{\index{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}!update\-Header\-Details@{update\-Header\-Details}}
+\index{update\-Header\-Details@{update\-Header\-Details}!org::buildmlearn::toolkit::activity::TemplateEditor@{org\-::buildmlearn\-::toolkit\-::activity\-::\-Template\-Editor}}
+\subsubsection[{update\-Header\-Details}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-activity.\-Template\-Editor.\-update\-Header\-Details (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{String}]{title}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1activity_1_1TemplateEditor_a3d785b7595c43249fc5a73e4f69daf41}
+
+
+Updates the title and author name in the header view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the author \\
+\hline
+{\em title} & Title of the template app \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+558                                                                   \{
+559         EditText authorEditText = ((EditText) findViewById(R.id.author\_name));
+560         EditText titleEditText = ((EditText) findViewById(R.id.template\_title));
+561         authorEditText.setText(name);
+562         titleEditText.setText(title);
+563     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/activity/\hyperlink{TemplateEditor_8java}{Template\-Editor.\-java}\end{DoxyCompactItemize}

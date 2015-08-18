@@ -1,0 +1,215 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread}{\section{org.\-buildmlearn.\-toolkit.\-utilities.\-Signer\-Thread Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread}\index{org.\-buildmlearn.\-toolkit.\-utilities.\-Signer\-Thread@{org.\-buildmlearn.\-toolkit.\-utilities.\-Signer\-Thread}}
+}
+
+
+Class for signing a unsigned apk file using a given keystore and credentials.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-utilities.\-Signer\-Thread\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{d7/dc0/classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-utilities.\-Signer\-Thread\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{dd/d23/classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread_1_1OnSignComplete}{On\-Sign\-Complete}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread_a5a37aaaeb632085cc262eb0376f4cabb}{Signer\-Thread} (Context context, String assets\-Apk, String final\-Apk, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1KeyStoreDetails}{Key\-Store\-Details} key\-Details, String asset\-File\-Path, String asset\-File\-Name)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread_a2f75999b55a36de5421b6563677eb75a}{set\-Signer\-Thread\-Listener} (\hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread_1_1OnSignComplete}{On\-Sign\-Complete} listener)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread_ab03f540249e80693f090c9b30c692d17}{run} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for signing a unsigned apk file using a given keystore and credentials. 
+
+Created by Abhishek on 10-\/06-\/2015. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread_a5a37aaaeb632085cc262eb0376f4cabb}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Signer\-Thread@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Signer\-Thread}!Signer\-Thread@{Signer\-Thread}}
+\index{Signer\-Thread@{Signer\-Thread}!org::buildmlearn::toolkit::utilities::SignerThread@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Signer\-Thread}}
+\subsubsection[{Signer\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-utilities.\-Signer\-Thread.\-Signer\-Thread (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{String}]{assets\-Apk, }
+\item[{String}]{final\-Apk, }
+\item[{{\bf Key\-Store\-Details}}]{key\-Details, }
+\item[{String}]{asset\-File\-Path, }
+\item[{String}]{asset\-File\-Name}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread_a5a37aaaeb632085cc262eb0376f4cabb}
+
+\begin{DoxyCode}
+44                                                                                                            
+                                               \{
+45         this.projectFile = finalApk;
+46         this.context = context;
+47         this.assetsApk = assetsApk;
+48         this.finalApk = finalApk.replaceAll(\textcolor{stringliteral}{"buildmlearn"}, \textcolor{stringliteral}{"apk"});
+49         this.keyDetails = keyDetails;
+50         this.toolkit = (ToolkitApplication) context;
+51         this.assetFileName = assetFileName;
+52         this.assetFilePath = assetFilePath;
+53     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread_ab03f540249e80693f090c9b30c692d17}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Signer\-Thread@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Signer\-Thread}!run@{run}}
+\index{run@{run}!org::buildmlearn::toolkit::utilities::SignerThread@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Signer\-Thread}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-utilities.\-Signer\-Thread.\-run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread_ab03f540249e80693f090c9b30c692d17}
+
+\begin{DoxyCode}
+59                       \{
+60 
+61         FileUtils.copyAssets(context, assetsApk, toolkit.getApkDir());
+62         FileUtils.copyAssets(context, keyDetails.getAssetsPath(), toolkit.
+      \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1ToolkitApplication_a976b0d6036419bd9382ffdca98b79fb4}{getApkDir}());
+63 
+64         \textcolor{keywordflow}{try} \{
+65             FileUtils.unZip(toolkit.getApkDir() + assetsApk, toolkit.\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1ToolkitApplication_a4f504e66f421dfc2f9dfd6810c2a86cb}{getUnZipDir}() + TEMP\_FOLDER
+      );
+66         \} \textcolor{keywordflow}{catch} (IOException e) \{
+67             \textcolor{keywordflow}{if} (listener != null) \{
+68                 listener.onFail(e);
+69             \}
+70             e.printStackTrace();
+71         \}
+72 
+73         File folder = \textcolor{keyword}{new} File(toolkit.\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1ToolkitApplication_a4f504e66f421dfc2f9dfd6810c2a86cb}{getUnZipDir}() + TEMP\_FOLDER + \textcolor{stringliteral}{"/"} + assetFilePath);
+74         \textcolor{keywordtype}{boolean} success = \textcolor{keyword}{true};
+75         \textcolor{keywordflow}{if} (!folder.exists()) \{
+76             success = folder.mkdir();
+77         \}
+78 
+79         File src = \textcolor{keyword}{new} File(projectFile);
+80         File dest = \textcolor{keyword}{new} File(toolkit.\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1ToolkitApplication_a4f504e66f421dfc2f9dfd6810c2a86cb}{getUnZipDir}() + TEMP\_FOLDER + \textcolor{stringliteral}{"/"} + assetFilePath + 
+      assetFileName);
+81 
+82         \textcolor{keywordflow}{try} \{
+83             FileWriter fileWriter = \textcolor{keyword}{new} FileWriter(dest.getAbsoluteFile(), \textcolor{keyword}{true});
+84         \} \textcolor{keywordflow}{catch} (IOException e) \{
+85             e.printStackTrace();
+86         \}
+87 
+88 
+89         \textcolor{keywordflow}{try} \{
+90             FileUtils.copy(src, dest);
+91         \} \textcolor{keywordflow}{catch} (IOException e) \{
+92             \textcolor{keywordflow}{if} (listener != null) \{
+93                 listener.onFail(e);
+94             \}
+95             e.printStackTrace();
+96         \}
+97 
+98         \textcolor{keywordflow}{try} \{
+99             FileUtils.zipFolder(toolkit.getUnZipDir() + TEMP\_FOLDER);
+100         \} \textcolor{keywordflow}{catch} (IOException e) \{
+101             \textcolor{keywordflow}{if} (listener != null) \{
+102                 listener.onFail(e);
+103             \}
+104             e.printStackTrace();
+105         \}
+106 
+107         String inputFile = toolkit.getUnZipDir() + TEMP\_FOLDER + \textcolor{stringliteral}{".zip"};
+108         \textcolor{keywordflow}{try} \{
+109             \textcolor{keywordflow}{if} (finalApk == null) \{
+110                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} IllegalArgumentException(\textcolor{stringliteral}{"Parameter outputFile is null"});
+111             \}
+112 
+113             zipSigner = \textcolor{keyword}{new} ZipSigner();
+114             zipSigner.setResourceAdapter(\textcolor{keyword}{new} ZipSignerAppResourceAdapter(context.getResources()));
+115 
+116             File keystoreFile;
+117             keystoreFile = \textcolor{keyword}{new} File(toolkit.\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1ToolkitApplication_a976b0d6036419bd9382ffdca98b79fb4}{getApkDir}() + keyDetails.getAssetsPath());
+118 
+119             \textcolor{keywordtype}{char}[] keyPass = keyDetails.getPassword().toCharArray();
+120             \textcolor{keywordtype}{char}[] aliasPass = keyDetails.getAliasPassword().toCharArray();
+121 
+122             \textcolor{keywordflow}{if} (toolkit.isExternalStorageAvailable()) \{
+123                 finalApk = toolkit.getDownloadDirectory() + \textcolor{stringliteral}{"/"} + finalApk.substring(toolkit.
+      \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1ToolkitApplication_a5f6a7d373de5d6d2c7cfacc9e6c86f47}{getSavedDir}().length());
+124                 Log.d(TAG, \textcolor{stringliteral}{"Final APK: "} + finalApk);
+125             \}
+126 
+127             CustomKeySigner.signZip(zipSigner, keystoreFile.getAbsolutePath(), keyPass,
+128                     keyDetails.\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1model_1_1KeyStoreDetails_a27f0dbd2433e3b1044b8fceda27ab4ac}{getAlias}(), aliasPass, signatureAlgorithm, inputFile, finalApk);
+129 
+130 
+131             \textcolor{keywordflow}{if} (zipSigner.isCanceled()) \{
+132                 Log.d(TAG, \textcolor{stringliteral}{"Signing cancelled"});
+133                 Toast.makeText(toolkit, \textcolor{stringliteral}{"APK file not generated"}, Toast.LENGTH\_SHORT).show();
+134             \} \textcolor{keywordflow}{else} \{
+135                 Log.d(TAG, \textcolor{stringliteral}{"Signing Complete"});
+136                 listener.onSuccess();
+137 
+138                 \textcolor{keywordflow}{if} (toolkit.isExternalStorageAvailable()) \{
+139                     showNotification(\textcolor{stringliteral}{"APK file saved in Downloads folder"});
+140                 \} \textcolor{keywordflow}{else} \{
+141                     showNotification(\textcolor{stringliteral}{"SD card not found. APK file saved in internal storage."});
+142                 \}
+143             \}
+144 
+145         \} \textcolor{keywordflow}{catch} (AutoKeyException | UnrecoverableKeyException x) \{
+146             Log.d(TAG, \textcolor{stringliteral}{"Exception: "} + x.getMessage());
+147             \textcolor{keywordflow}{if} (listener != null) \{
+148                 listener.onFail(x);
+149             \}
+150         \} \textcolor{keywordflow}{catch} (Throwable t) \{
+151 
+152             String tName = t.getClass().getName();
+153             \textcolor{keywordtype}{int} pos = tName.lastIndexOf(\textcolor{charliteral}{'.'});
+154             \textcolor{keywordflow}{if} (pos >= 0) \{
+155                 tName = tName.substring(pos + 1);
+156             \}
+157             Log.d(TAG, \textcolor{stringliteral}{"Exception: "} + tName + \textcolor{stringliteral}{": "} + t.getMessage());
+158             \textcolor{keywordflow}{if} (listener != null) \{
+159                 listener.onFail(null);
+160             \}
+161         \}
+162     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread_a2f75999b55a36de5421b6563677eb75a}{\index{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Signer\-Thread@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Signer\-Thread}!set\-Signer\-Thread\-Listener@{set\-Signer\-Thread\-Listener}}
+\index{set\-Signer\-Thread\-Listener@{set\-Signer\-Thread\-Listener}!org::buildmlearn::toolkit::utilities::SignerThread@{org\-::buildmlearn\-::toolkit\-::utilities\-::\-Signer\-Thread}}
+\subsubsection[{set\-Signer\-Thread\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-utilities.\-Signer\-Thread.\-set\-Signer\-Thread\-Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf On\-Sign\-Complete}}]{listener}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1utilities_1_1SignerThread_a2f75999b55a36de5421b6563677eb75a}
+
+\begin{DoxyCode}
+55                                                                  \{
+56         this.listener = listener;
+57     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/utilities/\hyperlink{SignerThread_8java}{Signer\-Thread.\-java}\end{DoxyCompactItemize}

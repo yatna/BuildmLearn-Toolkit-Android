@@ -1,0 +1,266 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment}{\section{org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Main\-Fragment Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment}\index{org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Main\-Fragment@{org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Main\-Fragment}}
+}
+
+
+Simulator code for Flash Card Template.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Main\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{d9/dfe/classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Main\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/daf/classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a4a45ac52c1f059e73b6428c8e6497ce2}{on\-Create\-View} (Layout\-Inflater inflater, View\-Group container, Bundle saved\-Instance\-State)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a4cbd053b83f6e1d0296a7d60639dfd8d}{populate\-Question} (int index)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_ae9e2c735c811355694eb801713f4d900}{re\-Initialize} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a3bf2edf287b796f71a8e2501b7e0d096}{on\-Animation\-End} (Animation animation)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_ad63767eb4d6d68f4e85c64ccc719da37}{on\-Animation\-Repeat} (Animation animation)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a4fe7d6269f507e5485fe13d036b4f152}{on\-Animation\-Start} (Animation animation)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Flash Card Template. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a3bf2edf287b796f71a8e2501b7e0d096}{\index{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment}!on\-Animation\-End@{on\-Animation\-End}}
+\index{on\-Animation\-End@{on\-Animation\-End}!org::buildmlearn::toolkit::flashcardtemplate::MainFragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment}}
+\subsubsection[{on\-Animation\-End}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Main\-Fragment.\-on\-Animation\-End (
+\begin{DoxyParamCaption}
+\item[{Animation}]{animation}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a3bf2edf287b796f71a8e2501b7e0d096}
+
+\begin{DoxyCode}
+166                                                     \{
+167         \textcolor{keywordflow}{if} (animation == animation1) \{
+168 
+169             TextView answerText = (TextView) view.findViewById(R.id.answerText);
+170 
+171             \textcolor{keywordflow}{if} (!isFlipped) \{
+172 
+173                 answerView.setVisibility(View.VISIBLE);
+174                 questionView.setVisibility(View.GONE);
+175                 isFlipped = \textcolor{keyword}{true};
+176                 answerText.setText(flashCardanswer);
+177                 currentView = answerView;
+178             \} \textcolor{keywordflow}{else} \{
+179 
+180                 isFlipped = \textcolor{keyword}{false};
+181                 answerText.setText(\textcolor{stringliteral}{""});
+182                 questionView.setVisibility(View.VISIBLE);
+183                 answerView.setVisibility(View.GONE);
+184                 currentView = questionView;
+185             \}
+186             currentView.clearAnimation();
+187             currentView.setAnimation(animation2);
+188             currentView.startAnimation(animation2);
+189 
+190         \}
+191 
+192     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_ad63767eb4d6d68f4e85c64ccc719da37}{\index{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment}!on\-Animation\-Repeat@{on\-Animation\-Repeat}}
+\index{on\-Animation\-Repeat@{on\-Animation\-Repeat}!org::buildmlearn::toolkit::flashcardtemplate::MainFragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment}}
+\subsubsection[{on\-Animation\-Repeat}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Main\-Fragment.\-on\-Animation\-Repeat (
+\begin{DoxyParamCaption}
+\item[{Animation}]{animation}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_ad63767eb4d6d68f4e85c64ccc719da37}
+
+\begin{DoxyCode}
+195                                                        \{
+196         \textcolor{comment}{// TODO Auto-generated method stub}
+197 
+198     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a4fe7d6269f507e5485fe13d036b4f152}{\index{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment}!on\-Animation\-Start@{on\-Animation\-Start}}
+\index{on\-Animation\-Start@{on\-Animation\-Start}!org::buildmlearn::toolkit::flashcardtemplate::MainFragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment}}
+\subsubsection[{on\-Animation\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Main\-Fragment.\-on\-Animation\-Start (
+\begin{DoxyParamCaption}
+\item[{Animation}]{animation}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a4fe7d6269f507e5485fe13d036b4f152}
+
+\begin{DoxyCode}
+201                                                       \{
+202         \textcolor{comment}{// TODO Auto-generated method stub}
+203 
+204     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a4a45ac52c1f059e73b6428c8e6497ce2}{\index{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment}!on\-Create\-View@{on\-Create\-View}}
+\index{on\-Create\-View@{on\-Create\-View}!org::buildmlearn::toolkit::flashcardtemplate::MainFragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment}}
+\subsubsection[{on\-Create\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Main\-Fragment.\-on\-Create\-View (
+\begin{DoxyParamCaption}
+\item[{Layout\-Inflater}]{inflater, }
+\item[{View\-Group}]{container, }
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a4a45ac52c1f059e73b6428c8e6497ce2}
+
+\begin{DoxyCode}
+47                                                                                                       \{
+48 
+49         view = inflater.inflate(R.layout.flash\_simu\_main, container, \textcolor{keyword}{false});
+50 
+51         animation1 = AnimationUtils.loadAnimation(getActivity(), R.anim.to\_middle);
+52         animation1.setAnimationListener(\textcolor{keyword}{this});
+53         animation2 = AnimationUtils.loadAnimation(getActivity(), R.anim.from\_middle);
+54         animation2.setAnimationListener(\textcolor{keyword}{this});
+55 
+56         questionView = view.findViewById(R.id.questionInMain);
+57         answerView = view.findViewById(R.id.answerInMain);
+58 
+59         questionView.setVisibility(View.VISIBLE);
+60         answerView.setVisibility(View.GONE);
+61         iQuestionIndex = 0;
+62 
+63         questionImage = (ImageView) view.findViewById(R.id.questionImage);
+64         flashCardText = (TextView) view.findViewById(R.id.flashCardText);
+65         questionText = (TextView) view.findViewById(R.id.questionhint);
+66         flashcardNumber = (TextView) view.findViewById(R.id.flashCardNumber);
+67 
+68         flipButton = (Button) view.findViewById(R.id.flip\_button);
+69         preButton = (Button) view.findViewById(R.id.pre\_button);
+70         nextButton = (Button) view.findViewById(R.id.next\_button);
+71 
+72         \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a4cbd053b83f6e1d0296a7d60639dfd8d}{populateQuestion}(iQuestionIndex);
+73         currentView = questionView;
+74 
+75         flipButton.setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+76 
+77             @Override
+78             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+79 
+80                 currentView.clearAnimation();
+81                 currentView.setAnimation(animation1);
+82                 currentView.startAnimation(animation1);
+83 
+84             \}
+85         \});
+86 
+87         preButton.setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+88 
+89             @Override
+90             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+91                 \textcolor{keywordflow}{if} (iQuestionIndex != 0) \{
+92                     isFlipped = \textcolor{keyword}{false};
+93 
+94                     iQuestionIndex--;
+95                     questionView.setVisibility(View.VISIBLE);
+96                     answerView.setVisibility(View.GONE);
+97                     currentView = questionView;
+98 
+99                     \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a4cbd053b83f6e1d0296a7d60639dfd8d}{populateQuestion}(iQuestionIndex);
+100                 \}
+101 
+102             \}
+103         \});
+104 
+105         nextButton.setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+106 
+107             @Override
+108             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+109 
+110                 \textcolor{keywordflow}{if} (iQuestionIndex < gd.model.size() - 1) \{
+111                     isFlipped = \textcolor{keyword}{false};
+112                     iQuestionIndex++;
+113                     questionView.setVisibility(View.VISIBLE);
+114                     answerView.setVisibility(View.GONE);
+115                     currentView = questionView;
+116                     \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a4cbd053b83f6e1d0296a7d60639dfd8d}{populateQuestion}(iQuestionIndex);
+117 
+118                 \} \textcolor{keywordflow}{else} \{
+119 
+120                     getActivity().getFragmentManager().beginTransaction().replace(R.id.container, \textcolor{keyword}{new} 
+      ScoreFragment()).addToBackStack(null).commit();
+121 
+122                     \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_ae9e2c735c811355694eb801713f4d900}{reInitialize}();
+123                 \}
+124 
+125             \}
+126         \});
+127         \textcolor{keywordflow}{return} view;
+128     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a4cbd053b83f6e1d0296a7d60639dfd8d}{\index{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment}!populate\-Question@{populate\-Question}}
+\index{populate\-Question@{populate\-Question}!org::buildmlearn::toolkit::flashcardtemplate::MainFragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment}}
+\subsubsection[{populate\-Question}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Main\-Fragment.\-populate\-Question (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_a4cbd053b83f6e1d0296a7d60639dfd8d}
+
+\begin{DoxyCode}
+131                                             \{
+132         \textcolor{keywordflow}{if} (index == 0) \{
+133             preButton.setEnabled(\textcolor{keyword}{false});
+134 
+135         \} \textcolor{keywordflow}{else}
+136             preButton.setEnabled(\textcolor{keyword}{true});
+137 
+138         \textcolor{keywordtype}{int} cardNum = index + 1;
+139         flashcardNumber.setText(\textcolor{stringliteral}{"Card #"} + cardNum + \textcolor{stringliteral}{" of "} + gd.totalCards);
+140         FlashModel mFlash = gd.model.get(index);
+141         TextView answerText = (TextView) view.findViewById(R.id.answerText);
+142         \textcolor{keywordflow}{if} (mFlash.getQuestion() != null)
+143             questionText.setText(mFlash.getQuestion());
+144         \textcolor{keywordflow}{if} (mFlash.getAnswer() != null) \{
+145             flashCardanswer = mFlash.getAnswer();
+146             answerText.setText(mFlash.getAnswer());
+147         \}
+148         \textcolor{keywordflow}{if} (mFlash.getBase64() != null) \{
+149             byte[] decodedString = Base64.decode(mFlash.getBase64(),
+150                     Base64.DEFAULT);
+151             Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString,
+152                     0, decodedString.length);
+153             questionImage.setImageBitmap(decodedByte);
+154         \} \textcolor{keywordflow}{else} \{
+155             questionText.setGravity(Gravity.CENTER\_VERTICAL);
+156         \}
+157 
+158     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_ae9e2c735c811355694eb801713f4d900}{\index{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment}!re\-Initialize@{re\-Initialize}}
+\index{re\-Initialize@{re\-Initialize}!org::buildmlearn::toolkit::flashcardtemplate::MainFragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Main\-Fragment}}
+\subsubsection[{re\-Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Main\-Fragment.\-re\-Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1MainFragment_ae9e2c735c811355694eb801713f4d900}
+
+\begin{DoxyCode}
+160                                \{
+161         iQuestionIndex = 0;
+162         gd.model.clear();
+163     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/flashcardtemplate/\hyperlink{MainFragment_8java}{Main\-Fragment.\-java}\end{DoxyCompactItemize}

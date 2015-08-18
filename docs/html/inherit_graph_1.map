@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$dd/db7/classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1NavigationDrawerMenuAdapter.html" title="Adapter used for showing menus in the side panel. " alt="" coords="177,5,399,46"/>
+<area shape="rect" id="node3" href="$d1/da6/classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1SavedProjectAdapter.html" title="Adapter used for showing saved projects in a list. " alt="" coords="177,70,399,111"/>
+<area shape="rect" id="node4" href="$d1/d66/classorg_1_1buildmlearn_1_1toolkit_1_1adapter_1_1TemplateAdapter.html" title="Adapter used for showing Templates available in the toolkit. " alt="" coords="177,135,399,177"/>
+<area shape="rect" id="node5" href="$d4/d40/classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1InfoListAdapter.html" title="Simulator code for Info Template. " alt="" coords="161,201,415,242"/>
+<area shape="rect" id="node6" href="$dd/dc9/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardAdapter.html" title="Adapter for displaying Flash Card Template Editor data. " alt="" coords="169,266,407,307"/>
+<area shape="rect" id="node7" href="$d7/d0d/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoAdapter.html" title="Adapter for displaying Info Template Editor data. " alt="" coords="169,331,407,373"/>
+<area shape="rect" id="node8" href="$d3/daa/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingAdapter.html" title="Adapter for displaying Learn Spelling Template Editor data. " alt="" coords="169,397,407,438"/>
+<area shape="rect" id="node9" href="$dd/dd7/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter.html" title="Adapter for displaying Quiz Template Editor data. " alt="" coords="169,462,407,503"/>
+</map>

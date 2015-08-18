@@ -1,0 +1,98 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1DetailView}{\section{org.\-buildmlearn.\-toolkit.\-infotemplate.\-Detail\-View Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1DetailView}\index{org.\-buildmlearn.\-toolkit.\-infotemplate.\-Detail\-View@{org.\-buildmlearn.\-toolkit.\-infotemplate.\-Detail\-View}}
+}
+
+
+Simulator code for Info Template.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-infotemplate.\-Detail\-View\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{da/d98/classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1DetailView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-infotemplate.\-Detail\-View\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{d7/d10/classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1DetailView__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1DetailView_a6a003850a5524fee3987264baaabf903}{on\-Create\-View} (Layout\-Inflater inflater, View\-Group container, Bundle saved\-Instance\-State)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Fragment \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1DetailView_a9402197a3f6fcc0b4c3cb365ae452bf3}{new\-Instance} (int position)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Info Template. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1DetailView_a9402197a3f6fcc0b4c3cb365ae452bf3}{\index{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Detail\-View@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Detail\-View}!new\-Instance@{new\-Instance}}
+\index{new\-Instance@{new\-Instance}!org::buildmlearn::toolkit::infotemplate::DetailView@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Detail\-View}}
+\subsubsection[{new\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static Fragment org.\-buildmlearn.\-toolkit.\-infotemplate.\-Detail\-View.\-new\-Instance (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1DetailView_a9402197a3f6fcc0b4c3cb365ae452bf3}
+
+\begin{DoxyCode}
+73                                                      \{
+74         DetailView fragment = \textcolor{keyword}{new} DetailView();
+75         Bundle bundle = \textcolor{keyword}{new} Bundle();
+76         bundle.putInt(\textcolor{stringliteral}{"position"}, position);
+77         fragment.setArguments(bundle);
+78         \textcolor{keywordflow}{return} fragment;
+79     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1DetailView_a6a003850a5524fee3987264baaabf903}{\index{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Detail\-View@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Detail\-View}!on\-Create\-View@{on\-Create\-View}}
+\index{on\-Create\-View@{on\-Create\-View}!org::buildmlearn::toolkit::infotemplate::DetailView@{org\-::buildmlearn\-::toolkit\-::infotemplate\-::\-Detail\-View}}
+\subsubsection[{on\-Create\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-infotemplate.\-Detail\-View.\-on\-Create\-View (
+\begin{DoxyParamCaption}
+\item[{Layout\-Inflater}]{inflater, }
+\item[{View\-Group}]{container, }
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1infotemplate_1_1DetailView_a6a003850a5524fee3987264baaabf903}
+
+\begin{DoxyCode}
+83                                                                                                       \{
+84 
+85         View view = inflater.inflate(R.layout.info\_template\_detail, container, \textcolor{keyword}{false});
+86         TextView title = (TextView) view.findViewById(R.id.titleText);
+87         TextView details = (TextView) view.findViewById(R.id.detailText);
+88         \textcolor{keywordtype}{int} position = getArguments().getInt(\textcolor{stringliteral}{"position"}, 0);
+89         InfoModel model = GlobalData.getInstance().mList.get(position);
+90         title.setText(model.getInfo\_object());
+91         details.setText(model.getInfo\_description());
+92         view.findViewById(R.id.info\_template\_simulator\_back\_button).setOnClickListener(\textcolor{keyword}{new} View.
+      OnClickListener() \{
+93             @Override
+94             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+95 
+96                 getActivity().getFragmentManager().popBackStack();
+97 
+98             \}
+99         \});
+100         \textcolor{keywordflow}{return} view;
+101     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/infotemplate/\hyperlink{DetailView_8java}{Detail\-View.\-java}\end{DoxyCompactItemize}

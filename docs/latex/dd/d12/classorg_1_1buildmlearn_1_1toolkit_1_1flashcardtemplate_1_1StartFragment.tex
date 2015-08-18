@@ -1,0 +1,115 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1StartFragment}{\section{org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Start\-Fragment Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1StartFragment}\index{org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Start\-Fragment@{org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Start\-Fragment}}
+}
+
+
+Simulator code for Flash Card Template.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Start\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{d4/d84/classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1StartFragment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Start\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/deb/classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1StartFragment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1StartFragment_abc6a9593b570ed16d43c87aa033fb049}{on\-Create\-View} (Layout\-Inflater inflater, View\-Group container, Bundle saved\-Instance\-State)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Fragment \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1StartFragment_a510b67dac9f1911febf2b350fa18d4a9}{new\-Instance} (String path)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1StartFragment_a094d9a57c85444f4c6a2116958b473ed}{T\-A\-G} = \char`\"{}Start Fragment\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Flash Card Template. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1StartFragment_a510b67dac9f1911febf2b350fa18d4a9}{\index{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Start\-Fragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Start\-Fragment}!new\-Instance@{new\-Instance}}
+\index{new\-Instance@{new\-Instance}!org::buildmlearn::toolkit::flashcardtemplate::StartFragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Start\-Fragment}}
+\subsubsection[{new\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static Fragment org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Start\-Fragment.\-new\-Instance (
+\begin{DoxyParamCaption}
+\item[{String}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1StartFragment_a510b67dac9f1911febf2b350fa18d4a9}
+
+\begin{DoxyCode}
+26                                                     \{
+27         StartFragment fragment = \textcolor{keyword}{new} StartFragment();
+28         Bundle bundle = \textcolor{keyword}{new} Bundle();
+29         bundle.putString(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a5e8ea6ec23e727cbfc84e5b854ae311c}{Constants.SIMULATOR\_FILE\_PATH}, path);
+30         fragment.setArguments(bundle);
+31         \textcolor{keywordflow}{return} fragment;
+32     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1StartFragment_abc6a9593b570ed16d43c87aa033fb049}{\index{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Start\-Fragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Start\-Fragment}!on\-Create\-View@{on\-Create\-View}}
+\index{on\-Create\-View@{on\-Create\-View}!org::buildmlearn::toolkit::flashcardtemplate::StartFragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Start\-Fragment}}
+\subsubsection[{on\-Create\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Start\-Fragment.\-on\-Create\-View (
+\begin{DoxyParamCaption}
+\item[{Layout\-Inflater}]{inflater, }
+\item[{View\-Group}]{container, }
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1StartFragment_abc6a9593b570ed16d43c87aa033fb049}
+
+\begin{DoxyCode}
+37                                                                                                       \{
+38 
+39         View view = inflater.inflate(R.layout.flash\_simu\_start\_view, container, \textcolor{keyword}{false});
+40 
+41         gd = GlobalData.getInstance();
+42         gd.readXml(getArguments().getString(\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1constant_1_1Constants_a5e8ea6ec23e727cbfc84e5b854ae311c}{Constants.SIMULATOR\_FILE\_PATH}));
+43 
+44         TextView quizAuthor = (TextView) view.findViewById(R.id.tv\_author);
+45         TextView quizTitle = (TextView) view.findViewById(R.id.tv\_apptitle);
+46 
+47         quizAuthor.setText(gd.iQuizAuthor);
+48         quizTitle.setText(gd.iQuizTitle);
+49 
+50         Button startButton = (Button) view.findViewById(R.id.btn\_start);
+51         startButton.setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+52 
+53             @Override
+54             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View arg0) \{
+55                 getActivity().getFragmentManager().beginTransaction().replace(R.id.container, \textcolor{keyword}{new} 
+      MainFragment()).addToBackStack(null).commit();
+56 
+57             \}
+58         \});
+59 
+60         \textcolor{keywordflow}{return} view;
+61     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1StartFragment_a094d9a57c85444f4c6a2116958b473ed}{\index{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Start\-Fragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Start\-Fragment}!T\-A\-G@{T\-A\-G}}
+\index{T\-A\-G@{T\-A\-G}!org::buildmlearn::toolkit::flashcardtemplate::StartFragment@{org\-::buildmlearn\-::toolkit\-::flashcardtemplate\-::\-Start\-Fragment}}
+\subsubsection[{T\-A\-G}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-buildmlearn.\-toolkit.\-flashcardtemplate.\-Start\-Fragment.\-T\-A\-G = \char`\"{}Start Fragment\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1flashcardtemplate_1_1StartFragment_a094d9a57c85444f4c6a2116958b473ed}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/flashcardtemplate/\hyperlink{StartFragment_8java}{Start\-Fragment.\-java}\end{DoxyCompactItemize}

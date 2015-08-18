@@ -1,0 +1,226 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter}{\section{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Adapter Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter}\index{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Adapter@{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Adapter}}
+}
+
+
+Adapter for displaying Quiz Template Editor data.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{d5/dc6/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Adapter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{dd/d79/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_1_1Holder}{Holder}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_ad2908a773bc1d570de067fb651955ec8}{Quiz\-Adapter} (Context context, Array\-List$<$ \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel}{Quiz\-Model} $>$ quiz\-Data)
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_a8c752789f5d0bb951476b84f10a047bc}{get\-Count} ()
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel}{Quiz\-Model} \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_add9307def1c611fefc1d255724488c1a}{get\-Item} (int position)
+\item 
+long \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_a2480fce399e8ecbc5914f2770f74c04e}{get\-Item\-Id} (int position)
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_a2d9da873e879211f8764af25b7ad4a16}{get\-View} (final int position, View convert\-View, View\-Group parent)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Adapter for displaying Quiz Template Editor data. 
+
+Created by abhishek on 28/5/15. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_ad2908a773bc1d570de067fb651955ec8}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter}!Quiz\-Adapter@{Quiz\-Adapter}}
+\index{Quiz\-Adapter@{Quiz\-Adapter}!org::buildmlearn::toolkit::templates::QuizAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter}}
+\subsubsection[{Quiz\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Adapter.\-Quiz\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{Array\-List$<$ {\bf Quiz\-Model} $>$}]{quiz\-Data}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_ad2908a773bc1d570de067fb651955ec8}
+
+\begin{DoxyCode}
+35                                                                        \{
+36         this.context = context;
+37         this.quizData = quizData;
+38     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_a8c752789f5d0bb951476b84f10a047bc}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter}!get\-Count@{get\-Count}}
+\index{get\-Count@{get\-Count}!org::buildmlearn::toolkit::templates::QuizAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter}}
+\subsubsection[{get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Adapter.\-get\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_a8c752789f5d0bb951476b84f10a047bc}
+
+\begin{DoxyCode}
+41                           \{
+42         \textcolor{keywordflow}{return} quizData.size();
+43     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_add9307def1c611fefc1d255724488c1a}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter}!get\-Item@{get\-Item}}
+\index{get\-Item@{get\-Item}!org::buildmlearn::toolkit::templates::QuizAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter}}
+\subsubsection[{get\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quiz\-Model} org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Adapter.\-get\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_add9307def1c611fefc1d255724488c1a}
+
+\begin{DoxyCode}
+46                                            \{
+47         \textcolor{keywordflow}{return} quizData.get(position);
+48     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_a2480fce399e8ecbc5914f2770f74c04e}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter}!get\-Item\-Id@{get\-Item\-Id}}
+\index{get\-Item\-Id@{get\-Item\-Id}!org::buildmlearn::toolkit::templates::QuizAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter}}
+\subsubsection[{get\-Item\-Id}]{\setlength{\rightskip}{0pt plus 5cm}long org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Adapter.\-get\-Item\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_a2480fce399e8ecbc5914f2770f74c04e}
+
+\begin{DoxyCode}
+51                                         \{
+52         \textcolor{keywordflow}{return} position;
+53     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_a2d9da873e879211f8764af25b7ad4a16}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter}!get\-View@{get\-View}}
+\index{get\-View@{get\-View}!org::buildmlearn::toolkit::templates::QuizAdapter@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Adapter}}
+\subsubsection[{get\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Adapter.\-get\-View (
+\begin{DoxyParamCaption}
+\item[{final int}]{position, }
+\item[{View}]{convert\-View, }
+\item[{View\-Group}]{parent}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_a2d9da873e879211f8764af25b7ad4a16}
+
+\begin{DoxyCode}
+56                                                                                 \{
+57         LayoutInflater mInflater;
+58         mInflater = LayoutInflater.from(context);
+59         Holder holder;
+60         \textcolor{keywordflow}{if} (convertView == null) \{
+61             convertView = mInflater.inflate(R.layout.quiz\_item, parent, \textcolor{keyword}{false});
+62             holder = \textcolor{keyword}{new} Holder();
+63 
+64             holder.question = (TextViewPlus) convertView.findViewById(R.id.question);
+65             holder.options = \textcolor{keyword}{new} ArrayList<>();
+66             holder.options.add((TextViewPlus) convertView.findViewById(R.id.answer1));
+67             holder.options.add((TextViewPlus) convertView.findViewById(R.id.answer2));
+68             holder.options.add((TextViewPlus) convertView.findViewById(R.id.answer3));
+69             holder.options.add((TextViewPlus) convertView.findViewById(R.id.answer4));
+70             holder.questionIcon = (ImageView) convertView.findViewById(R.id.question\_icon);
+71             holder.quizOptionsBox = (LinearLayout) convertView.findViewById(R.id.quiz\_options\_box);
+72             holder.delete = (Button) convertView.findViewById(R.id.quiz\_item\_delete);
+73             holder.edit = (Button) convertView.findViewById(R.id.quiz\_item\_edit);
+74 
+75         \} \textcolor{keywordflow}{else} \{
+76             holder = (Holder) convertView.getTag();
+77         \}
+78 
+79         QuizModel data = \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_add9307def1c611fefc1d255724488c1a}{getItem}(position);
+80         holder.question.setText(data.getQuestion());
+81         \textcolor{keywordflow}{if} (data.isSelected()) \{
+82             holder.questionIcon.setImageResource(R.drawable.collapse);
+83             holder.quizOptionsBox.setVisibility(View.VISIBLE);
+84         \} \textcolor{keywordflow}{else} \{
+85             holder.questionIcon.setImageResource(R.drawable.expand);
+86             holder.quizOptionsBox.setVisibility(View.GONE);
+87         \}
+88 
+89         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < holder.options.size(); i++) \{
+90             \textcolor{keywordflow}{if} (i < data.getOptions().size()) \{
+91                 \textcolor{keywordtype}{int} ascii = 65 + i;
+92                 holder.options.get(i).setText(Character.toString((\textcolor{keywordtype}{char}) ascii) + \textcolor{stringliteral}{")  "} + data.getOptions().\textcolor{keyword}{
+      get}(i));
+93                 holder.options.get(i).setVisibility(View.VISIBLE);
+94             \} \textcolor{keywordflow}{else} \{
+95                 holder.options.get(i).setVisibility(View.GONE);
+96             \}
+97         \}
+98 
+99         holder.options.get(data.getCorrectAnswer()).setCustomFont(context, \textcolor{stringliteral}{"roboto\_medium.ttf"});
+100         holder.options.get(data.getCorrectAnswer()).setTextColor(context.getResources().getColor(R.color.
+      quiz\_correct\_answer));
+101 
+102         holder.questionIcon.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+103             @Override
+104             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+105                 \textcolor{keywordflow}{if} (expandedPostion >= 0 && expandedPostion != position) \{
+106                     \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_add9307def1c611fefc1d255724488c1a}{getItem}(expandedPostion).setIsSelected(\textcolor{keyword}{false});
+107                 \}
+108                 \textcolor{keywordflow}{if} (\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_add9307def1c611fefc1d255724488c1a}{getItem}(position).isSelected()) \{
+109                     \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_add9307def1c611fefc1d255724488c1a}{getItem}(position).setIsSelected(\textcolor{keyword}{false});
+110                     expandedPostion = -1;
+111                 \} \textcolor{keywordflow}{else} \{
+112                     \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizAdapter_add9307def1c611fefc1d255724488c1a}{getItem}(position).setIsSelected(\textcolor{keyword}{true});
+113                     expandedPostion = position;
+114                 \}
+115                 notifyDataSetChanged();
+116             \}
+117         \});
+118 
+119         holder.edit.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+120             @Override
+121             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+122                 editItem(position, context);
+123             \}
+124         \});
+125         holder.delete.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+126             @Override
+127             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+128 
+129                 \textcolor{keyword}{final} MaterialDialog dialog = \textcolor{keyword}{new} MaterialDialog.Builder(context)
+130                         .title(R.string.dialog\_delete\_title)
+131                         .content(R.string.dialog\_delete\_msg)
+132                         .positiveText(R.string.dialog\_yes)
+133                         .negativeText(R.string.dialog\_no)
+134                         .build();
+135 
+136                 dialog.getActionButton(DialogAction.POSITIVE).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener()
+       \{
+137                     @Override
+138                     \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+139                         quizData.remove(position);
+140                         notifyDataSetChanged();
+141                         dialog.dismiss();
+142                     \}
+143                 \});
+144 
+145                 dialog.show();
+146             \}
+147         \});
+148         convertView.setTag(holder);
+149         \textcolor{keywordflow}{return} convertView;
+150     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/templates/\hyperlink{QuizAdapter_8java}{Quiz\-Adapter.\-java}\end{DoxyCompactItemize}

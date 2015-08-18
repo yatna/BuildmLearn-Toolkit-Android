@@ -1,0 +1,259 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager}{\section{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager}\index{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager@{org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager}}
+}
+
+
+Simulator code for Learn Spelling Template.  
+
+
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{dc/d77/classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a3fd8a313e9ef9dab76725009a3697e0c}{read\-Xml} (String file\-Path)
+\item 
+Array\-List$<$ \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1WordModel}{Word\-Model} $>$ \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_ae9636c402574a2deaaf3ef9b8a7a14a4}{get\-List} ()
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a8b1872c45bc78135989aa0ee7af83f73}{get\-Title} ()
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a7cc32c4c6be5e5d70045d0b10f1a2850}{get\-Author} ()
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a42a06c0c3ebd9ce4e90d7db5efda93b0}{get\-Active\-Word\-Count} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_acb93ba29d288da3139c448491c2cb545}{increase\-Count} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a4d9d8bdfb3013ee7f60999cccb4c0708}{increment\-Correct} ()
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a5544f492cfdf9c117412ac232b390918}{get\-Correct} ()
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a18a0de85ba35ec8044f6240ec9f53c7f}{get\-Wrong} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a46669a045691413b410a20149180d0a9}{increment\-Wrong} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a563486fa47d940f3ce806b8e60f26a8e}{reset} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager}{Data\-Manager} \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a7f2efbad139020fb8ec287c16b5b8ea2}{get\-Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Learn Spelling Template. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a42a06c0c3ebd9ce4e90d7db5efda93b0}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}!get\-Active\-Word\-Count@{get\-Active\-Word\-Count}}
+\index{get\-Active\-Word\-Count@{get\-Active\-Word\-Count}!org::buildmlearn::toolkit::learnspelling::DataManager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}}
+\subsubsection[{get\-Active\-Word\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager.\-get\-Active\-Word\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a42a06c0c3ebd9ce4e90d7db5efda93b0}
+
+\begin{DoxyCode}
+138                                     \{
+139         \textcolor{keywordflow}{return} countIndex;
+140 
+141     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a7cc32c4c6be5e5d70045d0b10f1a2850}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}!get\-Author@{get\-Author}}
+\index{get\-Author@{get\-Author}!org::buildmlearn::toolkit::learnspelling::DataManager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}}
+\subsubsection[{get\-Author}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager.\-get\-Author (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a7cc32c4c6be5e5d70045d0b10f1a2850}
+
+\begin{DoxyCode}
+134                               \{
+135         \textcolor{keywordflow}{return} mAuthor;
+136     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a5544f492cfdf9c117412ac232b390918}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}!get\-Correct@{get\-Correct}}
+\index{get\-Correct@{get\-Correct}!org::buildmlearn::toolkit::learnspelling::DataManager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}}
+\subsubsection[{get\-Correct}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager.\-get\-Correct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a5544f492cfdf9c117412ac232b390918}
+
+\begin{DoxyCode}
+151                             \{
+152         \textcolor{keywordflow}{return} countCorrect;
+153     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a7f2efbad139020fb8ec287c16b5b8ea2}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!org::buildmlearn::toolkit::learnspelling::DataManager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Data\-Manager} org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager.\-get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a7f2efbad139020fb8ec287c16b5b8ea2}
+
+\begin{DoxyCode}
+62                                             \{
+63         \textcolor{keywordflow}{if} (instance == null) \{
+64             instance = \textcolor{keyword}{new} DataManager();
+65         \}
+66         \textcolor{keywordflow}{return} instance;
+67     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_ae9636c402574a2deaaf3ef9b8a7a14a4}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}!get\-List@{get\-List}}
+\index{get\-List@{get\-List}!org::buildmlearn::toolkit::learnspelling::DataManager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}}
+\subsubsection[{get\-List}]{\setlength{\rightskip}{0pt plus 5cm}Array\-List$<${\bf Word\-Model}$>$ org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager.\-get\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_ae9636c402574a2deaaf3ef9b8a7a14a4}
+
+\begin{DoxyCode}
+125                                           \{
+126 
+127         \textcolor{keywordflow}{return} mList;
+128     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a8b1872c45bc78135989aa0ee7af83f73}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}!get\-Title@{get\-Title}}
+\index{get\-Title@{get\-Title}!org::buildmlearn::toolkit::learnspelling::DataManager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}}
+\subsubsection[{get\-Title}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager.\-get\-Title (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a8b1872c45bc78135989aa0ee7af83f73}
+
+\begin{DoxyCode}
+130                              \{
+131         \textcolor{keywordflow}{return} mTitle;
+132     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a18a0de85ba35ec8044f6240ec9f53c7f}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}!get\-Wrong@{get\-Wrong}}
+\index{get\-Wrong@{get\-Wrong}!org::buildmlearn::toolkit::learnspelling::DataManager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}}
+\subsubsection[{get\-Wrong}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager.\-get\-Wrong (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a18a0de85ba35ec8044f6240ec9f53c7f}
+
+\begin{DoxyCode}
+155                           \{
+156         \textcolor{keywordflow}{return} countWrong;
+157     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_acb93ba29d288da3139c448491c2cb545}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}!increase\-Count@{increase\-Count}}
+\index{increase\-Count@{increase\-Count}!org::buildmlearn::toolkit::learnspelling::DataManager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}}
+\subsubsection[{increase\-Count}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager.\-increase\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_acb93ba29d288da3139c448491c2cb545}
+
+\begin{DoxyCode}
+143                                 \{
+144         countIndex++;
+145     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a4d9d8bdfb3013ee7f60999cccb4c0708}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}!increment\-Correct@{increment\-Correct}}
+\index{increment\-Correct@{increment\-Correct}!org::buildmlearn::toolkit::learnspelling::DataManager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}}
+\subsubsection[{increment\-Correct}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager.\-increment\-Correct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a4d9d8bdfb3013ee7f60999cccb4c0708}
+
+\begin{DoxyCode}
+147                                    \{
+148         countCorrect++;
+149     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a46669a045691413b410a20149180d0a9}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}!increment\-Wrong@{increment\-Wrong}}
+\index{increment\-Wrong@{increment\-Wrong}!org::buildmlearn::toolkit::learnspelling::DataManager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}}
+\subsubsection[{increment\-Wrong}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager.\-increment\-Wrong (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a46669a045691413b410a20149180d0a9}
+
+\begin{DoxyCode}
+159                                  \{
+160         countWrong++;
+161     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a3fd8a313e9ef9dab76725009a3697e0c}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}!read\-Xml@{read\-Xml}}
+\index{read\-Xml@{read\-Xml}!org::buildmlearn::toolkit::learnspelling::DataManager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}}
+\subsubsection[{read\-Xml}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager.\-read\-Xml (
+\begin{DoxyParamCaption}
+\item[{String}]{file\-Path}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a3fd8a313e9ef9dab76725009a3697e0c}
+
+\begin{DoxyCode}
+85                                          \{
+86         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+87 
+88         dbf.setValidating(\textcolor{keyword}{false});
+89 
+90         DocumentBuilder db;
+91         Document doc;
+92         \textcolor{keywordflow}{try} \{
+93             mList = \textcolor{keyword}{new} ArrayList<>();
+94             File fXmlFile = \textcolor{keyword}{new} File(filePath);
+95             db = dbf.newDocumentBuilder();
+96             doc = db.parse(fXmlFile);
+97             doc.normalize();
+98             mTitle = doc.getElementsByTagName(\textcolor{stringliteral}{"title"}).item(0).getChildNodes()
+99                     .item(0).getNodeValue();
+100             mAuthor = doc.getElementsByTagName(\textcolor{stringliteral}{"name"}).item(0).getChildNodes()
+101                     .item(0).getNodeValue();
+102             NodeList childNodes = doc.getElementsByTagName(\textcolor{stringliteral}{"item"});
+103             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < childNodes.getLength(); i++) \{
+104                 WordModel app = \textcolor{keyword}{new} WordModel();
+105 
+106                 Node child = childNodes.item(i);
+107 
+108                 \textcolor{keywordflow}{if} (child.getNodeType() == Node.ELEMENT\_NODE) \{
+109                     Element element2 = (Element) child;
+110 
+111                     app.setWord(getValue(\textcolor{stringliteral}{"word"}, element2));
+112                     app.setDescription(getValue(\textcolor{stringliteral}{"meaning"}, element2));
+113 
+114                 \}
+115                 mList.add(app);
+116 
+117             \}
+118         \} \textcolor{keywordflow}{catch} (ParserConfigurationException | IOException | SAXException e) \{
+119             Log.e(\textcolor{stringliteral}{"tag"}, e.getLocalizedMessage());
+120             e.printStackTrace();
+121         \}
+122 
+123     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a563486fa47d940f3ce806b8e60f26a8e}{\index{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}!reset@{reset}}
+\index{reset@{reset}!org::buildmlearn::toolkit::learnspelling::DataManager@{org\-::buildmlearn\-::toolkit\-::learnspelling\-::\-Data\-Manager}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-learnspelling.\-Data\-Manager.\-reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1learnspelling_1_1DataManager_a563486fa47d940f3ce806b8e60f26a8e}
+
+\begin{DoxyCode}
+163                         \{
+164         countCorrect = 0;
+165         mList.clear();
+166         countIndex = 0;
+167         countWrong = 0;
+168     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/learnspelling/\hyperlink{DataManager_8java}{Data\-Manager.\-java}\end{DoxyCompactItemize}

@@ -1,0 +1,241 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment}{\section{org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Question\-Fragment Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment}\index{org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Question\-Fragment@{org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Question\-Fragment}}
+}
+
+
+Simulator code for Quiz Template.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Question\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{d7/d5d/classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Question\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{da/d0c/classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_abb793ebbf73449b93a9dd85f3786da07}{on\-Create\-View} (Layout\-Inflater inflater, View\-Group container, Bundle saved\-Instance\-State)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a196e5caed520e173fd52c1f43d8f4a31}{radio\-Click} (View v)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_aa7710314d3a07072c8d67e3625826590}{populate\-Question} (int index)
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a72d22e68fe4a0e7e57e978e4b4cdd618}{get\-Selected\-Answer} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a815352bbacc2869c92bf4dfbbf5c3851}{re\-Initialize} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a921fda4a087f9a43ebe8a4f05eec015c}{T\-A\-G} = \char`\"{}Q\-U\-E\-S\-T\-I\-O\-N\-\_\-\-F\-R\-A\-G\-M\-E\-N\-T\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Quiz Template. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a72d22e68fe4a0e7e57e978e4b4cdd618}{\index{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment}!get\-Selected\-Answer@{get\-Selected\-Answer}}
+\index{get\-Selected\-Answer@{get\-Selected\-Answer}!org::buildmlearn::toolkit::quiztemplate::QuestionFragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment}}
+\subsubsection[{get\-Selected\-Answer}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Question\-Fragment.\-get\-Selected\-Answer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a72d22e68fe4a0e7e57e978e4b4cdd618}
+
+\begin{DoxyCode}
+187                                    \{
+188         \textcolor{keywordtype}{int} selected = -1;
+189         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < iRadButtonList.size(); i++) \{
+190             \textcolor{keywordflow}{if} (iRadButtonList.get(i).isChecked()) \{
+191                 \textcolor{keywordflow}{return} i;
+192             \}
+193         \}
+194         \textcolor{keywordflow}{return} selected;
+195     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_abb793ebbf73449b93a9dd85f3786da07}{\index{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment}!on\-Create\-View@{on\-Create\-View}}
+\index{on\-Create\-View@{on\-Create\-View}!org::buildmlearn::toolkit::quiztemplate::QuestionFragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment}}
+\subsubsection[{on\-Create\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Question\-Fragment.\-on\-Create\-View (
+\begin{DoxyParamCaption}
+\item[{Layout\-Inflater}]{inflater, }
+\item[{View\-Group}]{container, }
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_abb793ebbf73449b93a9dd85f3786da07}
+
+\begin{DoxyCode}
+72                                                                                                       \{
+73 
+74         faActivity = (FragmentActivity) super.getActivity();
+75         view = inflater.inflate(R.layout.quiz\_template\_fragment\_questions\_view, container, \textcolor{keyword}{false});
+76 
+77         gd = GlobalData.getInstance();
+78 
+79         iQuestion\_no\_Label = (TextView) view.findViewById(R.id.question\_no);
+80         iQuestionLabel = (TextView) view.findViewById(R.id.question\_label);
+81 
+82         iRad0 = (RadioButton) view.findViewById(R.id.radio0);
+83         iRad1 = (RadioButton) view.findViewById(R.id.radio1);
+84         iRad2 = (RadioButton) view.findViewById(R.id.radio2);
+85         iRad3 = (RadioButton) view.findViewById(R.id.radio3);
+86 
+87         iRadioGroup = (RadioGroup) view.findViewById(R.id.radioGroup1);
+88 
+89         iRadButtonList.add(iRad0);
+90         iRadButtonList.add(iRad1);
+91         iRadButtonList.add(iRad2);
+92         iRadButtonList.add(iRad3);
+93 
+94         iSubmitButton = (Button) view.findViewById(R.id.submit\_button);
+95         iSubmitButton.setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+96 
+97             @Override
+98             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View arg0) \{
+99                 \textcolor{keywordtype}{int} selectedAnswer = \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a72d22e68fe4a0e7e57e978e4b4cdd618}{getSelectedAnswer}();
+100                 \textcolor{keywordflow}{if} (selectedAnswer == -1) \{
+101                     Toast.makeText(getActivity(),
+102                             \textcolor{stringliteral}{"Please select an answer!"}, Toast.LENGTH\_LONG).show();
+103                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (selectedAnswer != -1
+104                         && selectedAnswer == iCurrentCorrectAnswer) \{
+105                     iRadButtonList.get(iCurrentCorrectAnswer)
+106                             .setBackgroundColor(Color.GREEN);
+107                     Toast.makeText(getActivity(),
+108                             \textcolor{stringliteral}{"That's the correct answer!"}, Toast.LENGTH\_LONG).show();
+109                     gd.correct++;
+110                     iSubmitButton.setEnabled(\textcolor{keyword}{false});
+111 
+112                 \} \textcolor{keywordflow}{else} \{
+113                     iRadButtonList.get(selectedAnswer).setBackgroundColor(
+114                             Color.RED);
+115                     iRadButtonList.get(iCurrentCorrectAnswer)
+116                             .setBackgroundColor(Color.GREEN);
+117                     Toast.makeText(getActivity(),
+118                             \textcolor{stringliteral}{"Sorry, wrong answer!"}, Toast.LENGTH\_LONG).show();
+119 
+120                     iSubmitButton.setEnabled(\textcolor{keyword}{false});
+121                     gd.wrong++;
+122                     \textcolor{comment}{// iSubmitButton.setVisibility(View.GONE);}
+123                     \textcolor{comment}{// iNextButton.setVisibility(View.VISIBLE);}
+124 
+125                 \}
+126             \}
+127         \});
+128 
+129         iNextButton = (Button) view.findViewById(R.id.next\_button);
+130         iNextButton.setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+131 
+132             @Override
+133             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View arg0) \{
+134 
+135                 \textcolor{comment}{// set all radios to white}
+136                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < iRadButtonList.size(); i++) \{
+137                     iRadButtonList.get(i).setBackgroundColor(Color.TRANSPARENT);
+138                 \}
+139 
+140                 \textcolor{comment}{// Increase the index to next ques}
+141                 iQuestionIndex = iQuestionIndex + 1;
+142 
+143                 \textcolor{keywordflow}{if} (iQuestionIndex < gd.model.size()) \{
+144                     \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_aa7710314d3a07072c8d67e3625826590}{populateQuestion}(iQuestionIndex);
+145 
+146                     iSubmitButton.setEnabled(\textcolor{keyword}{true});
+147                     \textcolor{comment}{// iNextButton.setVisibility(View.GONE);}
+148                 \} \textcolor{keywordflow}{else} \{
+149                     \textcolor{comment}{// if the quiz is over}
+150                     \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a815352bbacc2869c92bf4dfbbf5c3851}{reInitialize}();
+151                     getActivity().getFragmentManager().beginTransaction().replace(R.id.container, \textcolor{keyword}{new} 
+      ScoreFragment(), \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1ScoreFragment_a0f33e1b8e2e8d4acddb6e2932dbd65ed}{ScoreFragment.TAG}).addToBackStack(null).commit();
+152                 \}
+153             \}
+154         \});
+155         \textcolor{comment}{// iNextButton.setVisibility(View.GONE);}
+156 
+157         \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_aa7710314d3a07072c8d67e3625826590}{populateQuestion}(iQuestionIndex);
+158 
+159         \textcolor{keywordflow}{return} view;
+160     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_aa7710314d3a07072c8d67e3625826590}{\index{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment}!populate\-Question@{populate\-Question}}
+\index{populate\-Question@{populate\-Question}!org::buildmlearn::toolkit::quiztemplate::QuestionFragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment}}
+\subsubsection[{populate\-Question}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Question\-Fragment.\-populate\-Question (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_aa7710314d3a07072c8d67e3625826590}
+
+\begin{DoxyCode}
+167                                             \{
+168         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < iRadButtonList.size(); i++) \{
+169             iRadButtonList.get(i).setBackgroundColor(Color.TRANSPARENT);
+170             iRadButtonList.get(i).setChecked(\textcolor{keyword}{false});
+171             iRadButtonList.get(i).setVisibility(View.INVISIBLE);
+172         \}
+173 
+174         iQuestion\_no\_Label.setText(\textcolor{stringliteral}{"Question #"} + String.valueOf(index + 1)
+175                 + \textcolor{stringliteral}{" of "} + gd.total);
+176         iQuestionLabel.setText(gd.model.get(index).getQuestion());
+177         ArrayList<String> options = gd.model.get(index).getOptions();
+178         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < options.size(); i++) \{
+179             iRadButtonList.get(i).setText(options.get(i));
+180             iRadButtonList.get(i).setVisibility(View.VISIBLE);
+181         \}
+182         iCurrentCorrectAnswer = Integer
+183                 .parseInt(gd.model.get(index).getAnswer());
+184 
+185     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a196e5caed520e173fd52c1f43d8f4a31}{\index{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment}!radio\-Click@{radio\-Click}}
+\index{radio\-Click@{radio\-Click}!org::buildmlearn::toolkit::quiztemplate::QuestionFragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment}}
+\subsubsection[{radio\-Click}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Question\-Fragment.\-radio\-Click (
+\begin{DoxyParamCaption}
+\item[{View}]{v}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a196e5caed520e173fd52c1f43d8f4a31}
+
+\begin{DoxyCode}
+163                                    \{
+164 
+165     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a815352bbacc2869c92bf4dfbbf5c3851}{\index{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment}!re\-Initialize@{re\-Initialize}}
+\index{re\-Initialize@{re\-Initialize}!org::buildmlearn::toolkit::quiztemplate::QuestionFragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment}}
+\subsubsection[{re\-Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Question\-Fragment.\-re\-Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a815352bbacc2869c92bf4dfbbf5c3851}
+
+\begin{DoxyCode}
+197                                \{
+198 
+199         iQuestionIndex = 0;
+200         gd.iQuizList.clear();
+201     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a921fda4a087f9a43ebe8a4f05eec015c}{\index{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment}!T\-A\-G@{T\-A\-G}}
+\index{T\-A\-G@{T\-A\-G}!org::buildmlearn::toolkit::quiztemplate::QuestionFragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Question\-Fragment}}
+\subsubsection[{T\-A\-G}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Question\-Fragment.\-T\-A\-G = \char`\"{}Q\-U\-E\-S\-T\-I\-O\-N\-\_\-\-F\-R\-A\-G\-M\-E\-N\-T\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1QuestionFragment_a921fda4a087f9a43ebe8a4f05eec015c}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/quiztemplate/\hyperlink{QuestionFragment_8java}{Question\-Fragment.\-java}\end{DoxyCompactItemize}

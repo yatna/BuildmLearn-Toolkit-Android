@@ -1,0 +1,103 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1ScoreFragment}{\section{org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Score\-Fragment Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1ScoreFragment}\index{org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Score\-Fragment@{org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Score\-Fragment}}
+}
+
+
+Simulator code for Quiz Template.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Score\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{dc/d96/classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1ScoreFragment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Score\-Fragment\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{d0/d23/classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1ScoreFragment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+View \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1ScoreFragment_a2a08483650f2c8f0e1c8ac8a25b10b75}{on\-Create\-View} (Layout\-Inflater inflater, View\-Group container, Bundle saved\-Instance\-State)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1ScoreFragment_a0f33e1b8e2e8d4acddb6e2932dbd65ed}{T\-A\-G} = \char`\"{}S\-C\-O\-R\-E\-\_\-\-F\-R\-A\-G\-M\-E\-N\-T\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulator code for Quiz Template. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1ScoreFragment_a2a08483650f2c8f0e1c8ac8a25b10b75}{\index{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Score\-Fragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Score\-Fragment}!on\-Create\-View@{on\-Create\-View}}
+\index{on\-Create\-View@{on\-Create\-View}!org::buildmlearn::toolkit::quiztemplate::ScoreFragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Score\-Fragment}}
+\subsubsection[{on\-Create\-View}]{\setlength{\rightskip}{0pt plus 5cm}View org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Score\-Fragment.\-on\-Create\-View (
+\begin{DoxyParamCaption}
+\item[{Layout\-Inflater}]{inflater, }
+\item[{View\-Group}]{container, }
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1ScoreFragment_a2a08483650f2c8f0e1c8ac8a25b10b75}
+
+\begin{DoxyCode}
+61                                                                                                       \{
+62         faActivity = (FragmentActivity) super.getActivity();
+63         view = inflater.inflate(R.layout.quiz\_template\_fragment\_score\_view, container, \textcolor{keyword}{false});
+64 
+65         gd = GlobalData.getInstance();
+66 
+67         mTv\_correct = (TextView) view.findViewById(R.id.tv\_correct);
+68         mTv\_wrong = (TextView) view.findViewById(R.id.tv\_wrong);
+69         mTv\_unanswered = (TextView) view.findViewById(R.id.tv\_unanswered);
+70         mTv\_correct.setText(\textcolor{stringliteral}{"Total Correct: "} + gd.correct);
+71         mTv\_wrong.setText(\textcolor{stringliteral}{"Total Wrong: "} + gd.wrong);
+72         \textcolor{keywordtype}{int} unanswered = gd.total - gd.correct - gd.wrong;
+73         mTv\_unanswered.setText(\textcolor{stringliteral}{"Unanswered: "} + unanswered);
+74 
+75         Button startAgainButton = (Button) view.findViewById(R.id.start\_again\_button);
+76         startAgainButton.setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+77 
+78             @Override
+79             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View arg0) \{
+80                 getActivity().getFragmentManager().beginTransaction().replace(R.id.container, 
+      TFTQuizFragment.newInstance(getActivity().getIntent().getStringExtra(Constants.SIMULATOR\_FILE\_PATH)), TFTQuizFragment.TAG
+      ).addToBackStack(null).commit();
+81             \}
+82         \});
+83 
+84         Button quitButton = (Button) view.findViewById(R.id.quit\_button);
+85         quitButton.setOnClickListener(\textcolor{keyword}{new} OnClickListener() \{
+86 
+87             @Override
+88             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View arg0) \{
+89                 getActivity().finish();
+90             \}
+91         \});
+92 
+93         \textcolor{keywordflow}{return} view;
+94     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1ScoreFragment_a0f33e1b8e2e8d4acddb6e2932dbd65ed}{\index{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Score\-Fragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Score\-Fragment}!T\-A\-G@{T\-A\-G}}
+\index{T\-A\-G@{T\-A\-G}!org::buildmlearn::toolkit::quiztemplate::ScoreFragment@{org\-::buildmlearn\-::toolkit\-::quiztemplate\-::\-Score\-Fragment}}
+\subsubsection[{T\-A\-G}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-buildmlearn.\-toolkit.\-quiztemplate.\-Score\-Fragment.\-T\-A\-G = \char`\"{}S\-C\-O\-R\-E\-\_\-\-F\-R\-A\-G\-M\-E\-N\-T\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1quiztemplate_1_1ScoreFragment_a0f33e1b8e2e8d4acddb6e2932dbd65ed}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/quiztemplate/\hyperlink{quiztemplate_2ScoreFragment_8java}{Score\-Fragment.\-java}\end{DoxyCompactItemize}

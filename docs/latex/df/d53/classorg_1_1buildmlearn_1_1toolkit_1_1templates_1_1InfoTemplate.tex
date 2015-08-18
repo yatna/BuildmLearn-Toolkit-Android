@@ -1,0 +1,531 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate}{\section{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate}\index{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template@{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template}}
+}
+
+
+Info template code implementing methods of Template\-Interface.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d2/d3d/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d7/dfb/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a3f9f925728b785f52105776cf4ba0e44}{Info\-Template} ()
+\item 
+Base\-Adapter \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_ab4d81e3a7da28f406ca3b6e8c74bb69c}{new\-Template\-Editor\-Adapter} (Context context)
+\begin{DoxyCompactList}\small\item\em Called from Template Editor when template editor is started for creating a new template project. \end{DoxyCompactList}\item 
+Base\-Adapter \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_adf457576e88abf2859b9d8cfb8097eba}{current\-Template\-Editor\-Adapter} ()
+\begin{DoxyCompactList}\small\item\em This function is used to get the adapter (containing template data) for a existing/current template project. \end{DoxyCompactList}\item 
+Base\-Adapter \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a3133856410f82ddd51ebd42f54a56cf6}{load\-Project\-Template\-Editor} (Context context, Array\-List$<$ Element $>$ data)
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_ada0d67fc9e941bb29703a19467216a92}{on\-Attach} ()
+\begin{DoxyCompactList}\small\item\em Called from Template\-Editor whenever a template is attached to Template\-Editor. \end{DoxyCompactList}\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_aeff54c9ca6a2925582e01d6fffea0b71}{get\-Title} ()
+\begin{DoxyCompactList}\small\item\em Used to get the title of the templaye. Mainly used to update Action\-Bar in Template Editor. \end{DoxyCompactList}\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a397a72ab6a84e7352e8e2af283a9b4a8}{add\-Item} (final Activity activity)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a959e9afa2bb71e903b575087515611a7}{edit\-Item} (final Activity activity, int position)
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_abcd4da5c42fd2601f72ddbe695a123a9}{delete\-Item} (int position)
+\begin{DoxyCompactList}\small\item\em Remove an item form template data list. \end{DoxyCompactList}\item 
+Array\-List$<$ Element $>$ \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a720895732bb2e94b7d0a119d7a6b0a6c}{get\-Items} (Document doc)
+\item 
+Fragment \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_ad67fb90b9a49c5ae17771252cd722ce0}{get\-Simulator\-Fragment} (String file\-Path\-With\-Name)
+\begin{DoxyCompactList}\small\item\em Returns a fragment required for the Simulator Activity. \end{DoxyCompactList}\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_aa2cab0b4c1dabf029612ebebbe8c43af}{get\-Assets\-File\-Name} ()
+\begin{DoxyCompactList}\small\item\em Name of the xml file congaing template data in the assets folders in the build apk. \end{DoxyCompactList}\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a7d33c2515392865627720469c30726cc}{get\-Assets\-File\-Path} ()
+\begin{DoxyCompactList}\small\item\em Folder path in which the apk is stored in the build A\-P\-K. \end{DoxyCompactList}\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a2c1e9f1197aa092e46015da0ed060b6b}{get\-Apk\-File\-Path} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a8089c34bead9e0dc798d5e14608e64fd}{on\-Activity\-Result} (Context context, int request\-Code, int result\-Code, Intent intent)
+\begin{DoxyCompactList}\small\item\em Called whenever on\-Activity\-Result is called in Template Editor. Can be used to perform action related to intent and callbacks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a6b8cc6c46170f7d0be6be09093f58e41}{validated} (Context context, Edit\-Text word, Edit\-Text meaning)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Info template code implementing methods of Template\-Interface. 
+
+Created by abhishek on 16/06/15 at 9\-:59 P\-M. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a3f9f925728b785f52105776cf4ba0e44}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!Info\-Template@{Info\-Template}}
+\index{Info\-Template@{Info\-Template}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{Info\-Template}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-Info\-Template (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a3f9f925728b785f52105776cf4ba0e44}
+
+\begin{DoxyCode}
+33                           \{
+34         infoData = \textcolor{keyword}{new} ArrayList<>();
+35     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a397a72ab6a84e7352e8e2af283a9b4a8}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!add\-Item@{add\-Item}}
+\index{add\-Item@{add\-Item}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{add\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-add\-Item (
+\begin{DoxyParamCaption}
+\item[{final Activity}]{activity}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a397a72ab6a84e7352e8e2af283a9b4a8}
+
+\begin{DoxyCode}
+90                                                  \{
+91 
+92         \textcolor{keyword}{final} MaterialDialog dialog = \textcolor{keyword}{new} MaterialDialog.Builder(activity)
+93                 .title(R.string.info\_add\_new\_title)
+94                 .customView(R.layout.info\_dialog\_add\_edit\_data, \textcolor{keyword}{true})
+95                 .positiveText(R.string.info\_template\_add)
+96                 .negativeText(R.string.info\_template\_delete)
+97                 .build();
+98 
+99         \textcolor{keyword}{final} EditText word = (EditText) dialog.findViewById(R.id.info\_word);
+100         \textcolor{keyword}{final} EditText meaning = (EditText) dialog.findViewById(R.id.info\_meaning);
+101 
+102         dialog.getActionButton(DialogAction.POSITIVE).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+103             @Override
+104             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+105 
+106                 \textcolor{keywordflow}{if} (\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a6b8cc6c46170f7d0be6be09093f58e41}{validated}(activity, word, meaning)) \{
+107                     String wordText = word.getText().toString();
+108                     String meaningText = meaning.getText().toString();
+109 
+110                     InfoModel temp = \textcolor{keyword}{new} InfoModel(wordText, meaningText);
+111                     infoData.add(temp);
+112                     adapter.notifyDataSetChanged();
+113                     dialog.dismiss();
+114                 \}
+115 
+116             \}
+117         \});
+118 
+119         dialog.show();
+120 
+121     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_adf457576e88abf2859b9d8cfb8097eba}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!current\-Template\-Editor\-Adapter@{current\-Template\-Editor\-Adapter}}
+\index{current\-Template\-Editor\-Adapter@{current\-Template\-Editor\-Adapter}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{current\-Template\-Editor\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Adapter org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-current\-Template\-Editor\-Adapter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_adf457576e88abf2859b9d8cfb8097eba}
+
+
+This function is used to get the adapter (containing template data) for a existing/current template project. 
+
+\begin{DoxyReturn}{Returns}
+Base\-Adapter inherited Object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ae433eedc291006e78b65b0fc4135d560}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+63                                                       \{
+64         \textcolor{keywordflow}{return} adapter;
+65     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_abcd4da5c42fd2601f72ddbe695a123a9}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!delete\-Item@{delete\-Item}}
+\index{delete\-Item@{delete\-Item}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{delete\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-delete\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_abcd4da5c42fd2601f72ddbe695a123a9}
+
+
+Remove an item form template data list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position of the item to be removed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_aeb65a5ef72b939c20b24cd7c02a80a97}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+162                                          \{
+163 
+164 
+165         infoData.remove(position);
+166         adapter.notifyDataSetChanged();
+167 
+168     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a959e9afa2bb71e903b575087515611a7}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!edit\-Item@{edit\-Item}}
+\index{edit\-Item@{edit\-Item}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{edit\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-edit\-Item (
+\begin{DoxyParamCaption}
+\item[{final Activity}]{activity, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a959e9afa2bb71e903b575087515611a7}
+
+\begin{DoxyCode}
+124                                                                 \{
+125         \textcolor{keyword}{final} MaterialDialog dialog = \textcolor{keyword}{new} MaterialDialog.Builder(activity)
+126                 .title(R.string.info\_add\_new\_title)
+127                 .customView(R.layout.info\_dialog\_add\_edit\_data, \textcolor{keyword}{true})
+128                 .positiveText(R.string.info\_template\_add)
+129                 .negativeText(R.string.info\_template\_delete)
+130                 .build();
+131 
+132         \textcolor{keyword}{final} InfoModel data = infoData.get(position);
+133 
+134         \textcolor{keyword}{final} EditText word = (EditText) dialog.findViewById(R.id.info\_word);
+135         \textcolor{keyword}{final} EditText meaning = (EditText) dialog.findViewById(R.id.info\_meaning);
+136         word.setText(data.getInfoObject());
+137         meaning.setText(data.getInfoDescription());
+138 
+139         dialog.getActionButton(DialogAction.POSITIVE).setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+140             @Override
+141             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+142 
+143                 \textcolor{keywordflow}{if} (\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a6b8cc6c46170f7d0be6be09093f58e41}{validated}(activity, word, meaning)) \{
+144                     String wordText = word.getText().toString();
+145                     String meaningText = meaning.getText().toString();
+146 
+147                     data.setWord(wordText);
+148                     data.setInfoDescription(meaningText);
+149 
+150                     adapter.notifyDataSetChanged();
+151                     dialog.dismiss();
+152                 \}
+153 
+154             \}
+155         \});
+156 
+157         dialog.show();
+158 
+159     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a2c1e9f1197aa092e46015da0ed060b6b}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!get\-Apk\-File\-Path@{get\-Apk\-File\-Path}}
+\index{get\-Apk\-File\-Path@{get\-Apk\-File\-Path}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{get\-Apk\-File\-Path}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-get\-Apk\-File\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a2c1e9f1197aa092e46015da0ed060b6b}
+Path of the apk stored in assets
+
+\begin{DoxyReturn}{Returns}
+Apk file path 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a1bca348acb3790aebce645c04a9e0945}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+199                                    \{
+200         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"BasicmLearningApp.apk"};
+201     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_aa2cab0b4c1dabf029612ebebbe8c43af}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!get\-Assets\-File\-Name@{get\-Assets\-File\-Name}}
+\index{get\-Assets\-File\-Name@{get\-Assets\-File\-Name}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{get\-Assets\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-get\-Assets\-File\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_aa2cab0b4c1dabf029612ebebbe8c43af}
+
+
+Name of the xml file congaing template data in the assets folders in the build apk. 
+
+\begin{DoxyReturn}{Returns}
+Asset file name 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a5336064bba45a1ba2f6db891567e1b6e}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+189                                       \{
+190         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"info\_content.xml"};
+191     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a7d33c2515392865627720469c30726cc}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!get\-Assets\-File\-Path@{get\-Assets\-File\-Path}}
+\index{get\-Assets\-File\-Path@{get\-Assets\-File\-Path}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{get\-Assets\-File\-Path}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-get\-Assets\-File\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a7d33c2515392865627720469c30726cc}
+
+
+Folder path in which the apk is stored in the build A\-P\-K. 
+
+\begin{DoxyReturn}{Returns}
+Assets folder path 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ae35d1ab3f2c88b79d0d2a79cde81155b}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+194                                       \{
+195         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"assets/"};
+196     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a720895732bb2e94b7d0a119d7a6b0a6c}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!get\-Items@{get\-Items}}
+\index{get\-Items@{get\-Items}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{get\-Items}]{\setlength{\rightskip}{0pt plus 5cm}Array\-List$<$Element$>$ org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-get\-Items (
+\begin{DoxyParamCaption}
+\item[{Document}]{doc}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a720895732bb2e94b7d0a119d7a6b0a6c}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9fb6e277f0ebfb2caea138017854473f}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+171                                                      \{
+172         ArrayList<Element> itemElements = \textcolor{keyword}{new} ArrayList<>();
+173 
+174 
+175         \textcolor{keywordflow}{for} (InfoModel data : infoData) \{
+176 
+177             itemElements.add(data.getXml(doc));
+178         \}
+179 
+180         \textcolor{keywordflow}{return} itemElements;
+181     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_ad67fb90b9a49c5ae17771252cd722ce0}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!get\-Simulator\-Fragment@{get\-Simulator\-Fragment}}
+\index{get\-Simulator\-Fragment@{get\-Simulator\-Fragment}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{get\-Simulator\-Fragment}]{\setlength{\rightskip}{0pt plus 5cm}Fragment org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-get\-Simulator\-Fragment (
+\begin{DoxyParamCaption}
+\item[{String}]{file\-Path\-With\-Name}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_ad67fb90b9a49c5ae17771252cd722ce0}
+
+
+Returns a fragment required for the Simulator Activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Path\-With\-Name} & Path of the generated .buildmlearn file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a fragment required for the Simulator Activity. $\ast$$\ast$\-Dev Note\-: File Path should be used to populate data from actual .buildmlearn file in the Simulator. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9b7f8c39a34918a8832eec6b1eb1f3c0}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+184                                                                   \{
+185         \textcolor{keywordflow}{return} TFTFragment.newInstance(filePathWithName);
+186     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_aeff54c9ca6a2925582e01d6fffea0b71}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!get\-Title@{get\-Title}}
+\index{get\-Title@{get\-Title}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{get\-Title}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-get\-Title (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_aeff54c9ca6a2925582e01d6fffea0b71}
+
+
+Used to get the title of the templaye. Mainly used to update Action\-Bar in Template Editor. 
+
+\begin{DoxyReturn}{Returns}
+Title as a string 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a98a8592a7e4928ce76d0c61df17cf5c8}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+85                              \{
+86         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Info Template"};
+87     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a3133856410f82ddd51ebd42f54a56cf6}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!load\-Project\-Template\-Editor@{load\-Project\-Template\-Editor}}
+\index{load\-Project\-Template\-Editor@{load\-Project\-Template\-Editor}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{load\-Project\-Template\-Editor}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Adapter org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-load\-Project\-Template\-Editor (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{Array\-List$<$ Element $>$}]{data}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a3133856410f82ddd51ebd42f54a56cf6}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ac0637282a7f7b58a4e9b8e86a734bf93}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+68                                                                                            \{
+69         infoData = \textcolor{keyword}{new} ArrayList<>();
+70         \textcolor{keywordflow}{for} (Element item : data) \{
+71             String infoObject = item.getElementsByTagName(\textcolor{stringliteral}{"item\_title"}).item(0).getTextContent();
+72             String infoDescription = item.getElementsByTagName(\textcolor{stringliteral}{"item\_description"}).item(0).getTextContent()
+      ;
+73             infoData.add(\textcolor{keyword}{new} InfoModel(infoObject, infoDescription));
+74         \}
+75         adapter = \textcolor{keyword}{new} InfoAdapter(context, infoData);
+76         \textcolor{keywordflow}{return} adapter;
+77     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_ab4d81e3a7da28f406ca3b6e8c74bb69c}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!new\-Template\-Editor\-Adapter@{new\-Template\-Editor\-Adapter}}
+\index{new\-Template\-Editor\-Adapter@{new\-Template\-Editor\-Adapter}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{new\-Template\-Editor\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Adapter org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-new\-Template\-Editor\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Context}]{context}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_ab4d81e3a7da28f406ca3b6e8c74bb69c}
+
+
+Called from Template Editor when template editor is started for creating a new template project. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Application context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Base\-Adapter inherited Object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_af7d9d92709123fc39693504884e4f7e2}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+57                                                                  \{
+58         adapter = \textcolor{keyword}{new} InfoAdapter(context, infoData);
+59         \textcolor{keywordflow}{return} adapter;
+60     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a8089c34bead9e0dc798d5e14608e64fd}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!on\-Activity\-Result@{on\-Activity\-Result}}
+\index{on\-Activity\-Result@{on\-Activity\-Result}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{on\-Activity\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-on\-Activity\-Result (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{int}]{request\-Code, }
+\item[{int}]{result\-Code, }
+\item[{Intent}]{intent}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a8089c34bead9e0dc798d5e14608e64fd}
+
+
+Called whenever on\-Activity\-Result is called in Template Editor. Can be used to perform action related to intent and callbacks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \\
+\hline
+{\em request\-Code} & \\
+\hline
+{\em result\-Code} & \\
+\hline
+{\em intent} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9c506bf3776973765d4d1e8d6954e95b}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+204                                                                                                   \{
+205 
+206     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_ada0d67fc9e941bb29703a19467216a92}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!on\-Attach@{on\-Attach}}
+\index{on\-Attach@{on\-Attach}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{on\-Attach}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-on\-Attach (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_ada0d67fc9e941bb29703a19467216a92}
+
+
+Called from Template\-Editor whenever a template is attached to Template\-Editor. 
+
+\begin{DoxyReturn}{Returns}
+Custom string 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_af511bc9b58d176182a53397494d14238}{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}.
+
+
+\begin{DoxyCode}
+80                              \{
+81         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Info Template"};
+82     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a6b8cc6c46170f7d0be6be09093f58e41}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}!validated@{validated}}
+\index{validated@{validated}!org::buildmlearn::toolkit::templates::InfoTemplate@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Info\-Template}}
+\subsubsection[{validated}]{\setlength{\rightskip}{0pt plus 5cm}static boolean org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template.\-validated (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{Edit\-Text}]{word, }
+\item[{Edit\-Text}]{meaning}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a6b8cc6c46170f7d0be6be09093f58e41}
+
+\begin{DoxyCode}
+37                                                                                       \{
+38         \textcolor{keywordflow}{if} (word == null || meaning == null) \{
+39             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+40         \}
+41 
+42         String wordText = word.getText().toString();
+43         String meaningText = meaning.getText().toString();
+44 
+45         \textcolor{keywordflow}{if} (wordText.equals(\textcolor{stringliteral}{""})) \{
+46             Toast.makeText(context, \textcolor{stringliteral}{"Enter word"}, Toast.LENGTH\_SHORT).show();
+47             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+48         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (meaningText.equals(\textcolor{stringliteral}{""})) \{
+49             Toast.makeText(context, \textcolor{stringliteral}{"Enter meaning"}, Toast.LENGTH\_SHORT).show();
+50             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+51         \}
+52         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+53 
+54     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/templates/\hyperlink{InfoTemplate_8java}{Info\-Template.\-java}\end{DoxyCompactItemize}

@@ -1,0 +1,197 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel}{\section{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Model Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel}\index{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Model@{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Model}}
+}
+
+
+Model class for Flash Card Template Editor data.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Model\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{df/d5d/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Model\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{d6/da7/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_a2dd9b2a68f1b2b6ada40d09b5a641f64}{Flash\-Card\-Model} (String question, String answer, String hint, Bitmap image)
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_ab57e165bc61b3bc72c50a7fbadabedbe}{Flash\-Card\-Model} (String question, String answer, String hint, String image)
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_abf8ce19f627a4783f734dd05366c83be}{get\-Question} ()
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_af7ada5f29f1967ffe976b8c1ac513c5e}{get\-Answer} ()
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_a89685e7a56be83bd6718ba0b3eb88eb0}{get\-Hint} ()
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_a80528eb28bb619a07090f7766f2de410}{get\-Image} ()
+\item 
+Bitmap \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_acc164af071d93c3ab9348310f3dbf8aa}{get\-Image\-Bitmap} ()
+\item 
+Element \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_a08112a6fbb90f87602d2b96da37e8cd8}{get\-Xml} (Document doc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Model class for Flash Card Template Editor data. 
+
+Created by abhishek on 11/07/15 at 7\-:34 P\-M. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_a2dd9b2a68f1b2b6ada40d09b5a641f64}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}!Flash\-Card\-Model@{Flash\-Card\-Model}}
+\index{Flash\-Card\-Model@{Flash\-Card\-Model}!org::buildmlearn::toolkit::templates::FlashCardModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}}
+\subsubsection[{Flash\-Card\-Model}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Model.\-Flash\-Card\-Model (
+\begin{DoxyParamCaption}
+\item[{String}]{question, }
+\item[{String}]{answer, }
+\item[{String}]{hint, }
+\item[{Bitmap}]{image}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_a2dd9b2a68f1b2b6ada40d09b5a641f64}
+
+\begin{DoxyCode}
+25                                                                                      \{
+26         mQuestion = question;
+27         mAnswer = answer;
+28         mHint = hint;
+29         mImage = convertBitmapToBase64(image);
+30     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_ab57e165bc61b3bc72c50a7fbadabedbe}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}!Flash\-Card\-Model@{Flash\-Card\-Model}}
+\index{Flash\-Card\-Model@{Flash\-Card\-Model}!org::buildmlearn::toolkit::templates::FlashCardModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}}
+\subsubsection[{Flash\-Card\-Model}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Model.\-Flash\-Card\-Model (
+\begin{DoxyParamCaption}
+\item[{String}]{question, }
+\item[{String}]{answer, }
+\item[{String}]{hint, }
+\item[{String}]{image}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_ab57e165bc61b3bc72c50a7fbadabedbe}
+
+\begin{DoxyCode}
+32                                                                                      \{
+33         mQuestion = question;
+34         mAnswer = answer;
+35         mHint = hint;
+36         mImage = image;
+37     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_af7ada5f29f1967ffe976b8c1ac513c5e}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}!get\-Answer@{get\-Answer}}
+\index{get\-Answer@{get\-Answer}!org::buildmlearn::toolkit::templates::FlashCardModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}}
+\subsubsection[{get\-Answer}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Model.\-get\-Answer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_af7ada5f29f1967ffe976b8c1ac513c5e}
+
+\begin{DoxyCode}
+54                               \{
+55         \textcolor{keywordflow}{return} mAnswer;
+56     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_a89685e7a56be83bd6718ba0b3eb88eb0}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}!get\-Hint@{get\-Hint}}
+\index{get\-Hint@{get\-Hint}!org::buildmlearn::toolkit::templates::FlashCardModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}}
+\subsubsection[{get\-Hint}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Model.\-get\-Hint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_a89685e7a56be83bd6718ba0b3eb88eb0}
+
+\begin{DoxyCode}
+58                             \{
+59         \textcolor{keywordflow}{return} mHint;
+60     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_a80528eb28bb619a07090f7766f2de410}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}!get\-Image@{get\-Image}}
+\index{get\-Image@{get\-Image}!org::buildmlearn::toolkit::templates::FlashCardModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}}
+\subsubsection[{get\-Image}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Model.\-get\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_a80528eb28bb619a07090f7766f2de410}
+
+\begin{DoxyCode}
+62                              \{
+63         \textcolor{keywordflow}{return} mImage;
+64     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_acc164af071d93c3ab9348310f3dbf8aa}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}!get\-Image\-Bitmap@{get\-Image\-Bitmap}}
+\index{get\-Image\-Bitmap@{get\-Image\-Bitmap}!org::buildmlearn::toolkit::templates::FlashCardModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}}
+\subsubsection[{get\-Image\-Bitmap}]{\setlength{\rightskip}{0pt plus 5cm}Bitmap org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Model.\-get\-Image\-Bitmap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_acc164af071d93c3ab9348310f3dbf8aa}
+
+\begin{DoxyCode}
+66                                    \{
+67         byte[] decodedString = Base64.decode(mImage, Base64.DEFAULT);
+68         Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+69         \textcolor{keywordflow}{return} decodedByte;
+70     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_abf8ce19f627a4783f734dd05366c83be}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}!get\-Question@{get\-Question}}
+\index{get\-Question@{get\-Question}!org::buildmlearn::toolkit::templates::FlashCardModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}}
+\subsubsection[{get\-Question}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Model.\-get\-Question (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_abf8ce19f627a4783f734dd05366c83be}
+
+\begin{DoxyCode}
+50                                 \{
+51         \textcolor{keywordflow}{return} mQuestion;
+52     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_a08112a6fbb90f87602d2b96da37e8cd8}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}!get\-Xml@{get\-Xml}}
+\index{get\-Xml@{get\-Xml}!org::buildmlearn::toolkit::templates::FlashCardModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Flash\-Card\-Model}}
+\subsubsection[{get\-Xml}]{\setlength{\rightskip}{0pt plus 5cm}Element org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Card\-Model.\-get\-Xml (
+\begin{DoxyParamCaption}
+\item[{Document}]{doc}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashCardModel_a08112a6fbb90f87602d2b96da37e8cd8}
+
+\begin{DoxyCode}
+72                                         \{
+73         Element rootElement = doc.createElement(\textcolor{stringliteral}{"item"});
+74         Element questionElement = doc.createElement(\textcolor{stringliteral}{"question"});
+75         questionElement.appendChild(doc.createTextNode(mQuestion));
+76         rootElement.appendChild(questionElement);
+77 
+78         Element answerElement = doc.createElement(\textcolor{stringliteral}{"answer"});
+79         answerElement.appendChild(doc.createTextNode(String.valueOf(mAnswer)));
+80         rootElement.appendChild(answerElement);
+81 
+82         Element hintElement = doc.createElement(\textcolor{stringliteral}{"hint"});
+83         hintElement.appendChild(doc.createTextNode(String.valueOf(mHint)));
+84         rootElement.appendChild(hintElement);
+85 
+86         Element imageElement = doc.createElement(\textcolor{stringliteral}{"image"});
+87         imageElement.appendChild(doc.createTextNode(String.valueOf(mImage)));
+88         rootElement.appendChild(imageElement);
+89         \textcolor{keywordflow}{return} rootElement;
+90     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/templates/\hyperlink{FlashCardModel_8java}{Flash\-Card\-Model.\-java}\end{DoxyCompactItemize}

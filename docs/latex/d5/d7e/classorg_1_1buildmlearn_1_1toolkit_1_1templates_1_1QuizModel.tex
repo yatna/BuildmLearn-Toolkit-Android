@@ -1,0 +1,215 @@
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel}{\section{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model Class Reference}
+\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel}\index{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model@{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model}}
+}
+
+
+Model class for Quiz Template Editor data.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{dc/d18/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{d1/d8b/classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_ad7ac0923cded5b5ab11c0311098e1aca}{Quiz\-Model} (String question, Array\-List$<$ String $>$ options, int correct\-Answer)
+\item 
+String \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_aefecb799e3e7738989a107f559dd44b8}{get\-Question} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_a3d8ef7cb3104f83ff7ed8ee4fcb94c80}{set\-Question} (String question)
+\item 
+Array\-List$<$ String $>$ \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_a836e96e8dafbb46c95630d03ec6e2775}{get\-Options} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_a438e25e521d193025952788493b81b5a}{set\-Options} (Array\-List$<$ String $>$ options)
+\item 
+int \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_ad0093665496e473a794700ef0d0b304b}{get\-Correct\-Answer} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_a4d774c397860e94d712c89ad004f8d3d}{set\-Correct\-Answer} (int correct\-Answer)
+\item 
+Element \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_ab40e946399a45e02e3c20d2dacc4bf0a}{get\-Xml} (Document doc)
+\item 
+boolean \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_ac076dad02a8b2fd2cd3437b76d4291a3}{is\-Selected} ()
+\item 
+void \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_aee131789e4b61f477436104d543f95d2}{set\-Is\-Selected} (boolean is\-Selected)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Model class for Quiz Template Editor data. 
+
+Created by abhishek on 28/5/15. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_ad7ac0923cded5b5ab11c0311098e1aca}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}!Quiz\-Model@{Quiz\-Model}}
+\index{Quiz\-Model@{Quiz\-Model}!org::buildmlearn::toolkit::templates::QuizModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}}
+\subsubsection[{Quiz\-Model}]{\setlength{\rightskip}{0pt plus 5cm}org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model.\-Quiz\-Model (
+\begin{DoxyParamCaption}
+\item[{String}]{question, }
+\item[{Array\-List$<$ String $>$}]{options, }
+\item[{int}]{correct\-Answer}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_ad7ac0923cded5b5ab11c0311098e1aca}
+
+\begin{DoxyCode}
+22                                                                                     \{
+23         this.question = question;
+24         this.options = options;
+25         this.correctAnswer = correctAnswer;
+26         this.isSelected = \textcolor{keyword}{false};
+27     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_ad0093665496e473a794700ef0d0b304b}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}!get\-Correct\-Answer@{get\-Correct\-Answer}}
+\index{get\-Correct\-Answer@{get\-Correct\-Answer}!org::buildmlearn::toolkit::templates::QuizModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}}
+\subsubsection[{get\-Correct\-Answer}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model.\-get\-Correct\-Answer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_ad0093665496e473a794700ef0d0b304b}
+
+\begin{DoxyCode}
+45                                   \{
+46         \textcolor{keywordflow}{return} correctAnswer;
+47     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_a836e96e8dafbb46c95630d03ec6e2775}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}!get\-Options@{get\-Options}}
+\index{get\-Options@{get\-Options}!org::buildmlearn::toolkit::templates::QuizModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}}
+\subsubsection[{get\-Options}]{\setlength{\rightskip}{0pt plus 5cm}Array\-List$<$String$>$ org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model.\-get\-Options (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_a836e96e8dafbb46c95630d03ec6e2775}
+
+\begin{DoxyCode}
+37                                           \{
+38         \textcolor{keywordflow}{return} options;
+39     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_aefecb799e3e7738989a107f559dd44b8}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}!get\-Question@{get\-Question}}
+\index{get\-Question@{get\-Question}!org::buildmlearn::toolkit::templates::QuizModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}}
+\subsubsection[{get\-Question}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model.\-get\-Question (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_aefecb799e3e7738989a107f559dd44b8}
+
+\begin{DoxyCode}
+29                                 \{
+30         \textcolor{keywordflow}{return} question;
+31     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_ab40e946399a45e02e3c20d2dacc4bf0a}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}!get\-Xml@{get\-Xml}}
+\index{get\-Xml@{get\-Xml}!org::buildmlearn::toolkit::templates::QuizModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}}
+\subsubsection[{get\-Xml}]{\setlength{\rightskip}{0pt plus 5cm}Element org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model.\-get\-Xml (
+\begin{DoxyParamCaption}
+\item[{Document}]{doc}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_ab40e946399a45e02e3c20d2dacc4bf0a}
+
+\begin{DoxyCode}
+53                                         \{
+54         Element rootElement = doc.createElement(\textcolor{stringliteral}{"item"});
+55         Element questionElement = doc.createElement(\textcolor{stringliteral}{"question"});
+56         questionElement.appendChild(doc.createTextNode(question));
+57         rootElement.appendChild(questionElement);
+58         \textcolor{keywordflow}{for} (String option : options) \{
+59             Element optionElement = doc.createElement(\textcolor{stringliteral}{"option"});
+60             optionElement.appendChild(doc.createTextNode(option));
+61             rootElement.appendChild(optionElement);
+62         \}
+63 
+64         Element answerElement = doc.createElement(\textcolor{stringliteral}{"answer"});
+65         answerElement.appendChild(doc.createTextNode(String.valueOf(correctAnswer)));
+66         rootElement.appendChild(answerElement);
+67         \textcolor{keywordflow}{return} rootElement;
+68     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_ac076dad02a8b2fd2cd3437b76d4291a3}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}!is\-Selected@{is\-Selected}}
+\index{is\-Selected@{is\-Selected}!org::buildmlearn::toolkit::templates::QuizModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}}
+\subsubsection[{is\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model.\-is\-Selected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_ac076dad02a8b2fd2cd3437b76d4291a3}
+
+\begin{DoxyCode}
+70                                 \{
+71         \textcolor{keywordflow}{return} \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_ac076dad02a8b2fd2cd3437b76d4291a3}{isSelected};
+72     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_a4d774c397860e94d712c89ad004f8d3d}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}!set\-Correct\-Answer@{set\-Correct\-Answer}}
+\index{set\-Correct\-Answer@{set\-Correct\-Answer}!org::buildmlearn::toolkit::templates::QuizModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}}
+\subsubsection[{set\-Correct\-Answer}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model.\-set\-Correct\-Answer (
+\begin{DoxyParamCaption}
+\item[{int}]{correct\-Answer}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_a4d774c397860e94d712c89ad004f8d3d}
+
+\begin{DoxyCode}
+49                                                     \{
+50         this.correctAnswer = correctAnswer;
+51     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_aee131789e4b61f477436104d543f95d2}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}!set\-Is\-Selected@{set\-Is\-Selected}}
+\index{set\-Is\-Selected@{set\-Is\-Selected}!org::buildmlearn::toolkit::templates::QuizModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}}
+\subsubsection[{set\-Is\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model.\-set\-Is\-Selected (
+\begin{DoxyParamCaption}
+\item[{boolean}]{is\-Selected}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_aee131789e4b61f477436104d543f95d2}
+
+\begin{DoxyCode}
+74                                                   \{
+75         this.isSelected = \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_ac076dad02a8b2fd2cd3437b76d4291a3}{isSelected};
+76     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_a438e25e521d193025952788493b81b5a}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}!set\-Options@{set\-Options}}
+\index{set\-Options@{set\-Options}!org::buildmlearn::toolkit::templates::QuizModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}}
+\subsubsection[{set\-Options}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model.\-set\-Options (
+\begin{DoxyParamCaption}
+\item[{Array\-List$<$ String $>$}]{options}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_a438e25e521d193025952788493b81b5a}
+
+\begin{DoxyCode}
+41                                                       \{
+42         this.options = options;
+43     \}
+\end{DoxyCode}
+\hypertarget{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_a3d8ef7cb3104f83ff7ed8ee4fcb94c80}{\index{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}!set\-Question@{set\-Question}}
+\index{set\-Question@{set\-Question}!org::buildmlearn::toolkit::templates::QuizModel@{org\-::buildmlearn\-::toolkit\-::templates\-::\-Quiz\-Model}}
+\subsubsection[{set\-Question}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Model.\-set\-Question (
+\begin{DoxyParamCaption}
+\item[{String}]{question}
+\end{DoxyParamCaption}
+)}}\label{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizModel_a3d8ef7cb3104f83ff7ed8ee4fcb94c80}
+
+\begin{DoxyCode}
+33                                              \{
+34         this.question = question;
+35     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/templates/\hyperlink{QuizModel_8java}{Quiz\-Model.\-java}\end{DoxyCompactItemize}

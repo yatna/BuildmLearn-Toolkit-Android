@@ -1,0 +1,333 @@
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface}{\section{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface Interface Reference}
+\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface}\index{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface@{org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface}}
+}
+
+
+Interface containing methods for a implementing a template.  
+
+
+
+
+Inheritance diagram for org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d45/interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{dc/d5d/interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Base\-Adapter \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_af7d9d92709123fc39693504884e4f7e2}{new\-Template\-Editor\-Adapter} (Context context)
+\begin{DoxyCompactList}\small\item\em Called from \hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Template}{Template} Editor when template editor is started for creating a new template project. \end{DoxyCompactList}\item 
+Base\-Adapter \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ae433eedc291006e78b65b0fc4135d560}{current\-Template\-Editor\-Adapter} ()
+\begin{DoxyCompactList}\small\item\em This function is used to get the adapter (containing template data) for a existing/current template project. \end{DoxyCompactList}\item 
+Base\-Adapter \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ac0637282a7f7b58a4e9b8e86a734bf93}{load\-Project\-Template\-Editor} (Context context, Array\-List$<$ Element $>$ data)
+\item 
+String \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_af511bc9b58d176182a53397494d14238}{on\-Attach} ()
+\begin{DoxyCompactList}\small\item\em Called from Template\-Editor whenever a template is attached to Template\-Editor. \end{DoxyCompactList}\item 
+String \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a98a8592a7e4928ce76d0c61df17cf5c8}{get\-Title} ()
+\begin{DoxyCompactList}\small\item\em Used to get the title of the templaye. Mainly used to update Action\-Bar in \hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Template}{Template} Editor. \end{DoxyCompactList}\item 
+void \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a4b0102080f73bee8b91530e03e995311}{add\-Item} (Activity activity)
+\begin{DoxyCompactList}\small\item\em Add an item to template data. \end{DoxyCompactList}\item 
+void \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a5a28364a7250ae0a6f18f8173c9df871}{edit\-Item} (Activity activity, int position)
+\begin{DoxyCompactList}\small\item\em Called to edit an item in the template data. \end{DoxyCompactList}\item 
+void \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_aeb65a5ef72b939c20b24cd7c02a80a97}{delete\-Item} (int position)
+\begin{DoxyCompactList}\small\item\em Remove an item form template data list. \end{DoxyCompactList}\item 
+Array\-List$<$ Element $>$ \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9fb6e277f0ebfb2caea138017854473f}{get\-Items} (Document doc)
+\item 
+Fragment \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9b7f8c39a34918a8832eec6b1eb1f3c0}{get\-Simulator\-Fragment} (String file\-Path\-With\-Name)
+\begin{DoxyCompactList}\small\item\em Returns a fragment required for the Simulator Activity. \end{DoxyCompactList}\item 
+String \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a5336064bba45a1ba2f6db891567e1b6e}{get\-Assets\-File\-Name} ()
+\begin{DoxyCompactList}\small\item\em Name of the xml file congaing template data in the assets folders in the build apk. \end{DoxyCompactList}\item 
+String \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ae35d1ab3f2c88b79d0d2a79cde81155b}{get\-Assets\-File\-Path} ()
+\begin{DoxyCompactList}\small\item\em Folder path in which the apk is stored in the build A\-P\-K. \end{DoxyCompactList}\item 
+String \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a1bca348acb3790aebce645c04a9e0945}{get\-Apk\-File\-Path} ()
+\item 
+void \hyperlink{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9c506bf3776973765d4d1e8d6954e95b}{on\-Activity\-Result} (Context context, int request\-Code, int result\-Code, Intent intent)
+\begin{DoxyCompactList}\small\item\em Called whenever on\-Activity\-Result is called in \hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Template}{Template} Editor. Can be used to perform action related to intent and callbacks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface containing methods for a implementing a template. 
+
+Each template must implement this interface. For using the template, a new enum in \hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Template}{Template} Enum is required.
+
+Created by abhishek on 27/5/15. 
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a4b0102080f73bee8b91530e03e995311}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}!add\-Item@{add\-Item}}
+\index{add\-Item@{add\-Item}!org::buildmlearn::toolkit::model::TemplateInterface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}}
+\subsubsection[{add\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface.\-add\-Item (
+\begin{DoxyParamCaption}
+\item[{Activity}]{activity}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a4b0102080f73bee8b91530e03e995311}
+
+
+Add an item to template data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em activity} & Current Activity \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ae433eedc291006e78b65b0fc4135d560}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}!current\-Template\-Editor\-Adapter@{current\-Template\-Editor\-Adapter}}
+\index{current\-Template\-Editor\-Adapter@{current\-Template\-Editor\-Adapter}!org::buildmlearn::toolkit::model::TemplateInterface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}}
+\subsubsection[{current\-Template\-Editor\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Adapter org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface.\-current\-Template\-Editor\-Adapter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ae433eedc291006e78b65b0fc4135d560}
+
+
+This function is used to get the adapter (containing template data) for a existing/current template project. 
+
+\begin{DoxyReturn}{Returns}
+Base\-Adapter inherited Object 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_adf457576e88abf2859b9d8cfb8097eba}{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingTemplate_a46ba1da1d9832f8e2ffbaf5a416a23f8}{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a70db96b6e7ec5e339fe106fc15d64860}{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template}, and \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_ab1d89e08da401108f6a6ec7bf208c973}{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template}.
+
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_aeb65a5ef72b939c20b24cd7c02a80a97}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}!delete\-Item@{delete\-Item}}
+\index{delete\-Item@{delete\-Item}!org::buildmlearn::toolkit::model::TemplateInterface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}}
+\subsubsection[{delete\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface.\-delete\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_aeb65a5ef72b939c20b24cd7c02a80a97}
+
+
+Remove an item form template data list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position of the item to be removed \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a71f43dadf52d381b71b0b8d4ce9d52a1}{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a16cd72fbce16660fffb9381a2333d239}{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_abcd4da5c42fd2601f72ddbe695a123a9}{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template}, and \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingTemplate_ad8f1904727ddd68bc429ae85fd916a1c}{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Template}.
+
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a5a28364a7250ae0a6f18f8173c9df871}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}!edit\-Item@{edit\-Item}}
+\index{edit\-Item@{edit\-Item}!org::buildmlearn::toolkit::model::TemplateInterface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}}
+\subsubsection[{edit\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface.\-edit\-Item (
+\begin{DoxyParamCaption}
+\item[{Activity}]{activity, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a5a28364a7250ae0a6f18f8173c9df871}
+
+
+Called to edit an item in the template data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em activity} & Current activity \\
+\hline
+{\em position} & Position of the item in the template data list \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a1bca348acb3790aebce645c04a9e0945}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}!get\-Apk\-File\-Path@{get\-Apk\-File\-Path}}
+\index{get\-Apk\-File\-Path@{get\-Apk\-File\-Path}!org::buildmlearn::toolkit::model::TemplateInterface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}}
+\subsubsection[{get\-Apk\-File\-Path}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface.\-get\-Apk\-File\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a1bca348acb3790aebce645c04a9e0945}
+Path of the apk stored in assets
+
+\begin{DoxyReturn}{Returns}
+Apk file path 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_afe64be10f6c439dd611e843ceabb5ac4}{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ae0ed657e20c9619afcd89bd624deb888}{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a2c1e9f1197aa092e46015da0ed060b6b}{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template}, and \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingTemplate_a05c6bdea670350a1f2aed2c9c4b28e10}{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Template}.
+
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a5336064bba45a1ba2f6db891567e1b6e}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}!get\-Assets\-File\-Name@{get\-Assets\-File\-Name}}
+\index{get\-Assets\-File\-Name@{get\-Assets\-File\-Name}!org::buildmlearn::toolkit::model::TemplateInterface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}}
+\subsubsection[{get\-Assets\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface.\-get\-Assets\-File\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a5336064bba45a1ba2f6db891567e1b6e}
+
+
+Name of the xml file congaing template data in the assets folders in the build apk. 
+
+\begin{DoxyReturn}{Returns}
+Asset file name 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a76c88931863b00d9713007e729431e23}{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_af05e9dceb6edcdd2ca6f3099a3ce2018}{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_aa2cab0b4c1dabf029612ebebbe8c43af}{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template}, and \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingTemplate_a17e1b99d6ac68e1912ea00bb29e368bc}{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Template}.
+
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ae35d1ab3f2c88b79d0d2a79cde81155b}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}!get\-Assets\-File\-Path@{get\-Assets\-File\-Path}}
+\index{get\-Assets\-File\-Path@{get\-Assets\-File\-Path}!org::buildmlearn::toolkit::model::TemplateInterface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}}
+\subsubsection[{get\-Assets\-File\-Path}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface.\-get\-Assets\-File\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ae35d1ab3f2c88b79d0d2a79cde81155b}
+
+
+Folder path in which the apk is stored in the build A\-P\-K. 
+
+\begin{DoxyReturn}{Returns}
+Assets folder path 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a7f0008da11aa1e2608a82214c92809e3}{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a081b149001c8d3829f6d5e81e0b80113}{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a7d33c2515392865627720469c30726cc}{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template}, and \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingTemplate_a49bf35434b6abe45d04db8ed1f16b9e1}{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Template}.
+
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9fb6e277f0ebfb2caea138017854473f}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}!get\-Items@{get\-Items}}
+\index{get\-Items@{get\-Items}!org::buildmlearn::toolkit::model::TemplateInterface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}}
+\subsubsection[{get\-Items}]{\setlength{\rightskip}{0pt plus 5cm}Array\-List$<$Element$>$ org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface.\-get\-Items (
+\begin{DoxyParamCaption}
+\item[{Document}]{doc}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9fb6e277f0ebfb2caea138017854473f}
+
+
+Implemented in \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a3d41a179fe1b10edd828d4ef4f0fb344}{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_adac9ece8aeee9a46cd8b7ac97ba9aab0}{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a720895732bb2e94b7d0a119d7a6b0a6c}{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template}, and \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingTemplate_a289b6e6a43daae52a975f3e74c03fa97}{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Template}.
+
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9b7f8c39a34918a8832eec6b1eb1f3c0}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}!get\-Simulator\-Fragment@{get\-Simulator\-Fragment}}
+\index{get\-Simulator\-Fragment@{get\-Simulator\-Fragment}!org::buildmlearn::toolkit::model::TemplateInterface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}}
+\subsubsection[{get\-Simulator\-Fragment}]{\setlength{\rightskip}{0pt plus 5cm}Fragment org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface.\-get\-Simulator\-Fragment (
+\begin{DoxyParamCaption}
+\item[{String}]{file\-Path\-With\-Name}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9b7f8c39a34918a8832eec6b1eb1f3c0}
+
+
+Returns a fragment required for the Simulator Activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Path\-With\-Name} & Path of the generated .buildmlearn file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a fragment required for the Simulator Activity. $\ast$$\ast$\-Dev Note\-: File Path should be used to populate data from actual .buildmlearn file in the Simulator. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_acef98cb485fc56abca5f6ecff6fe28c1}{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ac30d95d8c0304ba6ca3735c2e97fd410}{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_ad67fb90b9a49c5ae17771252cd722ce0}{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template}, and \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingTemplate_acf73238fe4aed0e287fd3151e6a2f653}{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Template}.
+
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a98a8592a7e4928ce76d0c61df17cf5c8}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}!get\-Title@{get\-Title}}
+\index{get\-Title@{get\-Title}!org::buildmlearn::toolkit::model::TemplateInterface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}}
+\subsubsection[{get\-Title}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface.\-get\-Title (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a98a8592a7e4928ce76d0c61df17cf5c8}
+
+
+Used to get the title of the templaye. Mainly used to update Action\-Bar in \hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Template}{Template} Editor. 
+
+\begin{DoxyReturn}{Returns}
+Title as a string 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_aed263c384b73d5d700e4144a97007245}{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_aeff54c9ca6a2925582e01d6fffea0b71}{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingTemplate_a06f51659532ed7300478ad233aa3e8b7}{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Template}, and \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a69f511c03a64a4945ffb41339666fcaa}{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template}.
+
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ac0637282a7f7b58a4e9b8e86a734bf93}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}!load\-Project\-Template\-Editor@{load\-Project\-Template\-Editor}}
+\index{load\-Project\-Template\-Editor@{load\-Project\-Template\-Editor}!org::buildmlearn::toolkit::model::TemplateInterface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}}
+\subsubsection[{load\-Project\-Template\-Editor}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Adapter org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface.\-load\-Project\-Template\-Editor (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{Array\-List$<$ Element $>$}]{data}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_ac0637282a7f7b58a4e9b8e86a734bf93}
+
+
+Implemented in \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a3133856410f82ddd51ebd42f54a56cf6}{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingTemplate_a889d8d414440285b80ca93b6a243e05e}{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_aeee0f28447c5d3c1d5c7c4ef8bb2ae3e}{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template}, and \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a546b1ec5e027883034daa14ef725c4ff}{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template}.
+
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_af7d9d92709123fc39693504884e4f7e2}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}!new\-Template\-Editor\-Adapter@{new\-Template\-Editor\-Adapter}}
+\index{new\-Template\-Editor\-Adapter@{new\-Template\-Editor\-Adapter}!org::buildmlearn::toolkit::model::TemplateInterface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}}
+\subsubsection[{new\-Template\-Editor\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Adapter org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface.\-new\-Template\-Editor\-Adapter (
+\begin{DoxyParamCaption}
+\item[{Context}]{context}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_af7d9d92709123fc39693504884e4f7e2}
+
+
+Called from \hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Template}{Template} Editor when template editor is started for creating a new template project. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Application context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Base\-Adapter inherited Object 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_ab4d81e3a7da28f406ca3b6e8c74bb69c}{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingTemplate_a532c1020ba161742148024ce7346d306}{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ad524e69199d8435959cf348558039b2d}{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template}, and \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a47d3029ad563737e60c7c209738b0a71}{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template}.
+
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9c506bf3776973765d4d1e8d6954e95b}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}!on\-Activity\-Result@{on\-Activity\-Result}}
+\index{on\-Activity\-Result@{on\-Activity\-Result}!org::buildmlearn::toolkit::model::TemplateInterface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}}
+\subsubsection[{on\-Activity\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface.\-on\-Activity\-Result (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{int}]{request\-Code, }
+\item[{int}]{result\-Code, }
+\item[{Intent}]{intent}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_a9c506bf3776973765d4d1e8d6954e95b}
+
+
+Called whenever on\-Activity\-Result is called in \hyperlink{enumorg_1_1buildmlearn_1_1toolkit_1_1model_1_1Template}{Template} Editor. Can be used to perform action related to intent and callbacks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \\
+\hline
+{\em request\-Code} & \\
+\hline
+{\em result\-Code} & \\
+\hline
+{\em intent} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a23bf444a6527a4be8b416f1d04a4912e}{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_a94a03d343059afa3914559725d911818}{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_a8089c34bead9e0dc798d5e14608e64fd}{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template}, and \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingTemplate_a3717f8c402a9da264b3d8e6665532c3c}{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Template}.
+
+\hypertarget{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_af511bc9b58d176182a53397494d14238}{\index{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}!on\-Attach@{on\-Attach}}
+\index{on\-Attach@{on\-Attach}!org::buildmlearn::toolkit::model::TemplateInterface@{org\-::buildmlearn\-::toolkit\-::model\-::\-Template\-Interface}}
+\subsubsection[{on\-Attach}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-buildmlearn.\-toolkit.\-model.\-Template\-Interface.\-on\-Attach (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1buildmlearn_1_1toolkit_1_1model_1_1TemplateInterface_af511bc9b58d176182a53397494d14238}
+
+
+Called from Template\-Editor whenever a template is attached to Template\-Editor. 
+
+\begin{DoxyReturn}{Returns}
+Custom string 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1FlashTemplate_ada55d7e95306576dd3a2f30183c3fc1e}{org.\-buildmlearn.\-toolkit.\-templates.\-Flash\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1InfoTemplate_ada0d67fc9e941bb29703a19467216a92}{org.\-buildmlearn.\-toolkit.\-templates.\-Info\-Template}, \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1LearnSpellingTemplate_ab644415ca83560eecd107a9d2a22e65b}{org.\-buildmlearn.\-toolkit.\-templates.\-Learn\-Spelling\-Template}, and \hyperlink{classorg_1_1buildmlearn_1_1toolkit_1_1templates_1_1QuizTemplate_a775355616317bb56fd8adf0962d7e05b}{org.\-buildmlearn.\-toolkit.\-templates.\-Quiz\-Template}.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Buildm\-Learn-\/\-Toolkit-\/\-Android/source-\/code/app/src/main/java/org/buildmlearn/toolkit/model/\hyperlink{TemplateInterface_8java}{Template\-Interface.\-java}\end{DoxyCompactItemize}
